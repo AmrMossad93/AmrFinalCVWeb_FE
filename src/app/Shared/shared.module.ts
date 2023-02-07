@@ -31,5 +31,5 @@ import {EducationItemComponent} from './Components/Reusable/education-item/educa
     AngularMaterialModule
   ]
 })
-export class SharedModule {
-}
+// @ts-ignore
+export class SharedModule {}
