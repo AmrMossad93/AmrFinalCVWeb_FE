@@ -126,7 +126,8 @@
             <i class="fa fa-map-marker"></i>{{basicInfoData.data.address}}
           </li>
           <li>
-            <i class="fa fa-envelope-o"></i><a href="mailto:{{basicInfoData.data.email}}">{{basicInfoData.data.email}}</a>
+            <i class="fa fa-envelope-o"></i><a
+            href="mailto:{{basicInfoData.data.email}}">{{basicInfoData.data.email}}</a>
           </li>
           <li>
             <i class="fa fa-phone"></i><a href="tel:00201099049044">{{basicInfoData.data.phone}}</a>
@@ -136,41 +137,12 @@
 
       <app-aside class="skills" [cardName]="'Skills'">
         <div class="skillset">
-
-          <div class="item">
-            <h3 class="level-title">Python &amp; Django
-            </h3>
-            <div class="level-bar">
-              <div class="level-bar-inner" data-level="96%">
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <h3 class="level-title">Javascript &amp; jQuery<span class="level-label">Expert</span></h3>
-            <div class="level-bar">
-              <div class="level-bar-inner" data-level="96%">
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <h3 class="level-title">HTML5, CSS3, SASS &amp; LESS<span class="level-label">Expert</span></h3>
-            <div class="level-bar">
-              <div class="level-bar-inner" data-level="96%">
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <h3 class="level-title">Ruby on Rails<span class="level-label">Pro</span></h3>
-            <div class="level-bar">
-              <div class="level-bar-inner" data-level="85%">
-              </div>
-            </div>
-          </div>
-
-          <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p>
+          <app-skill-item-card *ngFor="let skill of programmingSkillsData.data | slice:0:5"
+                               [skillName]="skill.name"
+                               [percentage]="skill.percentage"></app-skill-item-card>
+          <button mat-raised-button color="primary" (click)="viewAllProgrammingSkills()">
+            <i class="fa fa-external-link"></i> Show More Skills
+          </button>
         </div>
       </app-aside>
 

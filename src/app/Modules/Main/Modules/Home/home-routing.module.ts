@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./Components/home/home.component";
 import {AboutMeBriefResolver} from "./Resolvers/AboutMe/AboutMeBrief/about-me-brief.resolver";
 import {BasicInfoResolver} from "./Resolvers/AboutMe/BasicInfo/basic-info.resolver";
+import {ProgrammingSkillsResolver} from "./Resolvers/Skills/ProgrammingSkills/programming-skills.resolver";
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
     component: HomeComponent,
     resolve: {
       aboutMeBriefData: AboutMeBriefResolver,
-      basicInfoData: BasicInfoResolver
+      basicInfoData: BasicInfoResolver,
+      programmingSkillsData: ProgrammingSkillsResolver
     }
   }
 ];

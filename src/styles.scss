@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: #3aaa64;
+  --mdc-protected-button-label-text-color: #fff;
+}
+
+.progress-bar {
+  background-color: rgba(58, 170, 100, 0.63);
+}
