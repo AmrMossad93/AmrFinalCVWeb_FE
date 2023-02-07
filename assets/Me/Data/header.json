@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+    "name": "Amr Mossad Saber",
+    "profileImage": "assets/Me/Images/Me.jpeg",
+    "position": "Full Stack Web & Mobile Developer",
+    "socialLinks": [
+      {
+        "fontAwesomeIcon": "fa-linkedin",
+        "link": "https://www.linkedin.com/in/amr-mossad-209976158/"
+      },
+      {
+        "fontAwesomeIcon": "fa-github-alt",
+        "link": "https://github.com/AmrMossad93"
+      },
+      {
+        "fontAwesomeIcon": "fa-facebook",
+        "link": "https://www.facebook.com/amr.mossad.12979/"
+      },
+      {
+        "fontAwesomeIcon": "fa-instagram",
+        "link": "https://www.instagram.com/eng.amrmossad2/"
+      },
+      {
+        "fontAwesomeIcon": "fa-twitter",
+        "link": "https://twitter.com/AmrMossad8"
+      }
+    ]
+  }
+}
