@@ -1,1 +1,25 @@
-<p>project-detail works!</p>
+<div class="latest" *ngIf="projectDetailsData">
+  <div class="item featured text-center">
+    <h3 class="title">
+      {{projectDetailsData.projectName}}
+    </h3>
+    <p class="summary">{{projectDetailsData.client}}</p>
+    <div class="featured-image">
+      <img class="img-responsive project-image " [src]="projectDetailsData.images[0]"
+           [alt]="projectDetailsData.projectName"/>
+      <div class="ribbon">
+        <div class="text">{{projectDetailsData.type}}</div>
+      </div>
+    </div>
+
+
+    <div class="desc text-left">
+      <p>Made By {{projectDetailsData.coreDevelopment}}</p>
+      <p>{{projectDetailsData.projectDetail}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="latest" *ngIf="!projectDetailsData">
+  <app-alert alertTitle="Sorry!!" alertMessage="No Project With This Id!!!!!"></app-alert>
+</div>

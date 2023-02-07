@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ProjectListComponent} from "./Components/project-list/project-list.component";
 import {ProjectDetailComponent} from "./Components/project-detail/project-detail.component";
 import {ProjectsResolver} from "../Home/Resolvers/Projects/projects.resolver";
+import {ProjectDetailsResolver} from "./Resolvers/Project/project-details.resolver";
 
 const routes: Routes = [
   {
@@ -14,7 +15,10 @@ const routes: Routes = [
   },
   {
     path: ':projectId',
-    component: ProjectDetailComponent
+    component: ProjectDetailComponent,
+    resolve: {
+      projectDetailsData: ProjectDetailsResolver
+    }
   }
 ];
 

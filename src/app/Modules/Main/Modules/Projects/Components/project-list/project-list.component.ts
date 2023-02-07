@@ -8,7 +8,7 @@ import {IProject} from "../../../Home/Models/Interfaces/Projects/project";
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss']
 })
-export class ProjectListComponent implements OnInit{
+export class ProjectListComponent implements OnInit {
   projectListData = {} as IBaseData<IProject[]>;
 
   constructor(private activatedRoute: ActivatedRoute) {

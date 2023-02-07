@@ -28,7 +28,7 @@
           <p>Made By {{projectListData.data[0].coreDevelopment}}</p>
           <p>{{projectListData.data[0].projectDetail}}</p>
         </div>
-      </div><!--//item-->
+      </div>
       <hr class="divider"/>
       <app-project-card *ngFor="let project of projectListData.data | slice:1:3"
                         [project]="project"></app-project-card>

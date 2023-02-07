@@ -10,6 +10,7 @@ import {EducationItemComponent} from './Components/Reusable/education-item/educa
 import { ExperienceItemComponent } from './Components/Reusable/experience-item/experience-item.component';
 import { ProjectCardComponent } from './Components/Reusable/project-card/project-card.component';
 import {RouterModule} from "@angular/router";
+import { AlertComponent } from './Components/Reusable/alert/alert.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {RouterModule} from "@angular/router";
     SkillItemCardComponent,
     EducationItemComponent,
     ExperienceItemComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    AlertComponent
   ],
   exports: [
     HeaderComponent,
@@ -31,7 +33,8 @@ import {RouterModule} from "@angular/router";
     SkillItemCardComponent,
     EducationItemComponent,
     ExperienceItemComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    AlertComponent
   ],
   imports: [
     CommonModule,
