@@ -6,6 +6,7 @@ import {IProgrammingSkills} from "../../Models/Interfaces/Skills/programming-ski
 import {MatDialog} from "@angular/material/dialog";
 import {ProgrammingSkillsComponent} from "../../Shared/Dialogues/programming-skills/programming-skills.component";
 import {IEducation} from "../../Models/Interfaces/Education/education";
+import {IExperience} from "../../Models/Interfaces/Experience/experience";
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   basicInfoData = {} as IBaseData<IBasicInfo>;
   programmingSkillsData = {} as IBaseData<IProgrammingSkills[]>;
   educationData = {} as IBaseData<IEducation[]>;
+  experienceData = {} as IBaseData<IExperience[]>;
 
   constructor(private activatedRoute: ActivatedRoute, public dialog: MatDialog) {
   }
@@ -27,6 +29,7 @@ export class HomeComponent implements OnInit {
       this.basicInfoData = res['basicInfoData'];
       this.programmingSkillsData = res['programmingSkillsData'];
       this.educationData = res['educationData'];
+      this.experienceData = res['experienceData'];
     })
   }
 

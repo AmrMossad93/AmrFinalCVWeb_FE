@@ -7,6 +7,7 @@ import {AngularMaterialModule} from "../Core/DesignModules/AngularMaterial/angul
 import {AsideComponent} from './Components/Reusable/aside/aside.component';
 import {SkillItemCardComponent} from './Components/Reusable/skill-item-card/skill-item-card.component';
 import {EducationItemComponent} from './Components/Reusable/education-item/education-item.component';
+import { ExperienceItemComponent } from './Components/Reusable/experience-item/experience-item.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {EducationItemComponent} from './Components/Reusable/education-item/educa
     CardComponent,
     AsideComponent,
     SkillItemCardComponent,
-    EducationItemComponent
+    EducationItemComponent,
+    ExperienceItemComponent
   ],
   exports: [
     HeaderComponent,
@@ -24,7 +26,8 @@ import {EducationItemComponent} from './Components/Reusable/education-item/educa
     CardComponent,
     AsideComponent,
     SkillItemCardComponent,
-    EducationItemComponent
+    EducationItemComponent,
+    ExperienceItemComponent
   ],
   imports: [
     CommonModule,
