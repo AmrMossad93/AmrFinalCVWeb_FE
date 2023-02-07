@@ -96,7 +96,10 @@
 
       </app-card>
       <app-card [cardName]="'Work Experience'" class="experience">
-        <app-experience-item *ngFor="let item of experienceData.data.reverse()" [experience]="item"></app-experience-item>
+        <app-experience-item *ngFor="let item of experienceData.data.reverse() | slice:0:countOfShowExperience" [experience]="item"></app-experience-item>
+        <button mat-raised-button color="primary" (click)="toggleShowMoreExperience()">
+          <i class="fa fa-external-link"></i> Show {{isShowMore ? 'More': 'Less'}}
+        </button>
       </app-card>
 
     </div><!--//primary-->

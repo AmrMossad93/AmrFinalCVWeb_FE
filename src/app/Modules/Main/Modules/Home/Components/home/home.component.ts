@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
   programmingSkillsData = {} as IBaseData<IProgrammingSkills[]>;
   educationData = {} as IBaseData<IEducation[]>;
   experienceData = {} as IBaseData<IExperience[]>;
+  isShowMore = true;
+  countOfShowExperience: number = 3;
 
   constructor(private activatedRoute: ActivatedRoute, public dialog: MatDialog) {
   }
@@ -41,5 +43,14 @@ export class HomeComponent implements OnInit {
         programmingSkillsData: this.programmingSkillsData.data
       }
     });
+  }
+
+  toggleShowMoreExperience(): void {
+    this.isShowMore = !this.isShowMore;
+    if (!this.isShowMore) {
+      this.countOfShowExperience = this.experienceData.data.length;
+    } else {
+      this.countOfShowExperience = 3;
+    }
   }
 }

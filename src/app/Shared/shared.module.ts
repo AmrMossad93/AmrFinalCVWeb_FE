@@ -34,5 +34,4 @@ import { ExperienceItemComponent } from './Components/Reusable/experience-item/e
     AngularMaterialModule
   ]
 })
-// @ts-ignore
 export class SharedModule {}
