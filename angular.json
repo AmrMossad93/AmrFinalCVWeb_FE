@@ -30,9 +30,18 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "src/assets/Tools/css/styles.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/Tools/plugins/jquery-1.11.1.min.js",
+              "src/assets/Tools/plugins/jquery-migrate-1.2.1.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/Tools/plugins/jquery-rss/dist/jquery.rss.min.js",
+              "src/assets/Tools/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
