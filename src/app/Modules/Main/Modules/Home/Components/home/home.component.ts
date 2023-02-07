@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {IBaseData} from "../../../../../../Core/Model/Interface/Base/base-data";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {IBasicInfo} from "../../Models/Interfaces/AboutMe/basic-info";
 import {IProgrammingSkills} from "../../Models/Interfaces/Skills/programming-skills";
 import {MatDialog} from "@angular/material/dialog";
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   isShowMore = true;
   countOfShowExperience: number = 3;
 
-  constructor(private activatedRoute: ActivatedRoute, public dialog: MatDialog) {
+  constructor(private activatedRoute: ActivatedRoute, public dialog: MatDialog, private router: Router) {
   }
 
   ngOnInit() {
@@ -55,5 +55,9 @@ export class HomeComponent implements OnInit {
     } else {
       this.countOfShowExperience = 3;
     }
+  }
+
+  onNavigateToProjectList():void{
+    this.router.navigate(['main','projects'])
   }
 }

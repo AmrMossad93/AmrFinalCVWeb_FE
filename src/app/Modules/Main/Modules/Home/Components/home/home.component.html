@@ -1,94 +1,96 @@
-<div class="container sections-wrapper">
-  <div class="row">
-    <div class="primary col-md-8 col-sm-12 col-xs-12">
-      <app-card [cardName]="'About Me'" class="about">
-        <p *ngFor="let brief of aboutMeBriefData.data">
-          {{brief}}
-        </p>
-      </app-card>
-      <app-card [cardName]="'Latest Projects'" class="latest">
-        <div class="item featured text-center">
-          <h3 class="title"><a
-            href="https://wrapbootstrap.com/theme/delta-promote-mobile-app-effectively-WB09R23P8?ref=3wm"
-            target="_blank">{{projectListData.data[0].projectName}}</a></h3>
-          <p class="summary">{{projectListData.data[0].client}}</p>
-          <div class="featured-image">
-            <a href="https://wrapbootstrap.com/theme/delta-promote-mobile-app-effectively-WB09R23P8?ref=3wm"
-               target="_blank">
-              <img class="img-responsive project-image" [src]="projectListData.data[0].images[0]"
-                   alt="project name"/>
-            </a>
-            <div class="ribbon">
-              <div class="text">{{projectListData.data[0].type}}</div>
-            </div>
+<div class="row">
+  <div class="primary col-md-8 col-sm-12 col-xs-12">
+    <app-card [cardName]="'About Me'" class="about">
+      <p *ngFor="let brief of aboutMeBriefData.data">
+        {{brief}}
+      </p>
+    </app-card>
+    <app-card [cardName]="'Latest Projects'" class="latest">
+      <div class="item featured text-center">
+        <h3 class="title">
+          <a routerLink="/main/projects/{{projectListData.data[0].id}}">
+            {{projectListData.data[0].projectName}}
+          </a>
+        </h3>
+        <p class="summary">{{projectListData.data[0].client}}</p>
+        <div class="featured-image">
+          <a routerLink="/main/projects/{{projectListData.data[0].id}}">
+            <img class="img-responsive project-image" [src]="projectListData.data[0].images[0]"
+                 [alt]="projectListData.data[0].projectName"/>
+          </a>
+          <div class="ribbon">
+            <div class="text">{{projectListData.data[0].type}}</div>
           </div>
-
-
-          <div class="desc text-left">
-            <p>Made By {{projectListData.data[0].coreDevelopment}}</p>
-            <p>{{projectListData.data[0].projectDetail}}</p>
-          </div>
-        </div><!--//item-->
-        <hr class="divider"/>
-        <app-project-card *ngFor="let project of projectListData.data | slice:1:3"
-                          [project]="project"></app-project-card>
-      </app-card>
-
-      <app-card [cardName]="'Work Experience'" class="experience">
-        <app-experience-item *ngFor="let item of experienceData.data.reverse() | slice:0:countOfShowExperience"
-                             [experience]="item"></app-experience-item>
-        <button mat-raised-button color="primary" (click)="toggleShowMoreExperience()">
-          <i class="fa fa-external-link"></i> Show {{isShowMore ? 'More' : 'Less'}}
-        </button>
-      </app-card>
-
-    </div><!--//primary-->
-    <div class="secondary col-md-4 col-sm-12 col-xs-12">
-      <app-aside class="info" [cardName]="'Basic Information'">
-        <ul class="list-unstyled">
-          <li>
-            <i class="fa fa-map-marker"></i>{{basicInfoData.data.address}}
-          </li>
-          <li>
-            <i class="fa fa-envelope-o"></i><a
-            href="mailto:{{basicInfoData.data.email}}">{{basicInfoData.data.email}}</a>
-          </li>
-          <li>
-            <i class="fa fa-phone"></i><a href="tel:00201099049044">{{basicInfoData.data.phone}}</a>
-          </li>
-        </ul>
-      </app-aside>
-
-      <app-aside class="skills" [cardName]="'Skills'">
-        <div class="skillset">
-          <app-skill-item-card *ngFor="let skill of programmingSkillsData.data | slice:0:5"
-                               [skillName]="skill.name"
-                               [percentage]="skill.percentage"></app-skill-item-card>
-          <button mat-raised-button color="primary" (click)="viewAllProgrammingSkills()">
-            <i class="fa fa-external-link"></i> Show More Skills
-          </button>
         </div>
-      </app-aside>
 
-      <app-aside class="education" [cardName]="'Education'">
-        <app-education-item *ngFor="let education of educationData.data" [education]="education"></app-education-item>
-      </app-aside>
-      <app-aside class="languages" [cardName]="'Languages'">
-        <ul class="list-unstyled">
-          <li class="item">
-            <span class="title"><strong>Arabic : </strong></span>
-            <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i
-              class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-              class="fa fa-star"></i> </span>
-          </li><!--//item-->
-          <li class="item">
-            <span class="title"><strong>English : </strong></span>
-            <span class="level">Professional Proficiency <br class="visible-sm visible-xs"/><i
-              class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-              class="fa fa-star-half"></i></span>
-          </li><!--//item-->
-        </ul>
-      </app-aside>
-    </div>
+
+        <div class="desc text-left">
+          <p>Made By {{projectListData.data[0].coreDevelopment}}</p>
+          <p>{{projectListData.data[0].projectDetail}}</p>
+        </div>
+      </div><!--//item-->
+      <hr class="divider"/>
+      <app-project-card *ngFor="let project of projectListData.data | slice:1:3"
+                        [project]="project"></app-project-card>
+      <button mat-raised-button color="primary" (click)="onNavigateToProjectList()">
+        <i class="fa fa-external-link"></i> Show More
+      </button>
+    </app-card>
+
+    <app-card [cardName]="'Work Experience'" class="experience">
+      <app-experience-item *ngFor="let item of experienceData.data.reverse() | slice:0:countOfShowExperience"
+                           [experience]="item"></app-experience-item>
+      <button mat-raised-button color="primary" (click)="toggleShowMoreExperience()">
+        <i class="fa fa-external-link"></i> Show {{isShowMore ? 'More' : 'Less'}}
+      </button>
+    </app-card>
+
+  </div><!--//primary-->
+  <div class="secondary col-md-4 col-sm-12 col-xs-12">
+    <app-aside class="info" [cardName]="'Basic Information'">
+      <ul class="list-unstyled">
+        <li>
+          <i class="fa fa-map-marker"></i>{{basicInfoData.data.address}}
+        </li>
+        <li>
+          <i class="fa fa-envelope-o"></i><a
+          href="mailto:{{basicInfoData.data.email}}">{{basicInfoData.data.email}}</a>
+        </li>
+        <li>
+          <i class="fa fa-phone"></i><a href="tel:00201099049044">{{basicInfoData.data.phone}}</a>
+        </li>
+      </ul>
+    </app-aside>
+
+    <app-aside class="skills" [cardName]="'Skills'">
+      <div class="skillset">
+        <app-skill-item-card *ngFor="let skill of programmingSkillsData.data | slice:0:5"
+                             [skillName]="skill.name"
+                             [percentage]="skill.percentage"></app-skill-item-card>
+        <button mat-raised-button color="primary" (click)="viewAllProgrammingSkills()">
+          <i class="fa fa-external-link"></i> Show More Skills
+        </button>
+      </div>
+    </app-aside>
+
+    <app-aside class="education" [cardName]="'Education'">
+      <app-education-item *ngFor="let education of educationData.data" [education]="education"></app-education-item>
+    </app-aside>
+    <app-aside class="languages" [cardName]="'Languages'">
+      <ul class="list-unstyled">
+        <li class="item">
+          <span class="title"><strong>Arabic : </strong></span>
+          <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i
+            class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+            class="fa fa-star"></i> </span>
+        </li><!--//item-->
+        <li class="item">
+          <span class="title"><strong>English : </strong></span>
+          <span class="level">Professional Proficiency <br class="visible-sm visible-xs"/><i
+            class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+            class="fa fa-star-half"></i></span>
+        </li><!--//item-->
+      </ul>
+    </app-aside>
   </div>
 </div>

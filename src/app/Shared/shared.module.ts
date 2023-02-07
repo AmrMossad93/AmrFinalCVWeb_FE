@@ -9,6 +9,7 @@ import {SkillItemCardComponent} from './Components/Reusable/skill-item-card/skil
 import {EducationItemComponent} from './Components/Reusable/education-item/education-item.component';
 import { ExperienceItemComponent } from './Components/Reusable/experience-item/experience-item.component';
 import { ProjectCardComponent } from './Components/Reusable/project-card/project-card.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ProjectCardComponent } from './Components/Reusable/project-card/project
   ],
   imports: [
     CommonModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    RouterModule
   ]
 })
 export class SharedModule {}

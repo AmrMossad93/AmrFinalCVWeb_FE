@@ -1,0 +1,7 @@
+<app-card [cardName]="'All Projects List'" class="latest">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let project of projectListData.data ">
+      <app-project-card [project]="project"></app-project-card>
+    </div>
+  </div>
+</app-card>
