@@ -6,6 +6,8 @@ export interface IProject {
   client: string;
   category: string;
   webSiteURL: string;
+  iosLink: string;
+  androidLink: string;
   type: string;
   images: string[];
   vedioUrl: string;

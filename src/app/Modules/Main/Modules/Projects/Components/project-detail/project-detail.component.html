@@ -4,13 +4,12 @@
       {{projectDetailsData.projectName}}
     </h3>
     <p class="summary">{{projectDetailsData.client}}</p>
-    <div class="featured-image">
+    <div class="featured-image" style="width: 100%">
       <swiper style="--swiper-navigation-color: #B5B5C3;--swiper-pagination-color: #B5B5C3"
               [loop]="true"
-              [navigation]="true"
-              >
+              [navigation]="true">
         <ng-template swiperSlide *ngFor="let img of projectDetailsData.images">
-          <img [src]="img" style="width: 100%"/>
+          <img [src]="img" style=" max-height: 800px; max-width: 100%;"/>
         </ng-template>
       </swiper>
       <div class="ribbon">
@@ -21,7 +20,19 @@
 
     <div class="desc text-left">
       <p>Made By {{projectDetailsData.coreDevelopment}}</p>
+      <p>Client: {{projectDetailsData.client}}</p>
+      <p>Category: {{projectDetailsData.category}}</p>
       <p>{{projectDetailsData.projectDetail}}</p>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a mat-button [href]="projectDetailsData.webSiteURL" *ngIf="projectDetailsData.webSiteURL" target="_blank">View
+          Website</a>
+        <a mat-button [href]="projectDetailsData.iosLink" *ngIf="projectDetailsData.iosLink" target="_blank">View
+          IOS App</a>
+        <a mat-button [href]="projectDetailsData.androidLink" *ngIf="projectDetailsData.androidLink" target="_blank">View
+          Android App</a>
+      </div>
     </div>
   </div>
 </div>
