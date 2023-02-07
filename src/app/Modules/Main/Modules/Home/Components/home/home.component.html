@@ -147,25 +147,18 @@
       </app-aside>
 
       <app-aside class="education" [cardName]="'Education'">
-        <div class="item">
-          <h3 class="title"><i class="fa fa-graduation-cap"></i> MSc Psychology and Computer Science</h3>
-          <h4 class="university">University College London <span class="year">(2011-2012)</span></h4>
-        </div>
-        <div class="item">
-          <h3 class="title"><i class="fa fa-graduation-cap"></i> BSc Computer Science</h3>
-          <h4 class="university">University of Bristol <span class="year">(2008-2011)</span></h4>
-        </div>
+        <app-education-item *ngFor="let education of educationData.data" [education]="education"></app-education-item>
       </app-aside>
       <app-aside class="languages" [cardName]="'Languages'">
         <ul class="list-unstyled">
           <li class="item">
-            <span class="title"><strong>English:</strong></span>
+            <span class="title"><strong>Arabic : </strong></span>
             <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i
               class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
               class="fa fa-star"></i> </span>
           </li><!--//item-->
           <li class="item">
-            <span class="title"><strong>Spanish:</strong></span>
+            <span class="title"><strong>English : </strong></span>
             <span class="level">Professional Proficiency <br class="visible-sm visible-xs"/><i
               class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
               class="fa fa-star-half"></i></span>

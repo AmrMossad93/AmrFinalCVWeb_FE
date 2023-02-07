@@ -3,5 +3,8 @@ export const ABOUT_ME = {
   BASIC_INFO: 'basicInfo.json'
 }
 export const SKILLS = {
-  PROGRAMMING_SKILLS : 'programmingSkillsProgress.json'
+  PROGRAMMING_SKILLS: 'programmingSkillsProgress.json'
+}
+export const EDUCATION = {
+  LIST: 'education.json'
 }
