@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {NgxSpinnerModule} from "ngx-spinner";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {httpInterceptorsProviders} from "./Core/Interceptor";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {httpInterceptorsProviders} from "./Core/Interceptor";
     BrowserModule,
     AppRoutingModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [httpInterceptorsProviders],
   bootstrap: [AppComponent]

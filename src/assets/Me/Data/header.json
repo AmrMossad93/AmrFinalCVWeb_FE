@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+    "name": "Amr Mossad Saber",
+    "profileImage": "assets/Me/Images/Me.jpeg",
+    "position": "Full Stack Web & Mobile Developer",
+    "socialLinks": [
+      {
+        "fontAwesomeIcon": "fa-twitter",
+        "link": ""
+      },
+      {
+        "fontAwesomeIcon": "fa-linkedin",
+        "link": ""
+      },
+      {
+        "fontAwesomeIcon": "fa-github-alt",
+        "link": ""
+      }
+    ]
+  }
+}

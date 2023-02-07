@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {IBaseData} from "../../../../Core/Model/Interface/Base/base-data";
+import {IHeader} from "../../../../Modules/Main/Models/Interface/header";
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  @Input() headerData = {} as IHeader;
 }

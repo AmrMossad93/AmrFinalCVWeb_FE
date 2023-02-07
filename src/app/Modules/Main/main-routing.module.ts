@@ -1,11 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {MainComponent} from "./Components/main/main.component";
+import {HeaderResolver} from "./Resolvers/Header/header.resolver";
 
 const routes: Routes = [
   {
     path: '',
     component: MainComponent,
+    resolve: {
+      headerData: HeaderResolver
+    },
     children: [
       {
         path: '',
