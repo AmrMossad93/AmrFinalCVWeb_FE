@@ -6,6 +6,7 @@ import { ProjectListComponent } from './Components/project-list/project-list.com
 import { ProjectDetailComponent } from './Components/project-detail/project-detail.component';
 import {SharedModule} from "../../../../Shared/shared.module";
 import {AngularMaterialModule} from "../../../../Core/DesignModules/AngularMaterial/angular-material.module";
+import {SwiperModule} from "swiper/angular";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {AngularMaterialModule} from "../../../../Core/DesignModules/AngularMater
     CommonModule,
     ProjectsRoutingModule,
     SharedModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    SwiperModule
   ]
 })
 export class ProjectsModule { }

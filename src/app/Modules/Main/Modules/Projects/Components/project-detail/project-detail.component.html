@@ -5,8 +5,14 @@
     </h3>
     <p class="summary">{{projectDetailsData.client}}</p>
     <div class="featured-image">
-      <img class="img-responsive project-image " [src]="projectDetailsData.images[0]"
-           [alt]="projectDetailsData.projectName"/>
+      <swiper style="--swiper-navigation-color: #B5B5C3;--swiper-pagination-color: #B5B5C3"
+              [loop]="true"
+              [navigation]="true"
+              >
+        <ng-template swiperSlide *ngFor="let img of projectDetailsData.images">
+          <img [src]="img" style="width: 100%"/>
+        </ng-template>
+      </swiper>
       <div class="ribbon">
         <div class="text">{{projectDetailsData.type}}</div>
       </div>

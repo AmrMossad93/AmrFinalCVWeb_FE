@@ -1,7 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {IBaseData} from "../../../../../../Core/Model/Interface/Base/base-data";
+import SwiperCore, {FreeMode, Navigation, Thumbs} from 'swiper';
+import Swiper from "swiper";
 import {IProject} from "../../../Home/Models/Interfaces/Projects/project";
 import {ActivatedRoute} from "@angular/router";
+
+Swiper.use([FreeMode, Navigation, Thumbs]);
 
 @Component({
   selector: 'app-project-detail',

@@ -283,6 +283,7 @@ iframe {
   width: 110px;
   height: 110px;
   overflow: hidden;
+  z-index: 9;
 }
 
 .latest .featured-image .ribbon .text {
