@@ -8,6 +8,7 @@ import {AsideComponent} from './Components/Reusable/aside/aside.component';
 import {SkillItemCardComponent} from './Components/Reusable/skill-item-card/skill-item-card.component';
 import {EducationItemComponent} from './Components/Reusable/education-item/education-item.component';
 import { ExperienceItemComponent } from './Components/Reusable/experience-item/experience-item.component';
+import { ProjectCardComponent } from './Components/Reusable/project-card/project-card.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ExperienceItemComponent } from './Components/Reusable/experience-item/e
     AsideComponent,
     SkillItemCardComponent,
     EducationItemComponent,
-    ExperienceItemComponent
+    ExperienceItemComponent,
+    ProjectCardComponent
   ],
   exports: [
     HeaderComponent,
@@ -27,7 +29,8 @@ import { ExperienceItemComponent } from './Components/Reusable/experience-item/e
     AsideComponent,
     SkillItemCardComponent,
     EducationItemComponent,
-    ExperienceItemComponent
+    ExperienceItemComponent,
+    ProjectCardComponent
   ],
   imports: [
     CommonModule,

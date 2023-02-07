@@ -6,6 +6,7 @@ import {BasicInfoResolver} from "./Resolvers/AboutMe/BasicInfo/basic-info.resolv
 import {ProgrammingSkillsResolver} from "./Resolvers/Skills/ProgrammingSkills/programming-skills.resolver";
 import {EducationResolver} from "./Resolvers/Education/education.resolver";
 import {ExperienceResolver} from "./Resolvers/Experience/experience.resolver";
+import {ProjectsResolver} from "./Resolvers/Projects/projects.resolver";
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
       basicInfoData: BasicInfoResolver,
       programmingSkillsData: ProgrammingSkillsResolver,
       educationData: EducationResolver,
-      experienceData: ExperienceResolver
+      experienceData: ExperienceResolver,
+      projectListData: ProjectsResolver
     }
   }
 ];

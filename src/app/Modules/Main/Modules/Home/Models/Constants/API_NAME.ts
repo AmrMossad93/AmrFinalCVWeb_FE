@@ -11,3 +11,6 @@ export const EDUCATION = {
 export const EXPERIENCE = {
   LIST: 'experience.json'
 }
+export const PROJECT = {
+  LIST: 'projects.json'
+}

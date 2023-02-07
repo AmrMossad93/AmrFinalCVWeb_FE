@@ -7,6 +7,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {ProgrammingSkillsComponent} from "../../Shared/Dialogues/programming-skills/programming-skills.component";
 import {IEducation} from "../../Models/Interfaces/Education/education";
 import {IExperience} from "../../Models/Interfaces/Experience/experience";
+import {IProject} from "../../Models/Interfaces/Projects/project";
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
   programmingSkillsData = {} as IBaseData<IProgrammingSkills[]>;
   educationData = {} as IBaseData<IEducation[]>;
   experienceData = {} as IBaseData<IExperience[]>;
+  projectListData = {} as IBaseData<IProject[]>;
   isShowMore = true;
   countOfShowExperience: number = 3;
 
@@ -32,6 +34,7 @@ export class HomeComponent implements OnInit {
       this.programmingSkillsData = res['programmingSkillsData'];
       this.educationData = res['educationData'];
       this.experienceData = res['experienceData'];
+      this.projectListData = res['projectListData'];
     })
   }
 
