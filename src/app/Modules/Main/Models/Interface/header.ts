@@ -3,6 +3,7 @@ export interface IHeader {
   profileImage: string;
   position: string;
   socialLinks: IHeaderSocialLinks[];
+  cvPath: string;
 }
 
 export interface IHeaderSocialLinks {

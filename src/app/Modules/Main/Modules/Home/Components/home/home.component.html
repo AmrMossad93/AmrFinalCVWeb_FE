@@ -50,6 +50,9 @@
     <app-aside class="info" [cardName]="'Basic Information'">
       <ul class="list-unstyled">
         <li>
+          <i class="fa fa-map-marker"></i>{{basicInfoData.data.ksaAddress}}
+        </li>
+        <li>
           <i class="fa fa-map-marker"></i>{{basicInfoData.data.address}}
         </li>
         <li>
@@ -58,6 +61,9 @@
         </li>
         <li>
           <i class="fa fa-phone"></i><a href="tel:00201099049044">{{basicInfoData.data.phone}}</a>
+        </li>
+        <li>
+          <i class="fa fa-phone"></i><a href="tel:+966505430136">{{basicInfoData.data.ksaPhone}}</a>
         </li>
       </ul>
     </app-aside>

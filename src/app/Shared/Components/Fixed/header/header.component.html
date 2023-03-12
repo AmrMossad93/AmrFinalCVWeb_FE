@@ -10,6 +10,9 @@
         </li>
       </ul>
     </div>
-    <button class="pull-right" mat-raised-button color="primary"><i class="fa fa-paper-plane"></i> Contact Me</button>
+    <button class="pull-right" mat-raised-button color="primary" (click)="downloadURI(headerData.cvPath, 'Amr CV')">
+      <i class="fa  fa-download"></i>
+      Download My CV
+    </button>
   </div>
 </header>
