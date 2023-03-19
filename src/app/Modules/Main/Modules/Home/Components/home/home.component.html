@@ -8,25 +8,25 @@
     <app-card [cardName]="'Latest Projects'" class="latest">
       <div class="item featured text-center">
         <h3 class="title">
-          <a routerLink="/main/projects/{{projectListData.data[0].id}}">
-            {{projectListData.data[0].projectName}}
+          <a routerLink="/main/projects/{{latestProject.id}}">
+            {{latestProject.projectName}}
           </a>
         </h3>
-        <p class="summary">{{projectListData.data[0].client}}</p>
+        <p class="summary">{{latestProject.client}}</p>
         <div class="featured-image">
-          <a routerLink="/main/projects/{{projectListData.data[0].id}}">
-            <img class="img-responsive project-image" [src]="projectListData.data[0].images[0]"
-                 [alt]="projectListData.data[0].projectName"/>
+          <a routerLink="/main/projects/{{latestProject.id}}">
+            <img class="img-responsive project-image" [src]="latestProject.images[0]"
+                 [alt]="latestProject.projectName"/>
           </a>
           <div class="ribbon">
-            <div class="text">{{projectListData.data[0].type}}</div>
+            <div class="text">{{latestProject.type}}</div>
           </div>
         </div>
 
 
         <div class="desc text-left">
-          <p>Made By {{projectListData.data[0].coreDevelopment}}</p>
-          <p>{{projectListData.data[0].projectDetail}}</p>
+          <p>Made By {{latestProject.coreDevelopment}}</p>
+          <p>{{latestProject.projectDetail}}</p>
         </div>
       </div>
       <hr class="divider"/>

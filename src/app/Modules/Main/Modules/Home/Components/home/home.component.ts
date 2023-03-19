@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   educationData = {} as IBaseData<IEducation[]>;
   experienceData = {} as IBaseData<IExperience[]>;
   projectListData = {} as IBaseData<IProject[]>;
+  latestProject = {} as IProject;
   isShowMore = true;
   countOfShowExperience: number = 3;
 
@@ -35,6 +36,8 @@ export class HomeComponent implements OnInit {
       this.educationData = res['educationData'];
       this.experienceData = res['experienceData'];
       this.projectListData = res['projectListData'];
+      // @ts-ignore
+      this.latestProject = this.projectListData.data.at(-1);
     })
   }
 
@@ -57,7 +60,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  onNavigateToProjectList():void{
-    this.router.navigate(['main','projects'])
+  onNavigateToProjectList(): void {
+    this.router.navigate(['main', 'projects'])
   }
 }
