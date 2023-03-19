@@ -30,7 +30,7 @@
         </div>
       </div>
       <hr class="divider"/>
-      <app-project-card *ngFor="let project of projectListData.data | slice:1:3"
+      <app-project-card *ngFor="let project of projectListData.data.reverse() | slice:1:3"
                         [project]="project"></app-project-card>
       <button mat-raised-button color="primary" (click)="onNavigateToProjectList()">
         <i class="fa fa-external-link"></i> Show More
