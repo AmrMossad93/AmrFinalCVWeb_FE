@@ -10,6 +10,9 @@ import {IProject} from "../../../Home/Models/Interfaces/Projects/project";
 })
 export class ProjectListComponent implements OnInit {
   projectListData = {} as IBaseData<IProject[]>;
+  categories: string[] = []
+  selectedCategory: string = 'All';
+  filteredProjects: IProject[] = []
 
   constructor(private activatedRoute: ActivatedRoute) {
   }
@@ -17,6 +20,21 @@ export class ProjectListComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.data.subscribe(res => {
       this.projectListData = res['projectListData'];
+      this.filteredProjects = this.projectListData.data;
+      this.categories = ['All', ...new Set(this.projectListData.data.map(c => c.category))]
     })
+  }
+
+  checkSelectedCategory(category: string): boolean {
+    return this.selectedCategory === category
+  }
+
+  filterCategory(category: string): void {
+    this.selectedCategory = category;
+    if (category === 'All') {
+      this.filteredProjects = this.projectListData.data;
+    } else {
+      this.filteredProjects = this.projectListData.data.filter(c => c.category === category)
+    }
   }
 }

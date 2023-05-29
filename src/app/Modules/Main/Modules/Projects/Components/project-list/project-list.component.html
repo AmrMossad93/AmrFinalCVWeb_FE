@@ -1,6 +1,13 @@
+<app-card [cardName]="'Categories'" class="latest">
+  <button mat-raised-button class="margin-5" *ngFor="let category of categories"
+          [ngClass]="{'mat-primary': checkSelectedCategory(category)}" (click)="filterCategory(category)">
+    {{category}}
+  </button>
+</app-card>
+
 <app-card [cardName]="'All Projects List'" class="latest">
   <div class="row">
-    <div class="col-md-6" *ngFor="let project of projectListData.data ">
+    <div class="col-md-6" *ngFor="let project of filteredProjects">
       <app-project-card [project]="project"></app-project-card>
     </div>
   </div>
