@@ -532,6 +532,24 @@
         "assets/Me/Images/Projects/P2P/5.png"
       ],
       "vedioUrl": null
+    },
+    {
+      "id": 33,
+      "projectName": "Demand Commite",
+      "projectDetail": "It Was An App For Arranging Meetings For STC Clients Using Outlook Calendar Management Tools",
+      "type": "Web",
+      "coreDevelopment": "HTML5 , CSS3 , Angular 14  , Bootstrap , TypeScript , Angular Material",
+      "client": "STC",
+      "category": "Meetings",
+      "webSiteURL": null,
+      "images": [
+        "assets/Me/Images/Projects/Demand/1.png",
+        "assets/Me/Images/Projects/Demand/2.png",
+        "assets/Me/Images/Projects/Demand/3.png",
+        "assets/Me/Images/Projects/Demand/4.png",
+        "assets/Me/Images/Projects/Demand/5.png"
+      ],
+      "vedioUrl": null
     }
   ]
 }
