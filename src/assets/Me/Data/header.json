@@ -3,8 +3,8 @@
   "errorMessage": null,
   "data": {
     "name": "Amr Mossad Saber",
-    "profileImage": "assets/Me/Images/Me.jpeg",
-    "position": "Full Stack Web & Mobile Developer",
+    "profileImage": "assets/Me/Images/AmrMossad.jpeg",
+    "position": "FrontEnd Web & Mobile Developer",
     "socialLinks": [
       {
         "fontAwesomeIcon": "fa-linkedin",
