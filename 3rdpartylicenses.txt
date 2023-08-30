@@ -147,6 +147,9 @@ OFL-1.1
 ngx-spinner
 MIT
 
+primeng
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
