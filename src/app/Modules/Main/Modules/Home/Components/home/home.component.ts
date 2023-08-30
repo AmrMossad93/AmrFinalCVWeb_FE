@@ -9,6 +9,7 @@ import {IEducation} from "../../Models/Interfaces/Education/education";
 import {IExperience} from "../../Models/Interfaces/Experience/experience";
 import {IProject} from "../../Models/Interfaces/Projects/project";
 import {ICertificate} from "../../Models/Interfaces/Certificate/certificate";
+import {ImageGalleryComponent} from "../../Shared/Dialogues/image-gallery/image-gallery.component";
 
 @Component({
   selector: 'app-home',
@@ -68,6 +69,20 @@ export class HomeComponent implements OnInit {
   }
 
   getCertificate(certificate: ICertificate): void {
-    console.log(certificate)
+    this.dialog.open(ImageGalleryComponent, {
+      width: '70vw',
+      maxHeight: '95vh',
+      maxWidth: '640px',
+      data: {
+        imageName: 'Certificates',
+        imageList: this.certificateData.data.map(c => {
+          return {
+            name: c.certificateName,
+            path: c.certificatePath
+          }
+        }),
+        activeIndex: this.certificateData.data.findIndex(c => c === certificate)
+      }
+    });
   }
 }

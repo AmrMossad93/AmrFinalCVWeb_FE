@@ -62,10 +62,6 @@ const angularMaterialModule = [
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    angularMaterialModule
-  ],
   exports: [
     angularMaterialModule
   ]

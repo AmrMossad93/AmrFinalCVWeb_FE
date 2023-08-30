@@ -12,6 +12,8 @@ import { ProjectCardComponent } from './Components/Reusable/project-card/project
 import {RouterModule} from "@angular/router";
 import { AlertComponent } from './Components/Reusable/alert/alert.component';
 import { CertificateItemComponent } from './Components/Reusable/certificate-item/certificate-item.component';
+import { GalleriaComponent } from './Components/Reusable/galleria/galleria.component';
+import {PrimeNgModule} from "../Core/DesignModules/PrimeNg/prime-ng.module";
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { CertificateItemComponent } from './Components/Reusable/certificate-item
     ExperienceItemComponent,
     ProjectCardComponent,
     AlertComponent,
-    CertificateItemComponent
+    CertificateItemComponent,
+    GalleriaComponent
   ],
   exports: [
     HeaderComponent,
@@ -37,12 +40,14 @@ import { CertificateItemComponent } from './Components/Reusable/certificate-item
     ExperienceItemComponent,
     ProjectCardComponent,
     AlertComponent,
-    CertificateItemComponent
+    CertificateItemComponent,
+    GalleriaComponent
   ],
   imports: [
     CommonModule,
     AngularMaterialModule,
-    RouterModule
+    RouterModule,
+    PrimeNgModule
   ]
 })
 export class SharedModule {}

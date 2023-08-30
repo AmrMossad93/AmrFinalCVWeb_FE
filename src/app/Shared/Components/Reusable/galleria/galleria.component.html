@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col">
+    <p-galleria [responsiveOptions]="responsiveOptions" [numVisible]="5"
+                [containerStyle]="{ 'max-width': '640px' }"
+                [(activeIndex)]="activeIndex" [value]="images">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.path" style="width: 100%;"/>
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.path" style="width: 50%;"/>
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+</div>
