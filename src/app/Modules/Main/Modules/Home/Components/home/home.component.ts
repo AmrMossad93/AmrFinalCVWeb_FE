@@ -8,6 +8,7 @@ import {ProgrammingSkillsComponent} from "../../Shared/Dialogues/programming-ski
 import {IEducation} from "../../Models/Interfaces/Education/education";
 import {IExperience} from "../../Models/Interfaces/Experience/experience";
 import {IProject} from "../../Models/Interfaces/Projects/project";
+import {ICertificate} from "../../Models/Interfaces/Certificate/certificate";
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,7 @@ export class HomeComponent implements OnInit {
   latestProject = {} as IProject;
   isShowMore = true;
   countOfShowExperience: number = 3;
-
+  certificateData = {} as IBaseData<ICertificate[]>
   constructor(private activatedRoute: ActivatedRoute, public dialog: MatDialog, private router: Router) {
   }
 
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
       this.educationData = res['educationData'];
       this.experienceData = res['experienceData'];
       this.projectListData = res['projectListData'];
+      this.certificateData = res['certificateData'];
       // @ts-ignore
       this.latestProject = this.projectListData.data.at(-1);
     })

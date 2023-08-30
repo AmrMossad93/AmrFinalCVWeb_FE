@@ -11,6 +11,7 @@ import { ExperienceItemComponent } from './Components/Reusable/experience-item/e
 import { ProjectCardComponent } from './Components/Reusable/project-card/project-card.component';
 import {RouterModule} from "@angular/router";
 import { AlertComponent } from './Components/Reusable/alert/alert.component';
+import { CertificateItemComponent } from './Components/Reusable/certificate-item/certificate-item.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AlertComponent } from './Components/Reusable/alert/alert.component';
     EducationItemComponent,
     ExperienceItemComponent,
     ProjectCardComponent,
-    AlertComponent
+    AlertComponent,
+    CertificateItemComponent
   ],
   exports: [
     HeaderComponent,
@@ -34,7 +36,8 @@ import { AlertComponent } from './Components/Reusable/alert/alert.component';
     EducationItemComponent,
     ExperienceItemComponent,
     ProjectCardComponent,
-    AlertComponent
+    AlertComponent,
+    CertificateItemComponent
   ],
   imports: [
     CommonModule,

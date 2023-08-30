@@ -8,6 +8,9 @@ export const SKILLS = {
 export const EDUCATION = {
   LIST: 'education.json'
 }
+export const CERTIFICATE = {
+  LIST: 'certificates.json'
+}
 export const EXPERIENCE = {
   LIST: 'experience.json'
 }

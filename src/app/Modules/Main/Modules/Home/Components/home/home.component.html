@@ -82,6 +82,12 @@
     <app-aside class="education" [cardName]="'Education'">
       <app-education-item *ngFor="let education of educationData.data" [education]="education"></app-education-item>
     </app-aside>
+
+    <app-aside class="education" [cardName]="'Certificates'">
+      <app-certificate-item *ngFor="let certificate of certificateData.data"
+                            [certificate]="certificate"></app-certificate-item>
+    </app-aside>
+
     <app-aside class="languages" [cardName]="'Languages'">
       <ul class="list-unstyled">
         <li class="item">
