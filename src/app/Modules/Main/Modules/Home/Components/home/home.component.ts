@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
   isShowMore = true;
   countOfShowExperience: number = 3;
   certificateData = {} as IBaseData<ICertificate[]>
+
   constructor(private activatedRoute: ActivatedRoute, public dialog: MatDialog, private router: Router) {
   }
 
@@ -64,5 +65,9 @@ export class HomeComponent implements OnInit {
 
   onNavigateToProjectList(): void {
     this.router.navigate(['main', 'projects'])
+  }
+
+  getCertificate(certificate: ICertificate): void {
+    console.log(certificate)
   }
 }
