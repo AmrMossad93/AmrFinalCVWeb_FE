@@ -8,4 +8,8 @@ import {ICertificate} from "../../../../Modules/Main/Modules/Home/Models/Interfa
 })
 export class CertificateItemComponent {
   @Input() certificate = {} as ICertificate;
+
+  onEmitCertificate(): void {
+    console.log(this.certificate)
+  }
 }
