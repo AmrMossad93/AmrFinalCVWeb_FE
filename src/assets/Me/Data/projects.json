@@ -550,6 +550,55 @@
         "assets/Me/Images/Projects/Demand/5.png"
       ],
       "vedioUrl": null
+    },
+    {
+      "id": 34,
+      "projectName": "Connect V1",
+      "projectDetail": "It Is The Web Portal for 3D Conversions, Radiology Reports, Treatment Plans and Surgical Guides  For The Orders Where The Doctor Can Order And Aligner And Receive It In The Place He Want.",
+      "type": "Web",
+      "coreDevelopment": "HTML5 , CSS3 , Angular 7 , Bootstrap 4, TypeScript , Fontawesome",
+      "client": "3D-Diagnostics",
+      "category": "Medical",
+      "webSiteURL": "https://3ddiagnostix.com/newconnect-ui/",
+      "images": [
+        "assets/Me/Images/Projects/Connect/Connect-1.PNG",
+        "assets/Me/Images/Projects/Connect/Connect-2.PNG",
+        "assets/Me/Images/Projects/Connect/Connect-3.PNG",
+        "assets/Me/Images/Projects/Connect/Connect-4.PNG",
+        "assets/Me/Images/Projects/Connect/Connect-5.PNG",
+        "assets/Me/Images/Projects/Connect/Connect-6.PNG",
+        "assets/Me/Images/Projects/Connect/Connect-7.PNG"
+      ],
+      "videoUrl": null
+    },
+    {
+      "id": 35,
+      "projectName": "iSmileOn",
+      "projectDetail": "It Is The Medical App For Doctors Or Scanning Centers To View The Medical Aligners Order And Refinements For The Teeth Where The Doctor Can Order And Aligner And Receive It In The Place He Want.",
+      "type": "Web",
+      "coreDevelopment": "HTML5 , CSS3 , Angular 11 , PrimNg , Bootstrap 5, TypeScript , Fontawesome , Material Icons, Three.js",
+      "client": "3D-Diagnostics",
+      "category": "Medical",
+      "webSiteURL": "https://www.3ddx.com/ismile",
+      "images": [
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn0.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn1.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn2.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn3.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn4.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn5.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn6.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn7.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn8.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn9.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn10.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn11.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn12.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn13.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn14.PNG",
+        "assets/Me/Images/Projects/iSmileOn/iSMileOn15.PNG"
+      ],
+      "videoUrl": null
     }
   ]
 }
