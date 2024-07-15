@@ -1,0 +1,38 @@
+<section id="resume" class="resume section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Education</h3>
+        @for (education of educationData.data; track education) {
+          <div class="resume-item">
+            <h4>{{ education.name }}</h4>
+            <h5>{{ education.from }} - {{ education.to }}</h5>
+            <p><em>{{ education.department }}</em></p>
+            <p>
+              {{ education.distribution }}
+            </p>
+          </div>
+        }
+      </div>
+
+      <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">Professional Experience</h3>
+        @for (prof of experienceData.data; track prof) {
+          <div class="resume-item">
+            <h4>{{ prof.position }}</h4>
+            <h5>{{ prof.from }} - {{ prof.to }}</h5>
+            <p><em>{{ prof.company }}</em></p>
+            <ul>
+              <li>
+                {{ prof.distribution }}
+              </li>
+            </ul>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,10 +3,12 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {NgxSpinnerModule} from "ngx-spinner";
+import {SharedModule} from "./Shared/shared.module";
+import {NgxSpinnerComponent} from "ngx-spinner";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {httpInterceptorsProviders} from "./Core/Interceptor";
 import {HttpClientModule} from "@angular/common/http";
+import {httpInterceptorsProviders} from "./Core/Interceptor";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -15,9 +17,11 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxSpinnerModule,
+    SharedModule,
+    NgxSpinnerComponent,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   providers: [httpInterceptorsProviders],
   bootstrap: [AppComponent]

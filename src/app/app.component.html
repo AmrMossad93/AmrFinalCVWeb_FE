@@ -1,3 +1,12 @@
-<router-outlet></router-outlet>
-<ngx-spinner bdColor="rgba(218, 227, 230, 0.8)" size="medium" color="#778492" type="cube-transition" [fullScreen]="true">
-</ngx-spinner>
+<app-header></app-header>
+<main class="main">
+  <router-outlet (window:resize)="onResize($event)"/>
+</main>
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+  class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<ngx-spinner bdColor="rgba(218, 227, 230, 0.8)" size="medium" color="#0563bb" type="ball-circus"
+             [fullScreen]="true"></ngx-spinner>
+<!--<app-footer></app-footer>-->

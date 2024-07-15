@@ -1,0 +1,87 @@
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+  <div class="container">
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a routerLink="/main/home">Home</a></li>
+        <li class="current">{{ projectDetailsData.projectName }}</li>
+      </ol>
+    </nav>
+    <h1>{{ projectDetailsData.projectName }}</h1>
+  </div>
+</div><!-- End Page Title -->
+
+<!-- Portfolio Details Section -->
+<section id="portfolio-details" class="portfolio-details section">
+
+  <div class="container" data-aos="fade-up">
+
+    <div class="portfolio-details-slider swiper init-swiper">
+
+      <div class="swiper-wrapper align-items-center text-center">
+        @for (image of projectDetailsData.images; track image) {
+          <div class="swiper-slide " [ngClass]="{'text-center': projectDetailsData.type === 'Mobile'}">
+            <img [src]="image" [ngClass]="{'w-25': projectDetailsData.type === 'Mobile', 'w-50': responsiveService.isMobile}" alt="">
+          </div>
+        }
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="row justify-content-between gy-4 mt-4">
+
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="portfolio-description">
+          <h2>This is an example of {{ projectDetailsData.projectName }} details</h2>
+          <p>
+            {{ projectDetailsData.projectDetail }}
+          </p>
+
+          <h2>This is tools used for {{ projectDetailsData.projectName }}</h2>
+          <p>
+            {{ projectDetailsData.coreDevelopment }}
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-info">
+          <h3>Project information</h3>
+          <ul>
+            <li><strong>Category</strong> {{ projectDetailsData.category }}</li>
+            <li><strong>Client</strong> {{ projectDetailsData.client }}</li>
+            <li><strong>Project type</strong> {{ projectDetailsData.type }}</li>
+            @if (projectDetailsData.webSiteURL) {
+              <li *ngIf="projectDetailsData.type === 'Web'"><strong>Project URL</strong> <a
+                [href]="projectDetailsData.webSiteURL">
+                {{ projectDetailsData.webSiteURL }}
+              </a>
+              </li>
+              <li *ngIf="projectDetailsData.type === 'Web'"><a [href]="projectDetailsData.webSiteURL"
+                                                               class="btn-visit align-self-start">Visit
+                Website</a></li>
+            }
+            @if (projectDetailsData.iosLink) {
+              <li *ngIf="projectDetailsData.type === 'Mobile'"><a [href]="projectDetailsData.androidLink"
+                                                                  class="btn-visit align-self-start">
+                Google Play
+              </a></li>
+              <li *ngIf="projectDetailsData.type === 'Mobile'"><a [href]="projectDetailsData.iosLink"
+                                                                  class="btn-visit align-self-start">
+                App Store
+              </a></li>
+            }
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+

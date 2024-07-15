@@ -1,18 +1,22 @@
-<header class="header">
-  <div class="container">
-    <img class="profile-image img-responsive pull-left" [src]="headerData.profileImage" [alt]="headerData.name"/>
-    <div class="profile-content pull-left">
-      <h1 class="name">{{headerData.name}}</h1>
-      <h2 class="desc">{{headerData.position}}</h2>
-      <ul class="social list-inline">
-        <li *ngFor="let social of headerData.socialLinks">
-          <a [href]="social.link" target="_blank"><i class="fa {{social.fontAwesomeIcon}}"></i></a>
-        </li>
-      </ul>
-    </div>
-    <button class="pull-right" mat-raised-button color="primary" (click)="downloadURI(headerData.cvPath, 'FrontEnd Developer - Amr Mossad CV')">
-      <i class="fa  fa-download"></i>
-      Download My CV
-    </button>
-  </div>
+<header id="header" class="header d-flex flex-column justify-content-center">
+
+  <i class="header-toggle d-xl-none bi bi-list"></i>
+
+  <nav id="navmenu" class="navmenu">
+    <ul>
+      <li><a routerLink="/main/home" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><i
+        class="bi bi-house navicon"></i><span>Home</span></a></li>
+      <li><a routerLink="/main/about-me" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><i
+        class="bi bi-person navicon"></i><span>About</span></a></li>
+      <li><a routerLink="/main/resume" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><i
+        class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+      <li><a routerLink="/main/portfolio" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><i
+        class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+      <li><a routerLink="/main/services" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><i
+        class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+      <li><a routerLink="/main/contact-us" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><i
+        class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+    </ul>
+  </nav>
+
 </header>

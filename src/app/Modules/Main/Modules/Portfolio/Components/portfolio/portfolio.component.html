@@ -1,0 +1,44 @@
+<section id="portfolio" class="portfolio section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+  </div>
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <ul class="portfolio-filters " data-aos="fade-up" data-aos-delay="100">
+        <li *ngFor="let category of categories" [ngClass]="{'filter-active': checkSelectedCategory(category)}"
+            (click)="filterCategory(category)">{{ category }}
+        </li>
+      </ul>
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        @for (project of filteredProjects; track project) {
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item fade-in">
+            <div class="card w-100">
+              <img class="card-img-top" [src]="project.images[0]" [alt]="project.projectName">
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{ project.projectName }}
+                </h5>
+                <p class="card-text ">
+                  <span class="text-muted">
+                    {{ project.type }} -  {{ project.category }} - {{ project.client }}
+                  </span>
+
+                </p>
+                <a routerLink="./{{project.id}}" class="btn btn-outline-primary btn-sm float-end">Go see more</a>
+              </div>
+            </div>
+          </div>
+        }
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
