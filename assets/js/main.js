@@ -12,30 +12,28 @@
   /**
    * Header toggle
    */
-  document.addEventListener('DOMContentLoaded', function() {
-    const headerToggleBtn = document.querySelector('.header-toggle');
+  const headerToggleBtn = document.querySelector('.header-toggle');
 
-    function headerToggle() {
-      document.querySelector('#header').classList.toggle('header-show');
-      headerToggleBtn.classList.toggle('bi-list');
-      headerToggleBtn.classList.toggle('bi-x');
-    }
+  function headerToggle() {
+    document.querySelector('#header').classList.toggle('header-show');
+    headerToggleBtn.classList.toggle('bi-list');
+    headerToggleBtn.classList.toggle('bi-x');
+  }
 
-    if (headerToggleBtn) {
-      headerToggleBtn.addEventListener('click', headerToggle);
-    } else {
-      console.error('headerToggleBtn is null');
-    }
+  if (headerToggleBtn) {
+    headerToggleBtn.addEventListener('click', headerToggle);
+  } else {
+    console.error('headerToggleBtn is null');
+  }
 
-    /**
-     * Hide mobile nav on same-page/hash links
-     */
-    document.querySelectorAll('#navmenu a').forEach(navmenu => {
-      navmenu.addEventListener('click', () => {
-        if (document.querySelector('.header-show')) {
-          headerToggle();
-        }
-      });
+  /**
+   * Hide mobile nav on same-page/hash links
+   */
+  document.querySelectorAll('#navmenu a').forEach(navmenu => {
+    navmenu.addEventListener('click', () => {
+      if (document.querySelector('.header-show')) {
+        headerToggle();
+      }
     });
   });
 
