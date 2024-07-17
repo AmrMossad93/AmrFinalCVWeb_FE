@@ -3,27 +3,27 @@
   "errorMessage": null,
   "data": {
     "name": "Amr Mossad Saber",
-    "profileImage": "assets/img/Amr-Event.jpeg",
-    "positions": ["FrontEnd Developer", "Mobile Developer", "Angular Developer" , "Ionic Developer", "Freelancer", "Software Engineer"],
+    "profileImage": "assets/Me/Images/AmrMossad.jpeg",
+    "position": "FrontEnd Web & Mobile Developer",
     "socialLinks": [
       {
-        "fontAwesomeIcon": "bi bi-linkedin",
+        "fontAwesomeIcon": "fa-linkedin",
         "link": "https://www.linkedin.com/in/amr-mossad-209976158/"
       },
       {
-        "fontAwesomeIcon": "bi bi-github",
+        "fontAwesomeIcon": "fa-github-alt",
         "link": "https://github.com/AmrMossad93"
       },
       {
-        "fontAwesomeIcon": "bi bi-facebook",
+        "fontAwesomeIcon": "fa-facebook",
         "link": "https://www.facebook.com/amr.mossad.12979/"
       },
       {
-        "fontAwesomeIcon": "bi bi-instagram",
+        "fontAwesomeIcon": "fa-instagram",
         "link": "https://www.instagram.com/eng.amrmossad2/"
       },
       {
-        "fontAwesomeIcon": "bi bi-twitter-x",
+        "fontAwesomeIcon": "fa-twitter",
         "link": "https://twitter.com/AmrMossad8"
       }
     ],
