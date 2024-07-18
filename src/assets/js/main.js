@@ -12,33 +12,48 @@
   /**
    * Header toggle
    */
-  document.addEventListener('DOMContentLoaded', function() {
+  window.onload = function () {
+    console.log('All resources finished loading');
+
     const headerToggleBtn = document.querySelector('.header-toggle');
+    const header = document.querySelector('#header');
+
+    if (!headerToggleBtn) {
+      console.error('Header toggle button not found');
+      return;
+    }
+
+    if (!header) {
+      console.error('Header element not found');
+      return;
+    }
 
     function headerToggle() {
-      document.querySelector('#header').classList.toggle('header-show');
+      header.classList.toggle('header-show');
       headerToggleBtn.classList.toggle('bi-list');
       headerToggleBtn.classList.toggle('bi-x');
     }
 
-    if (headerToggleBtn) {
-      headerToggleBtn.addEventListener('click', headerToggle);
-    } else {
-      console.error('headerToggleBtn is null');
-    }
+    headerToggleBtn.addEventListener('click', headerToggle);
 
     /**
      * Hide mobile nav on same-page/hash links
      */
-    document.querySelectorAll('#navmenu a').forEach(navmenu => {
+    const navMenuLinks = document.querySelectorAll('#navmenu a');
+
+    if (navMenuLinks.length === 0) {
+      console.error('Nav menu links not found');
+      return;
+    }
+
+    navMenuLinks.forEach(navmenu => {
       navmenu.addEventListener('click', () => {
-        if (document.querySelector('.header-show')) {
+        if (header.classList.contains('header-show')) {
           headerToggle();
         }
       });
     });
-  });
-
+  };
   /**
    * Toggle mobile nav dropdowns
    */
@@ -64,30 +79,30 @@
   /**
    * Scroll top button
    */
-  document.addEventListener('DOMContentLoaded', function() {
-    let scrollTop = document.querySelector('.scroll-top');
-
-    function toggleScrollTop() {
-      if (scrollTop) {
-        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-      }
-    }
-
-    if (scrollTop) {
-      scrollTop.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-
-      window.addEventListener('load', toggleScrollTop);
-      document.addEventListener('scroll', toggleScrollTop);
-    } else {
-      console.error('scrollTop element is null');
-    }
-  });
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   let scrollTop = document.querySelector('.scroll-top');
+  //
+  //   function toggleScrollTop() {
+  //     if (scrollTop) {
+  //       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+  //     }
+  //   }
+  //
+  //   if (scrollTop) {
+  //     scrollTop.addEventListener('click', (e) => {
+  //       e.preventDefault();
+  //       window.scrollTo({
+  //         top: 0,
+  //         behavior: 'smooth'
+  //       });
+  //     });
+  //
+  //     window.addEventListener('load', toggleScrollTop);
+  //     document.addEventListener('scroll', toggleScrollTop);
+  //   } else {
+  //     console.error('scrollTop element is null');
+  //   }
+  // });
 
   /**
    * Animation on scroll function and init
