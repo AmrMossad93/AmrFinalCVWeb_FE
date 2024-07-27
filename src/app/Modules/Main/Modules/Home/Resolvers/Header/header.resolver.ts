@@ -7,16 +7,15 @@ import {
 import {Observable, of} from 'rxjs';
 import {IHeader} from "../../Models/Interface/header";
 import {HeaderService} from "../../Service/Header/header.service";
-import {IBaseData} from "../../../../../../Core/Model/Interface/Base/base-data";
 
 @Injectable({
   providedIn: 'root'
 })
-export class HeaderResolver implements Resolve<IBaseData<IHeader>> {
+export class HeaderResolver implements Resolve<IHeader> {
   constructor(private headerService: HeaderService) {
   }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IBaseData<IHeader>> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IHeader> {
     return this.headerService.getHeader()
   }
 }

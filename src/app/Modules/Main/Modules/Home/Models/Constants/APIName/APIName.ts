@@ -1,1 +1,1 @@
-export const HEADER_API = 'header.json';
+export const HEADER_API = 'header';

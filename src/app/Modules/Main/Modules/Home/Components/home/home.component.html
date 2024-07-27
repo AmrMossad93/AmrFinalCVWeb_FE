@@ -1,13 +1,13 @@
 <section id="hero" class="hero section light-background">
-  <img [src]="headerData.data.profileImage" [alt]="headerData.data.name">
+  <img [src]="headerData.profileImage" [alt]="headerData.name">
   <div class="container" data-aos="zoom-out">
     <div class="row justify-content-center">
       <div class="col-lg-9">
-        <h2>{{ headerData.data.name }}</h2>
+        <h2>{{ headerData.name }}</h2>
         <p>I'm <span class="typed">Software Engineer</span><span
           class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
         <div class="social-links">
-          <a *ngFor="let social of headerData.data.socialLinks" [href]="social.link"><i
+          <a *ngFor="let social of headerData.socialLinks" [href]="social.link"><i
             [class]="social.fontAwesomeIcon"></i></a>
         </div>
       </div>

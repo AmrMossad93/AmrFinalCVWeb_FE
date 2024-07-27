@@ -14,4 +14,8 @@ export class DataService {
   get(API_NAME: string): Observable<any> {
     return this.httpClient.get(environment.jsonFilesEndPoint + API_NAME);
   }
+
+  getAPI(API_NAME: string): Observable<any> {
+    return this.httpClient.get(environment.endPointURL + API_NAME);
+  }
 }

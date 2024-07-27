@@ -13,7 +13,7 @@ export class HeaderService {
   constructor(private dataService: DataService) {
   }
 
-  getHeader(): Observable<IBaseData<IHeader>> {
-    return this.dataService.get(HEADER_API);
+  getHeader(): Observable<IHeader> {
+    return this.dataService.getAPI(HEADER_API);
   }
 }
