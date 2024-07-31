@@ -1,21 +1,18 @@
 import { Injectable } from '@angular/core';
 import {
-  Router, Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
+  Resolve
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import {EducationService} from "../../Services/Education/education.service";
-import {IBaseData} from "../../../../../../Core/Model/Interface/Base/base-data";
 import {IEducation} from "../../Model/Interface/Education/education";
 
 @Injectable({
   providedIn: 'root'
 })
-export class EducationResolver implements Resolve<IBaseData<IEducation[]>> {
+export class EducationResolver implements Resolve<IEducation[]> {
   constructor(private educationService:EducationService) {
   }
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IBaseData<IEducation[]>> {
+  resolve(): Observable<IEducation[]> {
     return this.educationService.getEducationList()
   }
 }

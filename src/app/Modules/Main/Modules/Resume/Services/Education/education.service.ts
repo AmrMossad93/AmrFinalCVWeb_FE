@@ -13,7 +13,7 @@ export class EducationService {
   constructor(private dataService: DataService) {
   }
 
-  getEducationList(): Observable<IBaseData<IEducation[]>> {
-    return this.dataService.get(EDUCATION.LIST)
+  getEducationList(): Observable<IEducation[]> {
+    return this.dataService.getAPI(EDUCATION.LIST)
   }
 }

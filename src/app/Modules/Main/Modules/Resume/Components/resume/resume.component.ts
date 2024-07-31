@@ -10,7 +10,7 @@ import {IExperience} from "../../Model/Interface/Experience/experience";
   styleUrl: './resume.component.scss'
 })
 export class ResumeComponent implements OnInit {
-  educationData = {} as IBaseData<IEducation[]>;
+  educationData = [] as IEducation[];
   experienceData = {} as IBaseData<IExperience[]>;
 
   constructor(private activatedRoute: ActivatedRoute) {

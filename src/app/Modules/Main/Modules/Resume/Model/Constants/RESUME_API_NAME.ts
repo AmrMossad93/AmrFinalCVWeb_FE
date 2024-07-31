@@ -1,5 +1,5 @@
 export const EDUCATION = {
-  LIST: 'education.json'
+  LIST: 'education'
 }
 export const EXPERIENCE = {
   LIST: 'experience.json'

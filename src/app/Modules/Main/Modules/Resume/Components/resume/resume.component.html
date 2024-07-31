@@ -6,10 +6,10 @@
     <div class="row">
       <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
         <h3 class="resume-title">Education</h3>
-        @for (education of educationData.data; track education) {
+        @for (education of educationData; track education) {
           <div class="resume-item">
             <h4>{{ education.name }}</h4>
-            <h5>{{ education.from }} - {{ education.to }}</h5>
+            <h5>{{ education.date_from }} - {{ education.date_to }}</h5>
             <p><em>{{ education.department }}</em></p>
             <p>
               {{ education.distribution }}
