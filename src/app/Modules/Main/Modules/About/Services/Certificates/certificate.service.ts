@@ -13,7 +13,7 @@ export class CertificateService {
   constructor(private dataService: DataService) {
   }
 
-  getCertificateList(): Observable<IBaseData<ICertificate[]>> {
-    return this.dataService.get(CERTIFICATE.LIST)
+  getCertificateList(): Observable<ICertificate[]> {
+    return this.dataService.getAPI(CERTIFICATE.LIST)
   }
 }

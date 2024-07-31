@@ -13,7 +13,7 @@ export class SkillsService {
   constructor(private dataService: DataService) {
   }
 
-  getProgrammingSkills(): Observable<IBaseData<IProgrammingSkills[]>> {
-    return this.dataService.get(SKILLS.PROGRAMMING_SKILLS)
+  getProgrammingSkills(): Observable<IProgrammingSkills[]> {
+    return this.dataService.getAPI(SKILLS.PROGRAMMING_SKILLS)
   }
 }

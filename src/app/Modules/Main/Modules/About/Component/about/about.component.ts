@@ -8,6 +8,7 @@ import {ICertificate} from "../../Model/Interface/Certificate/certificate";
 // @ts-ignore
 import Lity from 'lity';
 import {Autoplay, FreeMode, Navigation, Thumbs} from "swiper/modules";
+import {IAboutMe} from "../../Model/Interface/AboutMe/about-me";
 Swiper.use([FreeMode, Navigation, Thumbs, Autoplay]);
 @Component({
   selector: 'app-about',
@@ -15,10 +16,10 @@ Swiper.use([FreeMode, Navigation, Thumbs, Autoplay]);
   styleUrl: './about.component.scss'
 })
 export class AboutComponent implements OnInit {
-  aboutMeBriefData = {} as IBaseData<string[]>;
-  basicInfoData = {} as IBaseData<IBasicInfo>;
-  programmingSkillsData = {} as IBaseData<IProgrammingSkills[]>;
-  certificateData = {} as IBaseData<ICertificate[]>
+  aboutMeBriefData = {} as IAboutMe;
+  basicInfoData = {} as IBasicInfo;
+  programmingSkillsData = {} as IProgrammingSkills[];
+  certificateData = {} as ICertificate[]
   swiper!: Swiper;
 
   constructor(private activatedRoute: ActivatedRoute) {

@@ -1,10 +1,10 @@
 export const ABOUT_ME = {
-  BRIEF: 'aboutMe.json',
-  BASIC_INFO: 'basicInfo.json'
+  BRIEF: 'about-me',
+  BASIC_INFO: 'basic-info'
 }
 export const SKILLS = {
-  PROGRAMMING_SKILLS: 'programmingSkillsProgress.json'
+  PROGRAMMING_SKILLS: 'programming-skills'
 }
 export const CERTIFICATE = {
-  LIST: 'certificates.json'
+  LIST: 'certificate'
 }

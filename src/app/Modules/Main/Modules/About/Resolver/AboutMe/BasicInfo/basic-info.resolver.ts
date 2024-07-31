@@ -1,22 +1,19 @@
 import {Injectable} from '@angular/core';
 import {
-  Router, Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
+  Resolve
 } from '@angular/router';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {AboutMeService} from "../../../Services/AboutMe/about-me.service";
-import {IBaseData} from "../../../../../../../Core/Model/Interface/Base/base-data";
 import {IBasicInfo} from "../../../Model/Interface/AboutMe/basic-info";
 
 @Injectable({
   providedIn: 'root'
 })
-export class BasicInfoResolver implements Resolve<IBaseData<IBasicInfo>> {
+export class BasicInfoResolver implements Resolve<IBasicInfo> {
   constructor(private aboutMeService: AboutMeService) {
   }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IBaseData<IBasicInfo>> {
+  resolve(): Observable<IBasicInfo> {
     return this.aboutMeService.getBasicInfo();
   }
 }
