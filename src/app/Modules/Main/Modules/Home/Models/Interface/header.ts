@@ -1,7 +1,7 @@
 export interface IHeader {
   name: string;
   profileImage: string;
-  position: string[];
+  positions: string[];
   socialLinks: IHeaderSocialLinks[];
   cvPath: string;
 }

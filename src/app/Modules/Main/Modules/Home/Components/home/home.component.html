@@ -4,7 +4,11 @@
     <div class="row justify-content-center">
       <div class="col-lg-9">
         <h2>{{ headerData.name }}</h2>
-        <p>I'm <span class="typed">Software Engineer</span><span
+        <p>I'm <span class="typed">
+          @if (headerData.positions){
+            {{ headerData.positions[0] }}
+          }
+        </span><span
           class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
         <div class="social-links">
           <a *ngFor="let social of headerData.socialLinks" [href]="social.link"><i

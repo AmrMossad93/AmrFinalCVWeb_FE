@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     const options = {
-      strings: ["FrontEnd Developer", "Mobile Developer", "Angular Developer", "Ionic Developer", "Freelancer", "Software Engineer"],
+      strings: this.headerData.positions,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
@@ -29,6 +29,6 @@ export class HomeComponent implements OnInit {
       cursorChar: '|',
     };
 
-    const typed = new Typed('.typed', options);
+    new Typed('.typed', options);
   }
 }
