@@ -13,7 +13,7 @@ import {ContactService} from "../../Service/contact/contact.service";
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
-  basicInfoData = {} as IBaseData<IBasicInfo>;
+  basicInfoData = {} as IBasicInfo;
   contactForm!: FormGroup;
 
   constructor(private activatedRoute: ActivatedRoute, private fb: FormBuilder, private toastr: ToastrService, private contactService: ContactService) {

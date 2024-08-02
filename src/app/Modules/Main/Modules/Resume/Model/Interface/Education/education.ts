@@ -1,6 +1,6 @@
 export interface IEducation {
-  date_from: string;
-  date_to: string;
+  dateFrom: string;
+  dateTo: string;
   name: string;
   department: string;
   distribution: string;
