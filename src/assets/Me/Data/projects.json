@@ -7,12 +7,12 @@
       "id": 1,
       "projectName": "ClassTech Public Site",
       "projectDetail": "It Was The Portfolio For ClassTech Company To Know The ClassTech Details News , Features , Contact And Choose A A Request To Use There Apps.",
-      "type": "Web",
+      "projectType": "Web",
       "coreDevelopment": "HTML5 , CSS3 , Angular 10 , PrimNg , Bootstrap , TypeScript , Fontawesome , Material Icons",
       "client": "UniLearn Egypt",
       "category": "Education",
       "webSiteURL": "https://classtechonline.com/",
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/ClassTechPublic.png",
         "assets/Me/Images/Projects/ClasstechPublicSite/1.png",
         "assets/Me/Images/Projects/ClasstechPublicSite/2.png"
@@ -22,13 +22,13 @@
     {
       "id": 2,
       "projectName": "ClassTech Admin Panel",
-      "type": "Web",
+      "projectType": "Web",
       "projectDetail": "It Was The Admin Panel For ClassTech Company To Contact With The Request Of The Clients And May Add News And May Configure New Features.",
       "coreDevelopment": "HTML5 , CSS3 , Angular 10 , PrimNg , Bootstrap 4, TypeScript , Fontawesome , Material Icons",
       "client": "UniLearn Egypt",
       "category": "Education",
       "webSiteURL": "https://uniadmin.classtechonline.com/",
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/ClassTechAdminPanel.jpg",
         "assets/Me/Images/Projects/ClassTechAdminPanel/1.png",
         "assets/Me/Images/Projects/ClassTechAdminPanel/2.png",
@@ -39,13 +39,13 @@
     {
       "id": 3,
       "projectName": "Personal Exam Module",
-      "type": "Web",
+      "projectType": "Web",
       "projectDetail": "It Was An Exam Module Which Teacher May Create Exams To Students And Get Reports To Evaluate His Students.",
       "coreDevelopment": "HTML5 , CSS3 , Angular 10 , PrimNg , Bootstrap 4, TypeScript , Fontawesome , Material Icons, Angular Material",
       "client": "UniLearn Egypt",
       "category": "Education",
       "webSiteURL": "https://pilotpersonal.classtechonline.com/",
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/Personal.png",
         "assets/Me/Images/Projects/Personal/1.png",
         "assets/Me/Images/Projects/Personal/2.png",
@@ -63,13 +63,13 @@
     {
       "id": 4,
       "projectName": "School Exam Module",
-      "type": "Web",
+      "projectType": "Web",
       "projectDetail": "It Was A School Application That The Headmaster May Add Teacher , Students , Parent And The Teacher Can Create Exams To Evaluate The Students And Parents May Know Their Children Details.",
       "coreDevelopment": "HTML5 , CSS3 , Angular 11 , PrimNg , Bootstrap 4, TypeScript , Fontawesome , Material Icons, Angular Material",
       "client": "UniLearn Egypt",
       "category": "Education",
       "webSiteURL": "https://pilotschool.classtechonline.com/",
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/School Unilearn.png",
         "assets/Me/Images/Projects/School Unilearn.png",
         "assets/Me/Images/Projects/School Unilearn.png",
@@ -91,8 +91,8 @@
       "client": "Grand Electronics",
       "category": "CMS",
       "webSiteURL": "https://grand-electronic-eg.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/GrandPublicSite.jpg",
         "assets/Me/Images/Projects/GrandPublic/1.png",
         "assets/Me/Images/Projects/GrandPublic/2.jpg",
@@ -108,8 +108,8 @@
       "client": "Grand Electronics",
       "category": "CMS",
       "webSiteURL": "https://grand-electronic-eg.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/GrandAdminPanel.jpg",
         "assets/Me/Images/Projects/GrandAdmin/1.png",
         "assets/Me/Images/Projects/GrandAdmin/2.png",
@@ -127,8 +127,8 @@
       "client": "Lotfy Group",
       "category": "CMS",
       "webSiteURL": "http://lotfygrouplg.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/LgPublic.png",
         "assets/Me/Images/Projects/LgPublic/1.jpg",
         "assets/Me/Images/Projects/LgPublic/2.jpg",
@@ -147,8 +147,8 @@
       "client": "Lotfy Group",
       "category": "CMS",
       "webSiteURL": "http://admin.lotfygrouplg.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/LGAdmin.png",
         "assets/Me/Images/Projects/LgAdmin/1.jpg",
         "assets/Me/Images/Projects/LgAdmin/2.png",
@@ -166,8 +166,8 @@
       "client": "EMD4IT",
       "category": "Medical",
       "webSiteURL": "http://covid-19.emd4it.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/COVID-19-Tracker.png",
         "assets/Me/Images/Projects/Covid-19/1.png",
         "assets/Me/Images/Projects/Covid-19/2.png",
@@ -183,8 +183,8 @@
       "client": "EMD4IT",
       "category": "HR",
       "webSiteURL": "http://demo.emd4it.com/hr/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/HR.png"
       ],
       "vedioUrl": null
@@ -197,8 +197,8 @@
       "client": "EMD4IT",
       "category": "CMS",
       "webSiteURL": "https://wwwmasadevelopmentcom.000webhostapp.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/MASA Project.png"
       ],
       "vedioUrl": null
@@ -211,8 +211,8 @@
       "client": "Upstricke",
       "category": "Sports",
       "webSiteURL": "http://upstricke.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/UpStricke.png"
       ],
       "vedioUrl": null
@@ -225,8 +225,8 @@
       "client": "SYNDICATE OF ARTIST'S",
       "category": "Social",
       "webSiteURL": "http://www.egyartists.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/ESA.jpg"
       ],
       "vedioUrl": null
@@ -239,8 +239,8 @@
       "client": "Me",
       "category": "Tricks",
       "webSiteURL": "https://amrmossad93.github.io/pubgTricks/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/PUBG.jpg"
       ],
       "vedioUrl": null
@@ -253,8 +253,8 @@
       "client": "EMD4IT",
       "category": "Social",
       "webSiteURL": "http://emd4it.com/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/EMD4IT.png",
         "assets/Me/Images/Projects/EMD4IT/1.jpg",
         "assets/Me/Images/Projects/EMD4IT/2.png",
@@ -271,8 +271,8 @@
       "client": "Freelance",
       "category": "Social",
       "webSiteURL": "https://amrmossad93.github.io/templateOne/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/Template !.png"
       ],
       "vedioUrl": null
@@ -285,8 +285,8 @@
       "client": "Freelance",
       "category": "Tricks",
       "webSiteURL": "https://amrmossad93.github.io/clockTricks/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/Clock.png"
       ],
       "vedioUrl": null
@@ -299,8 +299,8 @@
       "client": "EMD4IT",
       "category": "Social",
       "webSiteURL": "http://demo.emd4it.com/SinglePageOne/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/SingleWebsite.jpg"
       ],
       "vedioUrl": null
@@ -313,8 +313,8 @@
       "client": "Freelance",
       "category": "Education",
       "webSiteURL": "https://amrmossad93.github.io/SchoolTemplate/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/School.png"
       ],
       "vedioUrl": null
@@ -327,8 +327,8 @@
       "client": "Me",
       "category": "Tricks",
       "webSiteURL": "https://amrmossad93.github.io/Joker-Website/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/Joker.png"
       ],
       "vedioUrl": null
@@ -341,8 +341,8 @@
       "client": "Me",
       "category": "Tricks",
       "webSiteURL": "https://amrmossad93.github.io/CofeeShop/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/Cofee.jpg"
       ],
       "vedioUrl": null
@@ -355,8 +355,8 @@
       "client": "2M Technology",
       "category": "Education",
       "webSiteURL": null,
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/school-managment.png"
       ],
       "vedioUrl": null
@@ -369,8 +369,8 @@
       "client": "D.M.S. Egypt",
       "category": "Education",
       "webSiteURL": null,
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/wordpress-insurance-themes.jpg"
       ],
       "vedioUrl": null
@@ -383,8 +383,8 @@
       "client": "Me",
       "category": "Tricks",
       "webSiteURL": "https://amrmossad93.github.io/calcuatorTricks/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/Calculator.png"
       ],
       "vedioUrl": null
@@ -397,8 +397,8 @@
       "client": "Me",
       "category": "Tricks",
       "webSiteURL": "https://amrmossad93.github.io/Scroll-Bar/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/Scroll-Progress-Bar.png"
       ],
       "vedioUrl": null
@@ -411,8 +411,8 @@
       "client": "Me",
       "category": "Tricks",
       "webSiteURL": "https://amrmossad93.github.io/Glowing-Light-Custom-Checkbox/",
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/Glowing-Light-Custom-Checkbox.png"
       ],
       "vedioUrl": null
@@ -425,8 +425,8 @@
       "client": "2M Technology",
       "category": "HR",
       "webSiteURL": null,
-      "type": "Web",
-      "images": [
+      "projectType": "Web",
+      "projectImages": [
         "assets/Me/Images/Projects/convex-1024x679.jpg"
       ],
       "vedioUrl": null
@@ -435,13 +435,13 @@
       "id": 28,
       "projectName": "El-Seif Health Care",
       "projectDetail": "It Was A Mobile Application That Can The User Book A Doctor Who Is In The Seif Community",
-      "type": "Mobile",
+      "projectType": "Mobile",
       "coreDevelopment": "Ionic , Capacitor , IOS , Android",
       "client": "Seif Pharmacy - Vodaphone - Seen Solutions",
       "category": "Medical",
       "iosLink": null,
       "androidLink": null,
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/Seif/2.png",
         "assets/Me/Images/Projects/Seif/3.png",
         "assets/Me/Images/Projects/Seif/1.png",
@@ -455,13 +455,13 @@
       "id": 29,
       "projectName": "Task Management",
       "projectDetail": "It Was A Mobile Application That Can Manage Your Tasks.",
-      "type": "Mobile",
+      "projectType": "Mobile",
       "coreDevelopment": "Ionic , Capacitor , IOS , Android",
       "client": "TwoDevelopers",
       "category": "Management",
       "iosLink": null,
       "androidLink": null,
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/TaskManagment/1.png",
         "assets/Me/Images/Projects/TaskManagment/2.png",
         "assets/Me/Images/Projects/TaskManagment/3.png",
@@ -473,13 +473,13 @@
       "id": 30,
       "projectName": "NGSC",
       "projectDetail": "It Was A Mobile Application That Can Manage Your New Giza Sports Club.",
-      "type": "Mobile",
+      "projectType": "Mobile",
       "coreDevelopment": "Ionic , Capacitor , IOS , Android",
       "client": "New Giza - Vodaphone - Seen Solutions",
       "category": "Management",
       "iosLink": "https://apps.apple.com/eg/app/ngsc/id1548540039",
       "androidLink": "https://play.google.com/store/apps/details?id=com.ngsc.app",
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/NGSC/1.jpeg",
         "assets/Me/Images/Projects/NGSC/2.jpeg",
         "assets/Me/Images/Projects/NGSC/3.jpeg",
@@ -495,12 +495,12 @@
       "id": 31,
       "projectName": "Marihub MarketPlace",
       "projectDetail": "It Was The MarketPlace For Marines Where The Captain Can Order Thing For His Ship Online As Food Or Oils.",
-      "type": "Web",
+      "projectType": "Web",
       "coreDevelopment": "HTML5 , CSS3 , Angular 14 , PrimNg , Bootstrap , TypeScript , Fontawesome , Material Icons",
       "client": "Marihub",
       "category": "ECommerce",
       "webSiteURL": "https://www.marihub.com/",
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/MarihubMarketPlace/2022-12-03 00_41_40-.png",
         "assets/Me/Images/Projects/MarihubMarketPlace/2022-12-03 00_40_25-.png",
         "assets/Me/Images/Projects/MarihubMarketPlace/2022-12-03 00_41_10-.png",
@@ -519,12 +519,12 @@
       "id": 32,
       "projectName": "Procure To Pay (P2P)",
       "projectDetail": "It Was An App For Procurement In STC And My Role Was To Develop SubItems And Linked WorkOrder And CoC.",
-      "type": "Web",
+      "projectType": "Web",
       "coreDevelopment": "HTML5 , CSS3 , Angular 9 , KinduGrid , Bootstrap , TypeScript , Fontawesome , Angular Material",
       "client": "STC",
       "category": "Procurement",
       "webSiteURL": null,
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/P2P/1.png",
         "assets/Me/Images/Projects/P2P/2.png",
         "assets/Me/Images/Projects/P2P/3.png",
@@ -537,12 +537,12 @@
       "id": 33,
       "projectName": "Demand Commite",
       "projectDetail": "It Was An App For Arranging Meetings For STC Clients Using Outlook Calendar Management Tools",
-      "type": "Web",
+      "projectType": "Web",
       "coreDevelopment": "HTML5 , CSS3 , Angular 14  , Bootstrap , TypeScript , Angular Material",
       "client": "STC",
       "category": "Meetings",
       "webSiteURL": null,
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/Demand/1.png",
         "assets/Me/Images/Projects/Demand/2.png",
         "assets/Me/Images/Projects/Demand/3.png",
@@ -555,12 +555,12 @@
       "id": 34,
       "projectName": "Connect V1",
       "projectDetail": "It Is The Web Portal for 3D Conversions, Radiology Reports, Treatment Plans and Surgical Guides  For The Orders Where The Doctor Can Order And Aligner And Receive It In The Place He Want.",
-      "type": "Web",
+      "projectType": "Web",
       "coreDevelopment": "HTML5 , CSS3 , Angular 7 , Bootstrap 4, TypeScript , Fontawesome",
       "client": "3D-Diagnostics",
       "category": "Medical",
       "webSiteURL": "https://3ddiagnostix.com/newconnect-ui/",
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/Connect/Connect-1.PNG",
         "assets/Me/Images/Projects/Connect/Connect-2.PNG",
         "assets/Me/Images/Projects/Connect/Connect-3.PNG",
@@ -575,12 +575,12 @@
       "id": 35,
       "projectName": "iSmileOn",
       "projectDetail": "It Is The Medical App For Doctors Or Scanning Centers To View The Medical Aligners Order And Refinements For The Teeth Where The Doctor Can Order And Aligner And Receive It In The Place He Want.",
-      "type": "Web",
+      "projectType": "Web",
       "coreDevelopment": "HTML5 , CSS3 , Angular 11 , PrimNg , Bootstrap 5, TypeScript , Fontawesome , Material Icons, Three.js",
       "client": "3D-Diagnostics",
       "category": "Medical",
       "webSiteURL": "https://www.3ddx.com/ismile",
-      "images": [
+      "projectImages": [
         "assets/Me/Images/Projects/iSmileOn/iSMileOn0.PNG",
         "assets/Me/Images/Projects/iSmileOn/iSMileOn1.PNG",
         "assets/Me/Images/Projects/iSmileOn/iSMileOn2.PNG",

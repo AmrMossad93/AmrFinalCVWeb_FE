@@ -17,14 +17,14 @@
         @for (project of filteredProjects; track project) {
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item fade-in">
             <div class="card w-100">
-              <img class="card-img-top" [src]="project.images[0]" [alt]="project.projectName">
+              <img class="card-img-top" [src]="project.projectImages[0]" [alt]="project.projectName">
               <div class="card-body">
                 <h5 class="card-title">
                   {{ project.projectName }}
                 </h5>
                 <p class="card-text ">
                   <span class="text-muted">
-                    {{ project.type }} -  {{ project.category }} - {{ project.client }}
+                    {{ project.projectType }} -  {{ project.category }} - {{ project.client }}
                   </span>
 
                 </p>

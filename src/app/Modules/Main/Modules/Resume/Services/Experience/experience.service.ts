@@ -13,7 +13,7 @@ export class ExperienceService {
   constructor(private dataService: DataService) {
   }
 
-  getExperience(): Observable<IBaseData<IExperience[]>> {
-    return this.dataService.get(EXPERIENCE.LIST)
+  getExperience(): Observable<IExperience[]> {
+    return this.dataService.getAPI(EXPERIENCE.LIST)
   }
 }

@@ -11,7 +11,7 @@ import {IExperience} from "../../Model/Interface/Experience/experience";
 })
 export class ResumeComponent implements OnInit {
   educationData = [] as IEducation[];
-  experienceData = {} as IBaseData<IExperience[]>;
+  experienceData = {} as IExperience[];
 
   constructor(private activatedRoute: ActivatedRoute) {
   }

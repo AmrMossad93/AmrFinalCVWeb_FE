@@ -12,11 +12,11 @@ import {IExperience} from "../../Model/Interface/Experience/experience";
 @Injectable({
   providedIn: 'root'
 })
-export class ExperienceResolver implements Resolve<IBaseData<IExperience[]>> {
+export class ExperienceResolver implements Resolve<IExperience[]> {
   constructor(private experienceService: ExperienceService) {
   }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IBaseData<IExperience[]>> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IExperience[]> {
     return this.experienceService.getExperience();
   }
 }

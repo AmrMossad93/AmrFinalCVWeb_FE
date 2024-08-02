@@ -12,11 +12,11 @@ import {IProject} from "../../Model/Interface/Projects/project";
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectsResolver implements Resolve<IBaseData<IProject[]>> {
+export class ProjectsResolver implements Resolve<IProject[]> {
   constructor(private projectsService: ProjectsService) {
   }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IBaseData<IProject[]>> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IProject[]> {
     return this.projectsService.getProjectList()
   }
 }

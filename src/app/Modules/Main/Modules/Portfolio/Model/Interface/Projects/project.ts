@@ -8,7 +8,7 @@ export interface IProject {
   webSiteURL: string;
   iosLink: string;
   androidLink: string;
-  type: string;
-  images: string[];
+  projectType: string;
+  projectImages: string[];
   vedioUrl: string;
 }

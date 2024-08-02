@@ -9,7 +9,7 @@ import {IProject} from "../../Model/Interface/Projects/project";
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent implements OnInit {
-  projectListData = {} as IBaseData<IProject[]>;
+  projectListData = {} as IProject[];
   categories: string[] = []
   selectedCategory: string = 'All';
   filteredProjects: IProject[] = []
@@ -20,8 +20,8 @@ export class PortfolioComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.data.subscribe(res => {
       this.projectListData = res['projectListData'];
-      this.filteredProjects = this.projectListData.data;
-      this.categories = ['All', ...new Set(this.projectListData.data.map(c => c.category))]
+      this.filteredProjects = this.projectListData;
+      this.categories = ['All', ...new Set(this.projectListData.map(c => c.category))]
     });
   }
   checkSelectedCategory(category: string): boolean {
@@ -31,9 +31,9 @@ export class PortfolioComponent implements OnInit {
   filterCategory(category: string): void {
     this.selectedCategory = category;
     if (category === 'All') {
-      this.filteredProjects = this.projectListData.data;
+      this.filteredProjects = this.projectListData;
     } else {
-      this.filteredProjects = this.projectListData.data.filter(c => c.category === category)
+      this.filteredProjects = this.projectListData.filter(c => c.category === category)
     }
   }
 }

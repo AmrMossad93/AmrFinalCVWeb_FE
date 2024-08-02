@@ -19,9 +19,9 @@
     <div class="portfolio-details-slider swiper init-swiper">
 
       <div class="swiper-wrapper align-items-center text-center">
-        @for (image of projectDetailsData.images; track image) {
-          <div class="swiper-slide " [ngClass]="{'text-center': projectDetailsData.type === 'Mobile'}">
-            <img [src]="image" [ngClass]="{'w-25': projectDetailsData.type === 'Mobile', 'w-50': responsiveService.isMobile}" alt="">
+        @for (image of projectDetailsData.projectImages; track image) {
+          <div class="swiper-slide " [ngClass]="{'text-center': projectDetailsData.projectType === 'Mobile'}">
+            <img [src]="image" [ngClass]="{'w-25': projectDetailsData.projectType === 'Mobile', 'w-50': responsiveService.isMobile}" alt="">
           </div>
         }
       </div>
@@ -53,23 +53,23 @@
           <ul>
             <li><strong>Category</strong> {{ projectDetailsData.category }}</li>
             <li><strong>Client</strong> {{ projectDetailsData.client }}</li>
-            <li><strong>Project type</strong> {{ projectDetailsData.type }}</li>
+            <li><strong>Project type</strong> {{ projectDetailsData.projectType }}</li>
             @if (projectDetailsData.webSiteURL) {
-              <li *ngIf="projectDetailsData.type === 'Web'"><strong>Project URL</strong> <a
+              <li *ngIf="projectDetailsData.projectType === 'Web'"><strong>Project URL</strong> <a
                 [href]="projectDetailsData.webSiteURL">
                 {{ projectDetailsData.webSiteURL }}
               </a>
               </li>
-              <li *ngIf="projectDetailsData.type === 'Web'"><a [href]="projectDetailsData.webSiteURL"
+              <li *ngIf="projectDetailsData.projectType === 'Web'"><a [href]="projectDetailsData.webSiteURL"
                                                                class="btn-visit align-self-start">Visit
                 Website</a></li>
             }
             @if (projectDetailsData.iosLink) {
-              <li *ngIf="projectDetailsData.type === 'Mobile'"><a [href]="projectDetailsData.androidLink"
+              <li *ngIf="projectDetailsData.projectType === 'Mobile'"><a [href]="projectDetailsData.androidLink"
                                                                   class="btn-visit align-self-start">
                 Google Play
               </a></li>
-              <li *ngIf="projectDetailsData.type === 'Mobile'"><a [href]="projectDetailsData.iosLink"
+              <li *ngIf="projectDetailsData.projectType === 'Mobile'"><a [href]="projectDetailsData.iosLink"
                                                                   class="btn-visit align-self-start">
                 App Store
               </a></li>

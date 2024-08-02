@@ -13,11 +13,11 @@ export class ProjectsService {
   constructor(private dataService: DataService) {
   }
 
-  getProjectList(): Observable<IBaseData<IProject[]>> {
-    return this.dataService.get(PROJECT.LIST)
+  getProjectList(): Observable<IProject[]> {
+    return this.dataService.getAPI(PROJECT.LIST)
   }
 
   getProjectById(projectId: number): Observable<IProject> {
-    return this.dataService.get(PROJECT.LIST).pipe(map((data) => data.data.find((c: IProject) => c.id === projectId)))
+    return this.dataService.getAPI(PROJECT.PROJECT + projectId)
   }
 }

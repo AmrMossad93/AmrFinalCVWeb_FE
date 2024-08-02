@@ -1,3 +1,4 @@
 export const PROJECT = {
-  LIST: 'projects.json'
+  LIST: 'project',
+  PROJECT:'project/'
 }
