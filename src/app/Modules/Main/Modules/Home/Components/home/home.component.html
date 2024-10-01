@@ -9,6 +9,7 @@
         <div class="social-links">
           <a *ngFor="let social of headerData.data.socialLinks" [href]="social.link"><i
             [class]="social.fontAwesomeIcon"></i></a>
+          <a [href]="headerData.data.cvPath" download>Download My CV</a>
         </div>
       </div>
     </div>
