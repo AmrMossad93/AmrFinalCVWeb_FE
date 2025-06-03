@@ -3,8 +3,15 @@
   "errorMessage": null,
   "data": [
     {
-      "from": "September 2023",
+      "from": "December 2024",
       "to": "Present",
+      "company": "Tahakom  (Riyadh - KSA)",
+      "position": "Senior Front-End Web Developer",
+      "distribution": "Customizing The JSON Result To Make The CRUD Operations, Which Come To Me From The Back-End Developer To Design It In The UI By Using Angular 19, TypeScript , HTML5, CSS3 , ES6 , Tailwind , Fontawsome , Google Maps, etc..."
+    },
+    {
+      "from": "September 2023",
+      "to": "June 2025",
       "company": "Altheqa Insurance Broker (Jeddah - KSA)",
       "position": "Senior Front-End Web Developer",
       "distribution": "Customizing The JSON Result To Make The CRUD Operations, Which Come To Me From The Back-End Developer To Design It In The UI By Using Angular 16, Ionic 6 , TypeScript , HTML5, CSS3 , ES6 , Bootstrap 4 , Fontawsome , Ionic etc... & I Made With My Insurance Web & Mobile App."
