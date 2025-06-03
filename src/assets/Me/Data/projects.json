@@ -599,6 +599,56 @@
         "assets/Me/Images/Projects/iSmileOn/iSMileOn15.PNG"
       ],
       "videoUrl": null
+    },
+    {
+      "id": 36,
+      "projectName": "Ananas Insurance",
+      "projectDetail": "It Was An Aggregator For Insurance Company In Saudi Arabia That Gets Offers From Insurance Companies For Motors And Medical Mal Practice",
+      "type": "Web",
+      "coreDevelopment": "HTML5 , CSS3 , Angular 19 , PrimNg , Bootstrap 5, TypeScript , Fontawesome , Material Icons, SSE , GraphQL , Hyperpay",
+      "client": "Altheqa Insurance",
+      "category": "Aggregator",
+      "webSiteURL": "https://ananas.sa",
+      "images": [
+        "assets/Me/Images/Projects/AnanasWeb/1.png",
+        "assets/Me/Images/Projects/AnanasWeb/2.png",
+        "assets/Me/Images/Projects/AnanasWeb/3.png",
+        "assets/Me/Images/Projects/AnanasWeb/4.png",
+        "assets/Me/Images/Projects/AnanasWeb/5.png",
+        "assets/Me/Images/Projects/AnanasWeb/6.png",
+        "assets/Me/Images/Projects/AnanasWeb/7.png",
+        "assets/Me/Images/Projects/AnanasWeb/8.png",
+        "assets/Me/Images/Projects/AnanasWeb/9.png"
+      ],
+      "videoUrl": null
+    },
+    {
+      "id": 37,
+      "projectName": "Ananas Insurance Mobile App",
+      "projectDetail": "It Was An Aggregator For Insurance Company In Saudi Arabia That Gets Offers From Insurance Companies For Motors And Medical Mal Practice",
+      "type": "Mobile",
+      "coreDevelopment": "HTML5 , CSS3 , IONIC 6 , Angular 10 , PrimNg , Bootstrap 5, TypeScript , Fontawesome , Material Icons, SSE , Hyperpay , GraphQL",
+      "client": "Altheqa Insurance",
+      "category": "Aggregator",
+      "webSiteURL": "https://ananas.sa",
+      "images": [
+        "assets/Me/Images/Projects/AnanasMobile/1.png",
+        "assets/Me/Images/Projects/AnanasMobile/2.png",
+        "assets/Me/Images/Projects/AnanasMobile/3.png",
+        "assets/Me/Images/Projects/AnanasMobile/4.png",
+        "assets/Me/Images/Projects/AnanasMobile/5.png",
+        "assets/Me/Images/Projects/AnanasMobile/6.png",
+        "assets/Me/Images/Projects/AnanasMobile/7.png",
+        "assets/Me/Images/Projects/AnanasMobile/8.png",
+        "assets/Me/Images/Projects/AnanasMobile/9.png",
+        "assets/Me/Images/Projects/AnanasMobile/10.png",
+        "assets/Me/Images/Projects/AnanasMobile/11.png",
+        "assets/Me/Images/Projects/AnanasMobile/12.png",
+        "assets/Me/Images/Projects/AnanasMobile/13.png",
+        "assets/Me/Images/Projects/AnanasMobile/14.png",
+        "assets/Me/Images/Projects/AnanasMobile/15.png"
+      ],
+      "videoUrl": null
     }
   ]
 }

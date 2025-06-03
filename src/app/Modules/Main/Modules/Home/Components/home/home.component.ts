@@ -10,7 +10,7 @@ import {ActivatedRoute} from "@angular/router";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  headerData = {} as IHeader;
+  headerData = {} as IBaseData<IHeader>;
 
   constructor(private activatedRoute: ActivatedRoute) {
     this.activatedRoute.data.subscribe(res => {
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     const options = {
-      strings: this.headerData.positions,
+      strings: this.headerData.data.positions,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
