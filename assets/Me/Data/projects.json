@@ -649,6 +649,21 @@
         "assets/Me/Images/Projects/AnanasMobile/15.png"
       ],
       "videoUrl": null
+    },
+    {
+      "id": 38,
+      "projectName": "Offline Violation",
+      "projectDetail": "It wan an app that process the violation and returns the result to the user",
+      "type": "Web",
+      "coreDevelopment": "HTML5 , CSS3 ,  Angular 20 , Bootstrap 5, TypeScript , NodeJS , ExpressJs",
+      "client": "Tahakom",
+      "category": "Violations",
+      "webSiteURL": null,
+      "images": [
+        "assets/Me/Images/Projects/OfflineViolation/1.png",
+        "assets/Me/Images/Projects/OfflineViolation/2.png"
+      ],
+      "videoUrl": null
     }
   ]
 }
