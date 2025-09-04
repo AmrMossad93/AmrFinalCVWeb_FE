@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href \"https://amrmossad93.github.io/AmrFinalCVWeb_FE/\"",
+    "build": "ng build --base-href \"/AmrFinalCVWeb_FE/\"",
     "deployApp": "npx angular-cli-ghpages --dir=dist/amr-mossad-resume/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
