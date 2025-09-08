@@ -7,16 +7,12 @@
         <p>I'm <span class="typed">Software Engineer</span><span
           class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
         <div class="social-links">
-          <a *ngFor="let social of headerData.data.socialLinks" [href]="social.link"><i
-            [class]="social.fontAwesomeIcon"></i></a>
+          <a *ngFor="let social of headerData.data.socialLinks" [href]="social.link" target="_blank">
+            <i [class]="social.fontAwesomeIcon"></i>
+          </a>
           <a [href]="headerData.data.cvPath" download>Download My CV</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-
-
-
