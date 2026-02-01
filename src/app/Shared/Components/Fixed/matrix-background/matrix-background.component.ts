@@ -17,7 +17,7 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
   private lines!: THREE.LineSegments;
   private animationId!: number;
 
-  private readonly PARTICLE_COUNT = 400;
+  private readonly PARTICLE_COUNT = 600;
   private readonly MAX_DISTANCE = 110;
   private readonly SPHERE_RADIUS = 800;
 
@@ -130,8 +130,8 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
     const texture = new THREE.CanvasTexture(dotCanvas);
 
     const material = new THREE.PointsMaterial({
-      color: 0x1ec0b5,
-      size: 4,
+      color: 0x10b981,
+      size: 2,
       transparent: true,
       opacity: 0.8,
       sizeAttenuation: true,
@@ -150,7 +150,7 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
     lineGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(maxLines * 2 * 3), 3));
 
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x1ec0b5,
+      color: 0x10b981,
       transparent: true,
       opacity: 0.2
     });

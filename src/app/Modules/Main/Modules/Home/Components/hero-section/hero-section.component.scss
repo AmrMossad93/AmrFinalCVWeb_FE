@@ -11,8 +11,27 @@
 
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
+  will-change: transform;
 }
 
 .animate-spin-slow-reverse {
-  animation: spin-slow-reverse 25s linear infinite;
+  animation: spin-slow-reverse 20s linear infinite;
+  will-change: transform;
+}
+
+.animate-spin-very-slow {
+  animation: spin-slow 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-spin-very-slow-reverse {
+  animation: spin-slow-reverse 35s linear infinite;
+  will-change: transform;
+}
+
+/* Hardware acceleration to prevent flickering/glitches */
+.glass-card {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
