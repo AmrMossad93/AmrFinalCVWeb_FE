@@ -1,0 +1,52 @@
+<nav class="sticky top-0 z-50 w-full border-b border-gray-100/50 bg-white/80 backdrop-blur-xl dark:border-white/5 dark:bg-gray-950/80">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex justify-between h-20">
+      <div class="flex items-center">
+        <a routerLink="/" class="group flex items-center space-x-3">
+          <div class="relative w-10 h-10 flex items-center justify-center">
+            <div class="absolute inset-0 bg-brand-primary rounded-lg rotate-6 group-hover:rotate-0 transition-transform duration-300 opacity-20"></div>
+            <div class="relative w-full h-full bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center text-white dark:text-gray-950 font-bold text-xl transition-all duration-300 group-hover:scale-105">
+              A
+            </div>
+          </div>
+          <span class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Amr<span class="text-brand-primary">.</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-1">
+        <a routerLink="/home" routerLinkActive="text-gray-900 dark:text-white bg-gray-50 dark:bg-white/5" class="px-4 py-2 rounded-lg text-[13px] font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all">Home</a>
+
+        <a routerLink="/about" routerLinkActive="text-gray-900 dark:text-white bg-gray-50 dark:bg-white/5" class="px-4 py-2 rounded-lg text-[13px] font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all">About</a>
+        <a routerLink="/resume" routerLinkActive="text-gray-900 dark:text-white bg-gray-50 dark:bg-white/5" class="px-4 py-2 rounded-lg text-[13px] font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all">Resume</a>
+        <a routerLink="/portfolio" routerLinkActive="text-gray-900 dark:text-white bg-gray-50 dark:bg-white/5" class="px-4 py-2 rounded-lg text-[13px] font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all">Portfolio</a>
+        <div class="w-px h-6 bg-gray-200 dark:bg-white/10 mx-4"></div>
+        <a routerLink="/contact" class="px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-[13px] font-bold hover:bg-gray-800 dark:hover:bg-gray-100 transition-all shadow-sm">
+          Hire Me
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button (click)="toggleMenu()" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+            <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="isMenuOpen" class="md:hidden border-t border-gray-100 dark:border-white/5 bg-white dark:bg-gray-950 py-4 px-4 space-y-1">
+    <a routerLink="/home" (click)="isMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">Home</a>
+    <a routerLink="/about" (click)="isMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">About</a>
+    <a routerLink="/resume" (click)="isMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">Resume</a>
+    <a routerLink="/portfolio" (click)="isMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">Portfolio</a>
+    <a routerLink="/contact" (click)="isMenuOpen = false" class="mt-4 block px-4 py-3 rounded-lg text-base font-bold bg-gray-900 dark:bg-white text-white dark:text-gray-950 text-center">Contact</a>
+  </div>
+</nav>
+

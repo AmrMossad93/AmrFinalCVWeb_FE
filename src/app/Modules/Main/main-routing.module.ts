@@ -1,6 +1,6 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {MainComponent} from "./Components/main/main.component";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { MainComponent } from './main.component';
 
 const routes: Routes = [
   {
@@ -8,16 +8,17 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
         path: 'home',
         loadChildren: () => import('./Modules/Home/home.module').then(m => m.HomeModule)
       },
       {
-        path: 'about-me',
+        path: 'about',
         loadChildren: () => import('./Modules/About/about.module').then(m => m.AboutModule)
-      },
-      {
-        path: 'contact-us',
-        loadChildren: () => import('./Modules/Contact/contact.module').then(m => m.ContactModule)
       },
       {
         path: 'portfolio',
@@ -28,8 +29,8 @@ const routes: Routes = [
         loadChildren: () => import('./Modules/Resume/resume.module').then(m => m.ResumeModule)
       },
       {
-        path: 'services',
-        loadChildren: () => import('./Modules/Services/services.module').then(m => m.ServicesModule)
+        path: 'contact',
+        loadChildren: () => import('./Modules/Contact/contact.module').then(m => m.ContactModule)
       }
     ]
   }
@@ -39,5 +40,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainRoutingModule {
-}
+export class MainRoutingModule { }

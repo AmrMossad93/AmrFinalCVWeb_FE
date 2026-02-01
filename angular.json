@@ -1,13 +1,16 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "packageManager": "npm",
+    "analytics": false
+  },
   "newProjectRoot": "projects",
   "projects": {
-    "AmrMossadResume": {
+    "AmrWebsite": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
           "standalone": false
         },
         "@schematics/angular:directive": {
@@ -22,48 +25,18 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/amr-mossad-resume",
-            "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/assets/vendor/bootstrap/css/bootstrap.min.css",
-              "src/assets/vendor/bootstrap-icons/bootstrap-icons.css",
-              "./node_modules/ngx-spinner/animations/ball-circus.css",
-              "src/assets/vendor/aos/aos.css",
-              "src/assets/vendor/glightbox/css/glightbox.min.css",
-              "src/assets/vendor/swiper/swiper-bundle.min.css",
-              "src/assets/css/main.css",
-              "./node_modules/glightbox/dist/css/glightbox.css",
-              "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css"
-            ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
-              "src/assets/vendor/php-email-form/validate.js",
-              "src/assets/vendor/aos/aos.js",
-              "src/assets/vendor/typed.js/typed.umd.js",
-              "src/assets/vendor/purecounter/purecounter_vanilla.js",
-              "src/assets/vendor/waypoints/noframework.waypoints.js",
-              "./node_modules/glightbox/dist/js/glightbox.min.js",
-              "src/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js",
-              "src/assets/vendor/isotope-layout/isotope.pkgd.min.js",
-              "src/assets/vendor/swiper/swiper-bundle.min.js",
-              "src/assets/js/main.js"
+              "src/styles.css"
             ]
           },
           "configurations": {
@@ -72,12 +45,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "5MB"
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "10kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -85,57 +58,27 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AmrMossadResume:build:production"
+              "buildTarget": "AmrWebsite:build:production"
             },
             "development": {
-              "buildTarget": "AmrMossadResume:build:development"
+              "buildTarget": "AmrWebsite:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
-        },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
-          }
+          "builder": "@angular/build:unit-test"
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "c953edd5-af70-4878-a211-e3689e31c9bf"
   }
 }

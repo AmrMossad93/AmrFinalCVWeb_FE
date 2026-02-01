@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AboutRoutingModule } from './about-routing.module';
-import { AboutComponent } from './Component/about/about.component';
-
+import { RouterModule } from '@angular/router';
+import { AboutComponent } from './about.component';
+import { SharedModule } from '../../../../Shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AboutComponent
-  ],
+  declarations: [AboutComponent],
   imports: [
     CommonModule,
-    AboutRoutingModule
+    SharedModule,
+    RouterModule.forChild([{ path: '', component: AboutComponent }])
   ]
 })
 export class AboutModule { }

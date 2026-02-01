@@ -1,0 +1,101 @@
+<div class="animate-in fade-in duration-700 text-gray-100">
+  <!-- Hero Header -->
+  <section class="py-20 bg-white/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary mb-4">Resume</h2>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Experience & Skills</h1>
+        <p class="text-lg text-gray-400 font-medium leading-relaxed">
+          A track record of building high-performance web applications and leading technical teams towards engineering excellence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <!-- Left Column: Summary & Experience -->
+      <div class="lg:col-span-8 space-y-20">
+        <!-- Summary Card -->
+        <div class="p-8 lg:p-10 bg-white/5 rounded-[2rem] relative overflow-hidden group border border-white/10">
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <div class="relative z-10 space-y-6">
+            <h3 class="text-xl font-bold">Professional Summary</h3>
+            <p class="text-gray-400 leading-relaxed font-medium">
+              Senior Software Engineer with {{ yearsOfExperience }}+ years of experience specializing in the Angular ecosystem. Proven track record of architecting scalable enterprise solutions, mentoring high-performing teams, and delivering exceptional user experiences through clean, maintainable code.
+            </p>
+            <div class="pt-4">
+              <a href="assets/resume.pdf" download class="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:text-brand-primary/80 transition-colors group/link">
+                Download PDF Version
+                <svg class="w-4 h-4 group-hover/link:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Timeline -->
+        <div class="space-y-12">
+          <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-brand-primary/20 flex items-center justify-center text-brand-primary">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </span>
+            Work Experience
+          </h3>
+          
+          <div class="space-y-12">
+            <div *ngFor="let exp of experience" class="relative pl-10 border-l border-white/10 pb-12 last:pb-0">
+              <!-- Dot -->
+              <div class="absolute -left-[5px] top-1 w-[9px] h-[9px] rounded-full bg-brand-primary ring-4 ring-brand-bg"></div>
+              
+              <div class="space-y-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                  <h4 class="text-xl font-bold text-white">{{ exp.role }}</h4>
+                  <span class="text-[11px] font-bold text-gray-500 uppercase tracking-widest">{{ exp.period }}</span>
+                </div>
+                <div class="text-sm font-bold text-brand-primary uppercase tracking-wide">{{ exp.company }}</div>
+                <p class="text-base text-gray-400 leading-relaxed font-medium">
+                  {{ exp.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Skills & Education -->
+      <div class="lg:col-span-4 space-y-16">
+        <!-- Skills -->
+        <div class="space-y-8">
+          <h3 class="text-xl font-bold text-white">Technical Skills</h3>
+          <div class="flex flex-wrap gap-2">
+            <span *ngFor="let skill of skills" 
+                  class="px-4 py-2 bg-white/5 text-[13px] font-semibold text-gray-400 rounded-lg border border-white/10 hover:border-brand-primary/30 hover:text-brand-primary transition-all">
+              {{ skill }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="space-y-8">
+          <h3 class="text-xl font-bold text-white">Education</h3>
+          <div *ngFor="let edu of education" class="p-6 bg-white/5 rounded-2xl border border-white/10">
+            <h4 class="text-base font-bold text-white">{{ edu.degree }}</h4>
+            <div class="text-sm font-medium text-gray-400 mt-1">{{ edu.institution }}</div>
+            <div class="text-xs font-bold text-brand-primary mt-3">{{ edu.year }}</div>
+          </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="p-8 bg-brand-primary rounded-3xl text-brand-bg space-y-6">
+          <h3 class="text-xl font-bold">Looking for a Senior Engineer?</h3>
+          <p class="text-sm text-brand-bg/80 leading-relaxed font-medium">
+            I'm currently open to new opportunities and collaborations. Let's build something amazing together.
+          </p>
+          <a routerLink="/contact" class="block w-full py-3 bg-brand-bg text-brand-primary text-center font-bold rounded-xl hover:opacity-90 transition-colors">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

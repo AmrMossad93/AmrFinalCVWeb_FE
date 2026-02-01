@@ -1,19 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PortfolioRoutingModule } from './portfolio-routing.module';
-import { PortfolioComponent } from './Components/portfolio/portfolio.component';
-import { PortfolioDetailsComponent } from './Components/portfolio-details/portfolio-details.component';
-
+import { RouterModule } from '@angular/router';
+import { PortfolioComponent } from './portfolio.component';
+import { SharedModule } from '../../../../Shared/shared.module';
 
 @NgModule({
-  declarations: [
-    PortfolioComponent,
-    PortfolioDetailsComponent
-  ],
+  declarations: [PortfolioComponent],
   imports: [
     CommonModule,
-    PortfolioRoutingModule
+    SharedModule,
+    RouterModule.forChild([{ path: '', component: PortfolioComponent }])
   ]
 })
 export class PortfolioModule { }

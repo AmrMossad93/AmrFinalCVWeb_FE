@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ResumeRoutingModule } from './resume-routing.module';
-import { ResumeComponent } from './Components/resume/resume.component';
-
+import { RouterModule } from '@angular/router';
+import { ResumeComponent } from './resume.component';
+import { SharedModule } from '../../../../Shared/shared.module';
 
 @NgModule({
-  declarations: [
-    ResumeComponent
-  ],
+  declarations: [ResumeComponent],
   imports: [
     CommonModule,
-    ResumeRoutingModule
+    SharedModule,
+    RouterModule.forChild([{ path: '', component: ResumeComponent }])
   ]
 })
 export class ResumeModule { }
