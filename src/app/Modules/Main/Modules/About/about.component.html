@@ -101,4 +101,45 @@
       </div>
     </div>
   </section>
+  
+  <!-- Certificates Section -->
+  <section class="py-24 bg-white/2">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary mb-4">Recognition</h2>
+        <h3 class="text-4xl font-bold text-white mb-6">Professional Certificates</h3>
+        <p class="text-lg text-gray-400 max-w-2xl">
+          A collection of my professional certifications and achievements in software engineering and cloud technologies.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        @for (cert of certificates; track cert.name) {
+          <div class="glass-card group relative rounded-3xl overflow-hidden">
+            <div class="aspect-[4/3] overflow-hidden bg-gray-900">
+              <img [src]="cert.path" [alt]="cert.name" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+              <div class="p-4 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl">
+                <h4 class="text-sm font-bold text-white group-hover:text-brand-primary transition-colors line-clamp-2">
+                  {{ cert.name }}
+                </h4>
+              </div>
+            </div>
+            
+            <!-- View Button Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+               <a [href]="cert.path" target="_blank" 
+                  class="px-6 py-3 bg-brand-primary text-brand-bg text-xs font-bold uppercase tracking-widest rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:scale-105 active:scale-95">
+                 View Certificate
+               </a>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
 </div>
