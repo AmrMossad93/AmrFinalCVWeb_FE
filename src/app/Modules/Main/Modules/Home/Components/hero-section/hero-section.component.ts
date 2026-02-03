@@ -1,5 +1,7 @@
-import { Component, OnInit, OnDestroy, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import {Component, OnInit, OnDestroy, ViewChild, ElementRef, AfterViewInit, Input} from '@angular/core';
 import Typed from 'typed.js';
+import {IBase} from '../../../../../../Core/models/Interface/Base/base';
+import {IHeader} from '../../DTO/Interface/Header/header';
 
 @Component({
   selector: 'app-home-hero-section',
@@ -9,22 +11,25 @@ import Typed from 'typed.js';
 })
 export class HeroSectionComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('typedElement') typedElement!: ElementRef;
-  
-  roles: string[] = [
-    'Software Engineer',
-    'AI Integrator',
-    'Full Stack Developer',
-    'Problem Solver'
-  ];
-  
+  @Input() header: IBase<IHeader> = {} as IBase<IHeader>;
+
   private typed: Typed | undefined;
+
+  get splitName() {
+    if (!this.header?.data?.name) return { first: '', rest: '' };
+    const parts = this.header.data.name.split(' ');
+    return {
+      first: parts[0],
+      rest: parts.slice(1).join(' ')
+    };
+  }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
     const options = {
-      strings: this.roles,
+      strings: this.header.data.positions,
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000,

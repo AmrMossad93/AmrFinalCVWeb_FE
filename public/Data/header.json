@@ -2,31 +2,41 @@
   "success": true,
   "errorMessage": null,
   "data": {
-    "name": "Amr Mossad Saber",
-    "profileImage": "assets/img/Amr-Event.jpeg",
-    "positions": ["FrontEnd Developer", "Mobile Developer", "Angular Developer" , "Ionic Developer", "Freelancer", "Software Engineer"],
+    "name": "Amr Mossad",
+    "profileImage": "Images/Amr-Event.jpeg",
+    "positions": [
+      "FrontEnd Developer",
+      "Mobile Developer",
+      "Angular Developer",
+      "Ionic Developer",
+      "AI Integrator",
+      "Freelancer",
+      "Software Engineer",
+      "Problem Solver"
+    ],
     "socialLinks": [
       {
-        "fontAwesomeIcon": "bi bi-linkedin",
+        "fontAwesomeIcon": "fa-brands fa-linkedin",
         "link": "https://www.linkedin.com/in/amr-mossad-209976158/"
       },
       {
-        "fontAwesomeIcon": "bi bi-github",
+        "fontAwesomeIcon": "fa-brands fa-github",
         "link": "https://github.com/AmrMossad93"
       },
       {
-        "fontAwesomeIcon": "bi bi-facebook",
+        "fontAwesomeIcon": "fa-brands fa-facebook",
         "link": "https://www.facebook.com/amr.mossad.12979/"
       },
       {
-        "fontAwesomeIcon": "bi bi-instagram",
+        "fontAwesomeIcon": "fa-brands fa-instagram",
         "link": "https://www.instagram.com/eng.amrmossad2/"
       },
       {
-        "fontAwesomeIcon": "bi bi-twitter-x",
+        "fontAwesomeIcon": "fa-brands fa-square-x-twitter",
         "link": "https://twitter.com/AmrMossad93"
       }
     ],
-    "cvPath": "assets/Me/CV/Amr-Mossad-Saber-CV.pdf"
+    "cvPath": "CV/Amr-Mossad-Saber-CV.pdf",
+    "brief": "Software Engineer specializing in building scalable AI-integrated applications and high-performance web , mobile systems.\n        Turning complex problems into elegant, efficient solutions."
   }
 }

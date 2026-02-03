@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {IBase} from '../../../../Core/models/Interface/Base/base';
+import {IHeader} from './DTO/Interface/Header/header';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss',
   standalone: false
 })
-export class HomeComponent { }
+export class HomeComponent implements OnInit {
+  private readonly activatedRoute = inject(ActivatedRoute);
+  public header: IBase<IHeader> = {} as IBase<IHeader>;
+
+  ngOnInit() {
+    this.activatedRoute.data.subscribe(data => {
+      this.header = data['header'];
+    })
+  }
+}
