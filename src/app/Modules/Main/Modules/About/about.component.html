@@ -129,12 +129,6 @@
                   {{ basicInfo.data.brief }}
                 </p>
               </div>
-
-              <div class="flex flex-wrap gap-3 pt-4">
-                @for (skill of ['Angular', 'TypeScript', 'Node.js', 'RxJS', 'Cloud Architecture']; track skill) {
-                  <span class="tech-pill">{{ skill }}</span>
-                }
-              </div>
             </div>
 
             <!-- Bento Info Grid -->
@@ -165,7 +159,7 @@
                 </div>
                 <div class="space-y-2">
                   <span class="font-mono-code block text-gray-500">Comm.Phone</span>
-                  <span class="text-sm font-bold text-white">{{ basicInfo.data.phone }}</span>
+                  <span class="text-sm font-bold text-white">{{ basicInfo.data.ksaPhone }}</span>
                 </div>
                 <div class="space-y-2">
                   <span class="font-mono-code block text-gray-500">Loc.Current</span>
@@ -187,17 +181,20 @@
 
               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 @for (cert of certificateList.data; track cert.certificateName) {
-                  <div
-                    class="pro-card !p-0 cert-card group/cert border border-white/5 hover:border-brand-primary/40 transition-all duration-700">
+                  <a
+                    [href]="cert.certificatePath"
+                    data-fancybox="certificates"
+                    [attr.data-caption]="cert.certificateName"
+                    class="pro-card !p-0 cert-card group/cert border border-white/5 hover:border-brand-primary/40 transition-all duration-700 cursor-pointer block">
                     <div class="aspect-[16/10] relative overflow-hidden">
                       <img [src]="cert.certificatePath" [alt]="cert.certificateName"
                            class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover/cert:scale-110">
                       <div
                         class="absolute inset-0 bg-brand-bg/80 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-500 flex items-center justify-center p-8 text-center">
-                        <a [href]="cert.certificatePath" target="_blank"
+                        <div
                            class="px-6 py-3 bg-brand-primary text-black font-black uppercase tracking-widest text-[10px] rounded-full transform translate-y-4 group-hover/cert:translate-y-0 transition-all duration-500 shadow-xl shadow-brand-primary/20">
                           Verify Integrity
-                        </a>
+                        </div>
                       </div>
                     </div>
                     <div class="p-6 space-y-4">
@@ -210,7 +207,7 @@
                         {{ cert.certificateName }}
                       </h4>
                     </div>
-                  </div>
+                  </a>
                 }
               </div>
             </div>

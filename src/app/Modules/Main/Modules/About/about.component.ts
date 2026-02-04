@@ -1,8 +1,9 @@
-import {Component, inject, OnInit, HostListener} from '@angular/core';
+import {Component, inject, OnInit, HostListener, AfterViewInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {IBase} from '../../../../Core/models/Interface/Base/base';
 import {IBasicInfo} from './DTO/Interface/BasicInfo/basic-info';
 import {ICertificate} from './DTO/Interface/Certificate/certificate';
+import { Fancybox } from "@fancyapps/ui";
 
 @Component({
   selector: 'app-about',
@@ -10,8 +11,9 @@ import {ICertificate} from './DTO/Interface/Certificate/certificate';
   styleUrl: './about.component.scss',
   standalone: false
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
   private readonly activatedRoute = inject(ActivatedRoute);
+
   public basicInfo = {} as IBase<IBasicInfo>;
   public certificateList = {} as IBase<ICertificate[]>;
   yearsOfExperience: number = 0;
@@ -45,8 +47,34 @@ export class AboutComponent implements OnInit {
     this.activatedRoute.data.subscribe(res => {
       this.basicInfo = res['basicInfo'];
       this.certificateList = res['certificateList'];
-      this.yearsOfExperience = new Date().getFullYear() - this.basicInfo.data.graduatedYear
+      this.yearsOfExperience = new Date().getFullYear() - this.basicInfo.data.graduatedYear;
     })
+  }
+
+  ngAfterViewInit() {
+    (Fancybox as any).bind("[data-fancybox='certificates']", {
+      Toolbar: {
+        display: {
+          left: ["infobar"],
+          middle: [
+            "zoomIn",
+            "zoomOut",
+            "fullScreen",
+            "prev",
+            "next",
+          ],
+          right: ["slideshow", "download", "thumbs", "close"],
+        },
+      },
+      Images: {
+        Panzoom: {
+          maxScale: 2,
+        },
+      },
+      showClass: "fancybox-fadeIn",
+      hideClass: "fancybox-fadeOut",
+      animated: true,
+    });
   }
 
 }

@@ -186,3 +186,142 @@
     transform: scale(1.05);
   }
 }
+
+// Custom Fancybox Theme - Ultra Professional
+:root {
+  --f-button-bg: transparent;
+  --f-button-color: #10b981;
+  --f-button-hover-bg: rgba(16, 185, 129, 0.1);
+  --f-button-hover-color: #10b981;
+  --f-button-shadow: none;
+  --f-button-outline: none;
+}
+
+::ng-deep {
+  .fancybox__container {
+    --fancybox-bg: rgba(11, 22, 21, 0.98);
+    backdrop-filter: blur(24px);
+    z-index: 9999;
+  }
+
+  /* Toolbar Styling - Bottom Docked */
+  .fancybox__toolbar {
+    top: auto !important;
+    bottom: 0 !important;
+    background: linear-gradient(to top, rgba(11, 22, 21, 0.95) 0%, transparent 100%) !important;
+    padding: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 16px !important;
+
+    .f-button {
+      background: rgba(11, 22, 21, 0.8) !important;
+      border: 1px solid rgba(16, 185, 129, 0.2) !important;
+      backdrop-filter: blur(12px) !important;
+      border-radius: 14px !important;
+      width: 48px !important;
+      height: 48px !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      position: relative !important;
+
+      svg {
+        width: 22px !important;
+        height: 22px !important;
+        stroke-width: 2px !important;
+        filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.3)) !important;
+      }
+
+      &:hover {
+        background: rgba(16, 185, 129, 0.15) !important;
+        border-color: #10b981 !important;
+        transform: translateY(-4px) !important;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(16, 185, 129, 0.2) !important;
+      }
+    }
+  }
+
+  /* Infobar - Top Left Positioned */
+  .fancybox__infobar {
+    top: 30px !important;
+    left: 30px !important;
+    font-family: var(--font-mono);
+    color: #10b981;
+    font-size: 11px;
+    letter-spacing: 3px;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Close Button - Clean Exit Design */
+  .fancybox__button--close {
+    background: rgba(239, 68, 68, 0.15) !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    color: #ef4444 !important;
+    border-radius: 14px !important;
+    margin-left: 40px !important; /* Separate from other tools */
+
+    svg {
+      stroke: currentColor !important;
+      stroke-width: 2.5px !important;
+      width: 20px !important;
+      height: 20px !important;
+    }
+
+    &:hover {
+      background: #ef4444 !important;
+      border-color: #ef4444 !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 25px rgba(239, 68, 68, 0.4) !important;
+    }
+  }
+
+  /* Navigation Styling - Hidden because we use Toolbar buttons */
+  .fancybox__nav {
+    display: none !important;
+  }
+
+  .fancybox__content {
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.8), 0 0 40px rgba(16, 185, 129, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0b1615;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
+  .fancybox__caption {
+    font-family: var(--font-mono);
+    color: #10b981 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%) !important;
+    padding: 60px 20px 30px !important;
+    bottom: 100px !important; /* Move above bottom toolbar */
+  }
+
+  /* Progress Bar */
+  .fancybox__progress {
+    background: #10b981 !important;
+    height: 3px !important;
+    top: 0 !important;
+  }
+}
