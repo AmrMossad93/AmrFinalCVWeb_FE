@@ -10,21 +10,21 @@
            style="background-image: radial-gradient(var(--brand-primary) 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
     </div>
 
-    <section class="py-24 lg:py-40 relative">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section class="py-16 md:py-24 lg:py-40 pb-32 md:pb-40 relative overflow-x-hidden">
+      <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-8">
         <!-- Main Layout Grid -->
-        <div class="flex flex-col lg:flex-row gap-20 items-start">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch lg:items-start w-full">
 
           <!-- Sticky Visual Column -->
-          <div class="w-full lg:w-[420px] lg:sticky sticky-element">
-            <div class="relative group interactive-image-container">
+          <div class="w-full lg:w-[420px] lg:sticky sticky-element mb-16 lg:mb-0">
+            <div class="relative group interactive-image-container w-full max-w-[280px] xs:max-w-[320px] sm:max-w-md mx-auto lg:max-w-none">
               <!-- Advanced Cybernetic Glow -->
               <div
                 class="absolute -inset-4 bg-gradient-to-tr from-brand-primary/40 via-indigo-500/20 to-brand-primary/40 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
 
               <!-- Image Container -->
               <div
-                class="relative rounded-[3rem] overflow-hidden border border-white/10 glass-panel shadow-2xl image-wrapper">
+                class="relative rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden border border-white/10 glass-panel shadow-2xl image-wrapper">
                 <!-- Technical Corners -->
                 <div class="tech-corner tl"></div>
                 <div class="tech-corner tr"></div>
@@ -32,9 +32,9 @@
                 <div class="tech-corner br"></div>
 
                 <!-- HUD Data Points -->
-                <div class="hud-data top-10 left-12">COORD_X: 34.221</div>
-                <div class="hud-data top-14 left-12">COORD_Y: 10.454</div>
-                <div class="hud-data bottom-32 right-12 text-right">SYSTEM_STATUS: OK<br>ENCRYPTION: AES_256</div>
+                <div class="hud-data top-10 left-12 hidden sm:block">COORD_X: 34.221</div>
+                <div class="hud-data top-14 left-12 hidden sm:block">COORD_Y: 10.454</div>
+                <div class="hud-data bottom-32 right-12 text-right hidden sm:block">SYSTEM_STATUS: OK<br>ENCRYPTION: AES_256</div>
 
                 <!-- Scanning Line Effect -->
                 <div class="scan-line"></div>
@@ -54,28 +54,28 @@
                 </div>
 
                 <!-- System Identity Label -->
-                <div class="absolute top-10 right-12 text-right">
-                  <span class="font-mono-code text-white/40 block">Subject.Type</span>
+                <div class="absolute top-6 right-8 sm:top-10 sm:right-12 text-right">
+                  <span class="font-mono-code text-white/40 block text-[8px] sm:text-[10px]">Subject.Type</span>
                   <span
-                    class="text-[10px] font-bold tracking-[0.2em] text-brand-primary uppercase">Core_Engineer_V2</span>
+                    class="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-brand-primary uppercase">Core_Engineer_V2</span>
                 </div>
 
                 <!-- Bio-Metric Progress -->
-                <div class="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-brand-bg to-transparent">
-                  <div class="flex flex-col gap-5">
+                <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 bg-gradient-to-t from-brand-bg to-transparent">
+                  <div class="flex flex-col gap-4 sm:gap-5">
                     <div class="flex items-center justify-between">
                       <div class="flex flex-col">
                         <span
-                          class="text-5xl font-black text-white leading-none tracking-tighter">{{ yearsOfExperience }}
+                          class="text-3xl sm:text-5xl font-black text-white leading-none tracking-tighter">{{ yearsOfExperience }}
                           +</span>
-                        <span class="text-[9px] font-bold text-brand-primary uppercase tracking-[0.3em] mt-2">Cycle_Duration</span>
+                        <span class="text-[8px] sm:text-[9px] font-bold text-brand-primary uppercase tracking-[0.3em] mt-2">Cycle_Duration</span>
                       </div>
                       <div class="text-right">
-                        <span class="text-[10px] font-mono text-gray-500 uppercase block mb-1">Processing_Task</span>
-                        <span class="text-xs font-bold text-white uppercase tracking-widest">Architecting</span>
+                        <span class="text-[8px] sm:text-[10px] font-mono text-gray-500 uppercase block mb-1">Processing_Task</span>
+                        <span class="text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest">Architecting</span>
                       </div>
                     </div>
-                    <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden border border-white/10">
+                    <div class="h-1 sm:h-1.5 w-full bg-white/5 rounded-full overflow-hidden border border-white/10">
                       <div class="h-full bg-gradient-to-r from-brand-primary to-indigo-500 w-[92%] relative">
                         <div
                           class="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.2)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.2)_75%,transparent_75%,transparent)] bg-[length:10px_10px] animate-[pulse-soft_2s_linear_infinite]"></div>
@@ -87,45 +87,45 @@
 
               <!-- Floating Decrypted Tokens -->
               <div
-                class="absolute -top-6 -right-8 glass-card px-5 py-2.5 rounded-2xl border border-brand-primary/30 transform rotate-12 hover:rotate-0 transition-all duration-700 shadow-xl shadow-brand-primary/10">
-                <span class="font-mono-code text-brand-primary text-[10px]">AUTH_TOKEN: VALID</span>
+                class="absolute -top-3 -right-3 sm:-top-6 sm:-right-8 glass-card px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-xl sm:rounded-2xl border border-brand-primary/30 transform rotate-6 sm:rotate-12 hover:rotate-0 transition-all duration-700 shadow-xl shadow-brand-primary/10 z-50">
+                <span class="font-mono-code text-brand-primary text-[8px] sm:text-[10px]">AUTH_TOKEN: VALID</span>
               </div>
               <div
-                class="absolute top-1/2 -left-12 glass-card px-5 py-2.5 rounded-2xl border border-indigo-500/30 transform -rotate-12 hover:rotate-0 transition-all duration-700 shadow-xl shadow-indigo-500/10">
-                <span class="font-mono-code text-indigo-400 text-[10px] flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-ping"></span>
+                class="absolute top-1/2 -left-3 sm:-left-12 glass-card px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-xl sm:rounded-2xl border border-indigo-500/30 transform -rotate-6 sm:-rotate-12 hover:rotate-0 transition-all duration-700 shadow-xl shadow-indigo-500/10 z-50">
+                <span class="font-mono-code text-indigo-400 text-[8px] sm:text-[10px] flex items-center gap-2">
+                  <span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-indigo-500 animate-ping"></span>
                   LIVE_SYNC
                 </span>
               </div>
             </div>
 
             <!-- Profile Meta Bento -->
-            <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto lg:max-w-none w-full">
               <div class="pro-card !p-4 flex flex-col items-center text-center gap-2">
-                <span class="font-mono-code">Age</span>
-                <span class="text-lg font-bold text-white">{{ basicInfo.data.age }}</span>
+                <span class="font-mono-code text-[10px] sm:text-xs">Subject.Age</span>
+                <span class="text-lg sm:text-xl font-bold text-white">{{ basicInfo.data.age }}</span>
               </div>
               <div class="pro-card !p-4 flex flex-col items-center text-center gap-2">
-                <span class="font-mono-code">Class</span>
-                <span class="text-lg font-bold text-white">{{ basicInfo.data.graduatedYear }}</span>
+                <span class="font-mono-code text-[10px] sm:text-xs">Subject.Class</span>
+                <span class="text-lg sm:text-xl font-bold text-white">{{ basicInfo.data.graduatedYear }}</span>
               </div>
             </div>
           </div>
 
           <!-- Content Column -->
-          <div class="flex-1 space-y-24">
+          <div class="w-full lg:flex-1 space-y-12 md:space-y-20 lg:space-y-24">
             <!-- Header Section -->
             <div class="space-y-6">
               <div class="flex items-center gap-4">
-                <span class="font-mono-code text-brand-primary">System.Get(Biography);</span>
+                <span class="font-mono-code text-brand-primary text-xs">System.Get(Biography);</span>
                 <div class="h-px flex-1 bg-gradient-to-r from-brand-primary/30 to-transparent"></div>
               </div>
 
               <div class="space-y-4">
-                <h1 class="text-5xl md:text-7xl font-black text-white leading-tight tracking-tighter">
+                <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter break-words">
                   {{ basicInfo.data.title }}
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-400 font-medium max-w-3xl leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-gray-400 font-medium max-w-3xl leading-relaxed">
                   {{ basicInfo.data.brief }}
                 </p>
               </div>
@@ -134,76 +134,76 @@
             <!-- Bento Info Grid -->
             <div class="bento-grid">
               <!-- Mission Card -->
-              <div class="pro-card col-span-2 row-span-2 flex flex-col justify-between group">
+              <div class="pro-card md:col-span-1 xl:col-span-2 md:row-span-2 flex flex-col justify-between group">
                 <div class="space-y-4">
                   <div
-                    class="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center card-icon text-brand-primary">
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-brand-primary/10 flex items-center justify-center card-icon text-brand-primary">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
                   </div>
-                  <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Mission & Core Vision</h3>
-                  <p class="text-gray-400 leading-relaxed">{{ basicInfo.data.target }}</p>
+                  <h3 class="text-xl sm:text-2xl font-bold text-white uppercase tracking-tight">Mission & Core Vision</h3>
+                  <p class="text-sm sm:text-base text-gray-400 leading-relaxed">{{ basicInfo.data.target }}</p>
                 </div>
-                <div class="mt-8 pt-6 border-t border-white/5">
-                  <span class="font-mono-code">Status: Operational.v1</span>
+                <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/5">
+                  <span class="font-mono-code text-[10px] sm:text-xs">Status: Operational.v1</span>
                 </div>
               </div>
 
               <!-- Contact Grid -->
-              <div class="pro-card col-span-2 grid grid-cols-2 gap-8">
-                <div class="space-y-2">
-                  <span class="font-mono-code block text-gray-500">Comm.Email</span>
-                  <span class="text-sm font-bold text-white break-all">{{ basicInfo.data.email }}</span>
+              <div class="pro-card md:col-span-1 xl:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 content-start">
+                <div class="space-y-1 sm:space-y-2">
+                  <span class="font-mono-code block text-gray-500 text-[10px] sm:text-xs">Comm.Email</span>
+                  <span class="text-xs sm:text-sm font-bold text-white break-all">{{ basicInfo.data.email }}</span>
                 </div>
-                <div class="space-y-2">
-                  <span class="font-mono-code block text-gray-500">Comm.Phone</span>
-                  <span class="text-sm font-bold text-white">{{ basicInfo.data.ksaPhone }}</span>
+                <div class="space-y-1 sm:space-y-2">
+                  <span class="font-mono-code block text-gray-500 text-[10px] sm:text-xs">Comm.Phone</span>
+                  <span class="text-xs sm:text-sm font-bold text-white">{{ basicInfo.data.phone }}</span>
                 </div>
-                <div class="space-y-2">
-                  <span class="font-mono-code block text-gray-500">Loc.Current</span>
-                  <span class="text-sm font-bold text-white">{{ basicInfo.data.currentAddress }}</span>
+                <div class="space-y-1 sm:space-y-2">
+                  <span class="font-mono-code block text-gray-500 text-[10px] sm:text-xs">Loc.Current</span>
+                  <span class="text-xs sm:text-sm font-bold text-white">{{ basicInfo.data.currentAddress }}</span>
                 </div>
-                <div class="space-y-2">
-                  <span class="font-mono-code block text-gray-500">Loc.Native</span>
-                  <span class="text-sm font-bold text-white">{{ basicInfo.data.address }}</span>
+                <div class="space-y-1 sm:space-y-2">
+                  <span class="font-mono-code block text-gray-500 text-[10px] sm:text-xs">Loc.Native</span>
+                  <span class="text-xs sm:text-sm font-bold text-white">{{ basicInfo.data.address }}</span>
                 </div>
               </div>
             </div>
 
             <!-- Credentials Section -->
-            <div class="space-y-12">
+            <div class="space-y-8 sm:space-y-12">
               <div class="flex items-center gap-4">
-                <span class="font-mono-code text-indigo-400">System.Validate(Credentials);</span>
+                <span class="font-mono-code text-indigo-400 text-sm">System.Validate(Credentials);</span>
                 <div class="h-px flex-1 bg-gradient-to-r from-indigo-500/30 to-transparent"></div>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 @for (cert of certificateList.data; track cert.certificateName) {
                   <a
                     [href]="cert.certificatePath"
                     data-fancybox="certificates"
                     [attr.data-caption]="cert.certificateName"
                     class="pro-card !p-0 cert-card group/cert border border-white/5 hover:border-brand-primary/40 transition-all duration-700 cursor-pointer block">
-                    <div class="aspect-[16/10] relative overflow-hidden">
+                    <div class="aspect-[16/11] relative overflow-hidden bg-black/20">
                       <img [src]="cert.certificatePath" [alt]="cert.certificateName"
                            class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover/cert:scale-110">
                       <div
-                        class="absolute inset-0 bg-brand-bg/80 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-500 flex items-center justify-center p-8 text-center">
+                        class="absolute inset-0 bg-brand-bg/80 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-500 flex items-center justify-center p-6 text-center">
                         <div
-                           class="px-6 py-3 bg-brand-primary text-black font-black uppercase tracking-widest text-[10px] rounded-full transform translate-y-4 group-hover/cert:translate-y-0 transition-all duration-500 shadow-xl shadow-brand-primary/20">
+                           class="px-5 py-2.5 bg-brand-primary text-black font-black uppercase tracking-widest text-[9px] rounded-full transform translate-y-4 group-hover/cert:translate-y-0 transition-all duration-500 shadow-xl shadow-brand-primary/20">
                           Verify Integrity
                         </div>
                       </div>
                     </div>
-                    <div class="p-6 space-y-4">
+                    <div class="p-5 space-y-3">
                       <div class="flex items-center justify-between">
-                        <span class="text-[10px] font-mono text-gray-500 uppercase">Cert_ID.{{ $index + 1 }}</span>
-                        <div class="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse"></div>
+                        <span class="text-[9px] font-mono text-gray-500 uppercase tracking-widest">Cert_ID.{{ $index + 1 }}</span>
+                        <div class="w-1 h-1 rounded-full bg-brand-primary animate-pulse"></div>
                       </div>
                       <h4
-                        class="text-sm font-bold text-white group-hover/cert:text-brand-primary transition-colors line-clamp-2 leading-relaxed">
+                        class="text-xs font-bold text-white group-hover/cert:text-brand-primary transition-colors line-clamp-2 leading-relaxed uppercase tracking-wide">
                         {{ cert.certificateName }}
                       </h4>
                     </div>
@@ -214,19 +214,19 @@
 
             <!-- CTA Section -->
             <div
-              class="pro-card bg-brand-primary/5 border-brand-primary/20 flex flex-col items-center text-center gap-8 py-16">
-              <div class="space-y-4">
-                <h3 class="text-4xl md:text-5xl font-black text-white tracking-tight">
+              class="pro-card bg-brand-primary/5 border-brand-primary/20 flex flex-col items-center text-center gap-6 sm:gap-8 py-10 sm:py-16 px-6 sm:px-10">
+              <div class="space-y-4 w-full">
+                <h3 class="text-lg xs:text-xl sm:text-3xl md:text-5xl font-black text-white tracking-tight break-words">
                   System.Ready(New_Collaboration);</h3>
-                <p class="text-gray-400 text-lg max-w-xl mx-auto">
+                <p class="text-[10px] xs:text-xs sm:text-lg text-gray-400 max-w-xl mx-auto">
                   Currently seeking high-impact opportunities where engineering meets innovation.
                 </p>
               </div>
               <a routerLink="/contact"
-                 class="group relative px-10 py-5 bg-brand-primary text-black font-black uppercase tracking-[0.2em] rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-brand-primary/30">
+                 class="group relative w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-brand-primary text-black font-black uppercase tracking-[0.2em] rounded-xl sm:rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-brand-primary/30 text-xs sm:text-sm md:text-base text-center">
                 <span class="relative z-10">Initialize Handshake</span>
                 <div
-                  class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity rounded-2xl"></div>
+                  class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity rounded-xl sm:rounded-2xl"></div>
               </a>
             </div>
           </div>
