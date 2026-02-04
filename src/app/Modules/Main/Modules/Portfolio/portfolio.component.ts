@@ -65,11 +65,6 @@ export class PortfolioComponent implements OnInit {
     this.loadProjects();
   }
 
-  onFilterChange(): void {
-    this.currentPage = 1;
-    this.loadProjects();
-  }
-
   onSearch(query: string): void {
     this.searchQuery = query;
     this.currentPage = 1;
