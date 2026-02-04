@@ -12,6 +12,10 @@ export interface Project {
   featured?: boolean;
   completionDate: string;
   features: string[];
+  client?: string;
+  type?: string;
+  iosLink?: string | null;
+  androidLink?: string | null;
 }
 
-export type ProjectCategory = 'Web Development' | 'Mobile Apps' | 'AI & Machine Learning' | 'Cloud Solutions' | 'Cybersecurity' | 'Blockchain';
+export type ProjectCategory = string;

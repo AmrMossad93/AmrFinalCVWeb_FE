@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
-@import "@fancyapps/ui/dist/fancybox/fancybox.css";
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -60,55 +59,6 @@ body {
 
 .glow-primary {
   text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
-}
-
-.shadow-3xl {
-  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.5);
-}
-
-.animate-in {
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-}
-
-.fade-in {
-  animation-name: fadeIn;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Custom Selection Color */
-::selection {
-  background-color: #10b981;
-  color: #0b1615;
-}
-
-/* Modern Scrollbar for Ultra Prof Look */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0b1615;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1a1a1a;
-  border-radius: 10px;
-  border: 2px solid #0b1615;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
-}
-
-/* Hide horizontal scrollbar for clean look */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
 }
 
 /* Scrollbar */

@@ -20,26 +20,49 @@ export class PortfolioComponent implements OnInit {
   selectedCategory = '';
   selectedTech = '';
   searchQuery = '';
+  sortBy = 'newest';
 
   constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
-    this.categories = this.projectService.getAllCategories();
-    this.technologies = this.projectService.getAllTechnologies();
+    this.projectService.getAllCategories().subscribe(cats => this.categories = cats);
+    this.projectService.getAllTechnologies().subscribe(techs => this.technologies = techs);
     this.loadProjects();
   }
 
   loadProjects(): void {
     this.projectService.getProjects(
-      this.currentPage,
-      this.pageSize,
+      1, // Always load all for client-side sorting/pagination if needed, or stick to page-based
+      1000, // Load a large set to handle sorting properly for now
       this.selectedCategory,
       this.selectedTech,
       this.searchQuery
     ).subscribe((result: { projects: Project[], total: number }) => {
-      this.projects = result.projects;
-      this.totalProjects = result.total;
+      let filtered = [...result.projects];
+      
+      // Sorting
+      if (this.sortBy === 'newest') {
+        filtered.sort((a, b) => Number(b.id) - Number(a.id));
+      } else if (this.sortBy === 'name') {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      }
+      
+      this.totalProjects = filtered.length;
+      
+      // Apply manual pagination on the filtered/sorted list
+      const start = (this.currentPage - 1) * this.pageSize;
+      this.projects = filtered.slice(start, start + this.pageSize);
     });
+  }
+
+  onFilterChange(): void {
+    this.currentPage = 1;
+    this.loadProjects();
+  }
+
+  onSortChange(value: string): void {
+    this.sortBy = value;
+    this.loadProjects();
   }
 
   onFilterChange(): void {

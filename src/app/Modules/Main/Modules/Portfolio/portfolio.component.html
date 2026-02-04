@@ -1,195 +1,341 @@
-<div class="animate-in fade-in duration-700 text-gray-100">
-  <!-- Hero Header -->
-  <section class="py-20 bg-white/5">
+<div class="animate-in fade-in duration-1000 bg-brand-bg min-h-screen selection:bg-brand-primary selection:text-brand-bg relative overflow-x-hidden">
+  
+  <!-- Dynamic Matrix Background Integration -->
+  <div class="fixed inset-0 pointer-events-none z-0 opacity-40">
+    <app-matrix-background></app-matrix-background>
+  </div>
+
+  <!-- Hero Section Refinement -->
+  <section class="relative pt-40 pb-32 overflow-hidden z-10">
+    <!-- Architectural Overlays -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-bg/0 via-brand-bg/80 to-brand-bg"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_50%_20%,rgba(16,185,129,0.12),transparent_60%)]"></div>
+    </div>
+
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary mb-4">Portfolio</h2>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Selected Works</h1>
-        <p class="text-lg text-gray-400 font-medium leading-relaxed">
-          A showcase of enterprise-grade applications, focused on performance, scalability, and exceptional user experience.
+      <div class="flex flex-col items-center text-center">
+        <!-- Modernized Badge -->
+        <div class="group relative inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/[0.02] border border-white/10 mb-10 backdrop-blur-2xl hover:border-brand-primary/40 transition-all duration-500 cursor-default">
+          <div class="absolute inset-0 rounded-full bg-brand-primary/5 blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-40"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-primary"></span>
+          </span>
+          <span class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300">Curated Showcase v4.0</span>
+        </div>
+        
+        <!-- Typography with extra weight and spacing -->
+        <h1 class="text-6xl md:text-9xl font-black text-white mb-10 tracking-[-0.04em] leading-[0.85] max-w-5xl">
+          Crafting Digital<br>
+          <span class="text-gradient drop-shadow-[0_0_50px_rgba(16,185,129,0.25)]">Masterpieces</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-400 font-medium leading-relaxed max-w-3xl mb-16 opacity-70 tracking-tight">
+          A high-performance archive of architectural software solutions, engineered for the next generation of digital enterprise.
         </p>
+
+        <!-- Dynamic Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-24 py-12 px-12 rounded-[3rem] bg-white/[0.02] border border-white/5 backdrop-blur-3xl relative group">
+          <div class="absolute inset-0 bg-brand-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+          
+          <div class="flex flex-col items-center gap-2">
+            <span class="text-5xl font-black text-white tracking-tighter">{{totalProjects}}+</span>
+            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-brand-primary/80">Systems Deployed</span>
+          </div>
+          <div class="hidden md:flex flex-col items-center gap-2 border-x border-white/10 px-12">
+            <span class="text-5xl font-black text-white tracking-tighter">{{categories.length}}</span>
+            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-brand-primary/80">Tech Domains</span>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <span class="text-5xl font-black text-white tracking-tighter">100%</span>
+            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-brand-primary/80">Code Integrity</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Filters & Search -->
-  <section class="py-12 border-b border-white/5">
+  <!-- Modern Integrated Control Matrix (Filters) -->
+  <section class="sticky top-0 z-50 bg-brand-bg/40 backdrop-blur-3xl border-y border-white/5 py-8 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row gap-6 items-end">
-        <!-- Search -->
-        <div class="flex-grow w-full md:w-auto">
-          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Search Projects</label>
-          <div class="relative">
+      <div class="flex flex-col space-y-8">
+        <!-- Primary Controls -->
+        <div class="flex flex-col xl:flex-row gap-6 items-stretch xl:items-center">
+          <!-- Search -->
+          <div class="relative group flex-grow lg:max-w-xl">
+            <div class="absolute inset-0 bg-brand-primary/5 rounded-[1.25rem] blur-xl opacity-0 group-focus-within:opacity-100 transition-all duration-700"></div>
             <input 
               type="text" 
               [(ngModel)]="searchQuery" 
               (input)="onSearch(searchQuery)"
-              placeholder="Search by name or tech..."
-              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary/50 transition-colors"
+              placeholder="Search by system, tech, or industry matrix..."
+              class="relative w-full bg-white/[0.03] border border-white/10 rounded-[1.25rem] px-8 py-5 pl-16 text-white placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-brand-primary/20 focus:border-brand-primary/40 transition-all duration-500 backdrop-blur-xl"
             >
-            <svg class="absolute right-4 top-3.5 w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <svg class="absolute left-6 top-5.5 w-6 h-6 text-gray-600 group-focus-within:text-brand-primary transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+
+          <!-- Category Matrix Pills -->
+          <div class="flex items-center gap-2.5 overflow-x-auto pb-4 xl:pb-0 no-scrollbar xl:flex-grow justify-start xl:justify-end">
+            <button 
+              (click)="selectedCategory=''; onFilterChange()"
+              [class]="!selectedCategory ? 'bg-brand-primary text-brand-bg shadow-[0_0_30px_rgba(16,185,129,0.25)] scale-105' : 'bg-white/[0.03] text-gray-500 hover:bg-white/[0.08] hover:text-white'"
+              class="px-8 py-4 rounded-xl text-[10px] font-black uppercase tracking-[0.3em] whitespace-nowrap transition-all duration-500 border border-white/5"
+            >
+              All Matrices
+            </button>
+            <button 
+              *ngFor="let cat of categories"
+              (click)="selectedCategory=cat; onFilterChange()"
+              [class]="selectedCategory === cat ? 'bg-brand-primary text-brand-bg shadow-[0_0_30px_rgba(16,185,129,0.25)] scale-105' : 'bg-white/[0.03] text-gray-500 hover:bg-white/[0.08] hover:text-white'"
+              class="px-8 py-4 rounded-xl text-[10px] font-black uppercase tracking-[0.3em] whitespace-nowrap transition-all duration-500 border border-white/5"
+            >
+              {{cat}}
+            </button>
+          </div>
+        </div>
+
+        <!-- Secondary Meta Controls -->
+        <div class="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-white/5">
+          <div class="flex items-center gap-4">
+            <!-- Tech Domain -->
+            <div class="relative group">
+              <select 
+                [(ngModel)]="selectedTech" 
+                (change)="onFilterChange()"
+                class="bg-white/[0.02] border border-white/10 text-[10px] font-black text-gray-400 pl-6 pr-12 py-3.5 rounded-xl focus:outline-none focus:border-brand-primary/40 cursor-pointer appearance-none uppercase tracking-[0.2em] transition-all hover:bg-white/[0.05]"
+              >
+                <option value="">Tech Domain</option>
+                <option *ngFor="let tech of technologies" [value]="tech">{{tech}}</option>
+              </select>
+              <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-600 group-hover:text-brand-primary transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+
+            <!-- Execution Sort -->
+            <div class="relative group">
+              <select 
+                [(ngModel)]="sortBy" 
+                (change)="onSortChange(sortBy)"
+                class="bg-white/[0.02] border border-white/10 text-[10px] font-black text-gray-400 pl-6 pr-12 py-3.5 rounded-xl focus:outline-none focus:border-brand-primary/40 cursor-pointer appearance-none uppercase tracking-[0.2em] transition-all hover:bg-white/[0.05]"
+              >
+                <option value="newest">Latest Deployment</option>
+                <option value="name">System Index A-Z</option>
+              </select>
+              <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-600 group-hover:text-brand-primary transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Counter -->
+          <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-brand-primary/5 border border-brand-primary/10 backdrop-blur-md">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse"></span>
+            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-brand-primary/80">
+              Validated {{projects.length}} / {{totalProjects}} Core Systems
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architectural Project Matrix -->
+  <section class="py-32 px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div *ngIf="projects.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div *ngFor="let project of projects; let i = index"
+             class="project-card-v4 group relative">
+          
+          <!-- Perspective Wrapper -->
+          <div class="relative aspect-[10/13] overflow-hidden rounded-[2.5rem] bg-[#0c0c0c] border border-white/[0.05] transition-all duration-700 hover:border-brand-primary/30 group-hover:-translate-y-3">
+            
+            <!-- System Visual -->
+            <div class="absolute inset-0 overflow-hidden">
+              <img 
+                *ngIf="project.gallery.length > 0" 
+                [src]="project.gallery[0]" 
+                class="w-full h-full object-cover transition-all duration-[1.5s] scale-[1.02] group-hover:scale-110 opacity-40 group-hover:opacity-100 grayscale-[0.5] group-hover:grayscale-0"
+                [alt]="project.name"
+              >
+              <!-- Glass Gradients -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent group-hover:via-black/10 transition-all duration-700"></div>
+              <div class="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.1),transparent_70%)] transition-opacity duration-700"></div>
+            </div>
+
+            <!-- Header Info -->
+            <div class="absolute top-8 left-8 right-8 flex items-start justify-between z-20">
+              <div class="flex flex-col gap-1.5">
+                <span class="text-[9px] font-black uppercase tracking-[0.4em] text-brand-primary drop-shadow-xl">
+                  {{project.category}}
+                </span>
+                <span class="text-[11px] font-bold text-white/50 uppercase tracking-[0.2em]">
+                  {{project.type}}
+                </span>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-black/50 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:border-brand-primary/40 transition-colors">
+                <span class="text-[10px] font-black text-white/80 group-hover:text-brand-primary transition-colors">0{{i + 1}}</span>
+              </div>
+            </div>
+
+            <!-- Deep Info Layer (Hover) -->
+            <div class="absolute inset-0 bg-brand-bg/95 backdrop-blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col p-12 translate-y-4 group-hover:translate-y-0">
+              <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-0.5 bg-brand-primary"></div>
+                <span class="text-brand-primary font-black text-[9px] uppercase tracking-[0.4em]">System Specs</span>
+              </div>
+              
+              <h3 class="text-4xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
+                {{ project.name }}
+              </h3>
+              
+              <p class="text-[13px] text-gray-400 leading-[1.6] line-clamp-6 font-medium mb-auto opacity-80 group-hover:opacity-100 transition-opacity delay-100">
+                {{ project.description }}
+              </p>
+              
+              <div class="pt-10 mt-auto">
+                <div class="flex flex-wrap gap-2 mb-10">
+                  <span *ngFor="let tech of project.technologies.slice(0, 4)"
+                        class="px-3 py-2 rounded-lg bg-white/5 border border-white/5 text-[8px] font-black text-gray-500 uppercase tracking-[0.2em] hover:text-brand-primary hover:border-brand-primary/30 transition-all cursor-default">
+                    {{tech}}
+                  </span>
+                </div>
+                
+                <a [routerLink]="['/portfolio', project.id]" 
+                   class="group/btn relative flex items-center justify-center w-full py-5 bg-white text-brand-bg font-black uppercase tracking-[0.3em] text-[10px] rounded-xl overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+                  <span class="relative z-10">Initialize Case</span>
+                  <div class="absolute inset-0 bg-brand-primary translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500"></div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Static Overlay Layer -->
+            <div class="absolute bottom-10 left-10 right-10 z-10 group-hover:opacity-0 transition-all duration-500 translate-y-0 group-hover:translate-y-4">
+               <div *ngIf="project.client" class="mb-4">
+                <span class="text-[9px] font-black text-white/30 uppercase tracking-[0.3em]">Client: {{project.client}}</span>
+              </div>
+              <h3 class="text-3xl font-black text-white mb-6 tracking-tighter leading-[0.9]">
+                {{ project.name }}
+              </h3>
+              
+              <div class="flex items-center gap-6">
+                <div class="flex -space-x-3">
+                  <div *ngFor="let tech of project.technologies.slice(0, 3)" 
+                       class="w-10 h-10 rounded-full bg-[#111]/80 backdrop-blur-md border border-white/10 flex items-center justify-center">
+                    <span class="text-[9px] font-black text-brand-primary">{{tech.substring(0,2)}}</span>
+                  </div>
+                  <div *ngIf="project.technologies.length > 3" 
+                       class="w-10 h-10 rounded-full bg-brand-primary text-brand-bg border border-black flex items-center justify-center shadow-lg">
+                    <span class="text-[9px] font-black">+{{project.technologies.length - 3}}</span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <span class="text-[9px] font-black uppercase tracking-[0.2em] text-white/40">Technology</span>
+                  <span class="text-[10px] font-bold text-white/80 uppercase tracking-widest">Protocol</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional System Empty State -->
+      <div *ngIf="projects.length === 0" class="flex flex-col items-center justify-center py-48 text-center bg-white/[0.01] rounded-[4rem] border border-white/5 backdrop-blur-md relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.05),transparent_70%)]"></div>
+        <div class="relative w-40 h-40 mb-12">
+          <div class="absolute inset-0 bg-brand-primary/10 blur-[60px] rounded-full animate-pulse"></div>
+          <div class="relative w-full h-full rounded-full border border-white/10 flex items-center justify-center bg-black/40 backdrop-blur-2xl">
+            <svg class="w-16 h-16 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
         </div>
-
-        <!-- Category Filter -->
-        <div class="w-full md:w-64">
-          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Category</label>
-          <select 
-            [(ngModel)]="selectedCategory" 
-            (change)="onFilterChange()"
-            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary/50 transition-colors appearance-none"
-          >
-            <option value="">All Categories</option>
-            <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
-          </select>
-        </div>
-
-        <!-- Tech Filter -->
-        <div class="w-full md:w-64">
-          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Technology</label>
-          <select 
-            [(ngModel)]="selectedTech" 
-            (change)="onFilterChange()"
-            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary/50 transition-colors appearance-none"
-          >
-            <option value="">All Technologies</option>
-            <option *ngFor="let tech of technologies" [value]="tech">{{tech}}</option>
-          </select>
-        </div>
+        <h3 class="text-5xl font-black text-white mb-6 tracking-tighter uppercase leading-none">Matrix Disconnected</h3>
+        <p class="text-gray-500 max-w-md mx-auto mb-14 font-medium text-lg leading-relaxed opacity-60">
+          No system clusters found matching your current search parameters. Please re-align your filter matrix.
+        </p>
+        <button (click)="selectedCategory=''; selectedTech=''; searchQuery=''; onFilterChange()" 
+                class="group relative px-14 py-6 bg-white/[0.03] text-white font-black uppercase tracking-[0.4em] text-[10px] rounded-2xl border border-white/10 hover:bg-white hover:text-brand-bg transition-all duration-500">
+          <span class="relative z-10">Re-Initialize Matrix</span>
+          <div class="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+        </button>
       </div>
-    </div>
-  </section>
 
-  <!-- Project Grid -->
-  <section class="py-24 px-6 lg:px-8 min-h-[600px]">
-    <div class="max-w-7xl mx-auto">
-      <div *ngIf="projects.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-        <div *ngFor="let project of projects; let i = index"
-             class="group flex flex-col bg-white/5 rounded-3xl border border-white/10 overflow-hidden hover:border-brand-primary/30 transition-all duration-500 hover:shadow-2xl">
+      <!-- Modern Minimalist Global Pagination -->
+      <div *ngIf="totalPages > 1" class="mt-40 flex flex-col items-center gap-10">
+        <div class="flex items-center gap-4 p-2 bg-white/[0.02] rounded-[2.5rem] border border-white/5 backdrop-blur-2xl">
+          <button 
+            (click)="onPageChange(currentPage - 1)" 
+            [disabled]="currentPage === 1"
+            class="w-16 h-16 flex items-center justify-center bg-white/[0.03] border border-white/10 rounded-full text-gray-600 hover:text-white hover:border-brand-primary/40 disabled:opacity-5 disabled:cursor-not-allowed transition-all duration-500"
+          >
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
           
-          <!-- Project Visual -->
-          <div class="aspect-video w-full bg-white/5 flex items-center justify-center relative overflow-hidden">
-            <img 
-              *ngIf="project.gallery.length > 0" 
-              [src]="project.gallery[0]" 
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              [alt]="project.name"
+          <div class="flex items-center gap-3">
+            <button 
+              *ngFor="let page of pages" 
+              (click)="onPageChange(page)"
+              [class.bg-brand-primary]="currentPage === page"
+              [class.text-brand-bg]="currentPage === page"
+              [class.shadow-[0_0_40px_rgba(16,185,129,0.3)]]="currentPage === page"
+              [class.scale-110]="currentPage === page"
+              class="w-14 h-14 rounded-full text-[11px] font-black transition-all duration-500 transform border border-white/5 hover:border-brand-primary/30"
             >
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg/80 via-transparent to-transparent opacity-60"></div>
-            <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            
-            <!-- Project ID as visual -->
-            <span class="absolute top-4 left-4 text-2xl font-bold text-white/20">
-              #{{ project.id }}
-            </span>
-            
-            <!-- Hover Action -->
-            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <a [routerLink]="['/portfolio', project.id]" class="px-6 py-3 bg-white text-gray-900 font-bold rounded-xl shadow-xl hover:scale-105 transition-all">
-                View Project
-              </a>
-            </div>
+              {{ page }}
+            </button>
           </div>
 
-          <!-- Project Details -->
-          <div class="p-8 flex flex-col flex-grow">
-            <div class="flex-grow space-y-4">
-              <div class="flex items-center gap-2">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-brand-primary bg-brand-primary/10 px-2 py-1 rounded">
-                  {{ project.category }}
-                </span>
-              </div>
-              <h3 class="text-xl font-bold text-white group-hover:text-brand-primary transition-colors line-clamp-1">
-                {{ project.name }}
-              </h3>
-              <p class="text-sm text-gray-400 leading-relaxed font-medium line-clamp-2">
-                {{ project.description }}
-              </p>
-            </div>
-
-            <!-- Tech Tags -->
-            <div class="mt-6 flex flex-wrap gap-2">
-              <span *ngFor="let tech of project.technologies"
-                    class="px-2 py-1 bg-white/5 text-gray-400 text-[10px] font-bold rounded-lg border border-white/10 transition-colors">
-                {{ tech }}
-              </span>
-            </div>
-
-            <!-- Footer Links -->
-            <div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
-              <a [href]="project.githubUrl" target="_blank" class="text-xs font-bold text-gray-500 hover:text-white transition-colors flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                Source
-              </a>
-              <a [routerLink]="['/portfolio', project.id]" class="text-xs font-bold text-brand-primary hover:text-brand-primary/80 transition-colors flex items-center gap-1 group/link">
-                View Case Study
-                <svg class="w-3 h-3 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </a>
-            </div>
-          </div>
+          <button 
+            (click)="onPageChange(currentPage + 1)" 
+            [disabled]="currentPage === totalPages"
+            class="w-16 h-16 flex items-center justify-center bg-white/[0.03] border border-white/10 rounded-full text-gray-600 hover:text-white hover:border-brand-primary/40 disabled:opacity-5 disabled:cursor-not-allowed transition-all duration-500"
+          >
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
         </div>
-      </div>
-
-      <!-- Empty State -->
-      <div *ngIf="projects.length === 0" class="flex flex-col items-center justify-center py-20 text-center">
-        <div class="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center mb-6">
-          <svg class="w-10 h-10 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 9.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+        <div class="flex flex-col items-center gap-2">
+           <span class="text-[9px] font-black uppercase tracking-[0.5em] text-gray-600">Matrix Index</span>
+           <span class="text-xs font-bold text-white tracking-widest">{{currentPage}} / {{totalPages}}</span>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-2">No projects found</h3>
-        <p class="text-gray-400">Try adjusting your filters or search query.</p>
-        <button (click)="selectedCategory=''; selectedTech=''; searchQuery=''; onFilterChange()" class="mt-8 text-brand-primary font-bold hover:underline">
-          Clear all filters
-        </button>
-      </div>
-
-      <!-- Pagination -->
-      <div *ngIf="totalPages > 1" class="mt-20 flex flex-wrap justify-center gap-2">
-        <button 
-          (click)="onPageChange(currentPage - 1)" 
-          [disabled]="currentPage === 1"
-          class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-400 hover:border-brand-primary/30 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-        >
-          Previous
-        </button>
-        
-        <button 
-          *ngFor="let page of pages" 
-          (click)="onPageChange(page)"
-          [class.bg-brand-primary]="currentPage === page"
-          [class.text-brand-bg]="currentPage === page"
-          [class.border-brand-primary]="currentPage === page"
-          class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-400 hover:border-brand-primary/30 hover:text-white transition-all"
-        >
-          {{ page }}
-        </button>
-
-        <button 
-          (click)="onPageChange(currentPage + 1)" 
-          [disabled]="currentPage === totalPages"
-          class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-400 hover:border-brand-primary/30 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-        >
-          Next
-        </button>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-24 bg-[#0B1615] text-white border-t border-white/5 overflow-hidden relative">
-    <div class="absolute inset-0 bg-brand-primary/5 blur-3xl rounded-full translate-y-1/2 scale-150"></div>
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center space-y-8">
-      <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Interested in collaboration?</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto font-medium">
-        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-      </p>
-      <div class="pt-4">
-        <a routerLink="/contact" class="px-10 py-5 bg-brand-primary text-brand-bg font-bold rounded-2xl hover:scale-105 transition-all inline-block shadow-2xl">
-          Get Started Today
-        </a>
+  <!-- High-End Terminal CTA -->
+  <section class="py-48 relative overflow-hidden bg-[#050a0a]">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.05]"></div>
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-primary/30 to-transparent"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="relative group">
+        <div class="absolute inset-0 bg-brand-primary/5 blur-[160px] rounded-full opacity-40 group-hover:opacity-100 transition-opacity duration-1000"></div>
+        
+        <div class="relative flex flex-col items-center text-center py-32 px-12 rounded-[5rem] border border-white/5 bg-black/40 backdrop-blur-[100px] shadow-3xl overflow-hidden">
+          <div class="absolute -top-32 -left-32 w-80 h-80 bg-brand-primary/10 blur-[100px] rounded-full"></div>
+          
+          <span class="text-brand-primary font-black text-[10px] uppercase tracking-[0.5em] mb-12 animate-pulse">Available for Connection</span>
+          <h2 class="text-5xl md:text-8xl font-black text-white mb-12 tracking-tighter max-w-4xl leading-[0.85]">
+            Ready to Forge the<br>
+            <span class="text-gradient">Digital Future?</span>
+          </h2>
+          <p class="text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto font-medium mb-20 opacity-60 leading-relaxed tracking-tight">
+            I specialize in architecting high-end digital environments that blend raw performance with cinematic aesthetics.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center gap-10">
+            <a routerLink="/contact" class="group/btn relative px-16 py-7 bg-brand-primary text-brand-bg font-black uppercase tracking-[0.3em] text-[11px] rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(16,185,129,0.4)]">
+              <span class="relative z-10">Initiate Protocol</span>
+              <div class="absolute inset-0 bg-white translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500"></div>
+            </a>
+            <a routerLink="/resume" class="group/btn relative px-16 py-7 bg-white/[0.02] text-white font-black uppercase tracking-[0.3em] text-[11px] rounded-2xl border border-white/10 transition-all duration-500 hover:bg-white hover:text-black">
+              View Dossier
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
