@@ -186,15 +186,15 @@
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                @for (cert of certificates; track cert.name) {
+                @for (cert of certificateList.data; track cert.certificateName) {
                   <div
                     class="pro-card !p-0 cert-card group/cert border border-white/5 hover:border-brand-primary/40 transition-all duration-700">
                     <div class="aspect-[16/10] relative overflow-hidden">
-                      <img [src]="cert.path" [alt]="cert.name"
+                      <img [src]="cert.certificatePath" [alt]="cert.certificateName"
                            class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover/cert:scale-110">
                       <div
                         class="absolute inset-0 bg-brand-bg/80 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-500 flex items-center justify-center p-8 text-center">
-                        <a [href]="cert.path" target="_blank"
+                        <a [href]="cert.certificatePath" target="_blank"
                            class="px-6 py-3 bg-brand-primary text-black font-black uppercase tracking-widest text-[10px] rounded-full transform translate-y-4 group-hover/cert:translate-y-0 transition-all duration-500 shadow-xl shadow-brand-primary/20">
                           Verify Integrity
                         </a>
@@ -207,7 +207,7 @@
                       </div>
                       <h4
                         class="text-sm font-bold text-white group-hover/cert:text-brand-primary transition-colors line-clamp-2 leading-relaxed">
-                        {{ cert.name }}
+                        {{ cert.certificateName }}
                       </h4>
                     </div>
                   </div>

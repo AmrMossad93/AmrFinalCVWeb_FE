@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 import {AboutComponent} from './about.component';
 import {SharedModule} from '../../../../Shared/shared.module';
 import {basicInfoResolver} from './Resolvers/BasicInfo/basic-info-resolver';
+import {certificateResolver} from './Resolvers/Certificate/certificate-resolver';
 
 @NgModule({
   declarations: [AboutComponent],
@@ -15,7 +16,8 @@ import {basicInfoResolver} from './Resolvers/BasicInfo/basic-info-resolver';
         path: '',
         component: AboutComponent,
         resolve: {
-          basicInfo: basicInfoResolver
+          basicInfo: basicInfoResolver,
+          certificateList: certificateResolver
         }
       }
     ])
