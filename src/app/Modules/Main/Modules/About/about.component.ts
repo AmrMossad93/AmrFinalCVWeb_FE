@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {IBase} from '../../../../Core/models/Interface/Base/base';
+import {IBasicInfo} from './DTO/Interface/BasicInfo/basic-info';
 
 @Component({
   selector: 'app-about',
@@ -6,8 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.scss',
   standalone: false
 })
-export class AboutComponent {
-  yearsOfExperience: number = new Date().getFullYear() - 2017;
+export class AboutComponent implements OnInit {
+  private readonly activatedRoute = inject(ActivatedRoute);
+  public basicInfo = {} as IBase<IBasicInfo>
+  yearsOfExperience: number = 0;
 
   certificates = [
     {
@@ -51,4 +56,12 @@ export class AboutComponent {
       path: 'Images/Cir/Cyper.png'
     }
   ];
+
+  ngOnInit() {
+    this.activatedRoute.data.subscribe(res => {
+      this.basicInfo = res['basicInfo'];
+      this.yearsOfExperience = new Date().getFullYear() - this.basicInfo.data.graduatedYear
+    })
+  }
+
 }
