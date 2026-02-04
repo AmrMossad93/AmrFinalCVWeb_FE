@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../../../Core/services/Data/data.service';
+import { IBase } from '../../../../Core/models/Interface/Base/base';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-resume',
@@ -6,30 +9,44 @@ import { Component } from '@angular/core';
   styleUrl: './resume.component.scss',
   standalone: false
 })
-export class ResumeComponent {
+export class ResumeComponent implements OnInit {
   yearsOfExperience: number = new Date().getFullYear() - 2017;
-  skills = ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3/SCSS', 'Tailwind CSS', 'Node.js', 'RxJS', 'Git', 'REST APIs', 'Unit Testing', 'Responsive Design'];
-
-  experience = [
-    {
-      role: 'Senior Software Engineer',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
-      description: 'Lead developer for enterprise-scale Angular applications, mentoring junior developers and implementing best practices for code quality and performance.'
-    },
-    {
-      role: 'Frontend Developer',
-      company: 'Creative Web Studio',
-      period: '2019 - 2022',
-      description: 'Developed responsive user interfaces for various clients, focusing on modern web standards and exceptional user experiences.'
-    }
+  
+  skills = [
+    'Angular 19+', 'TypeScript 5.x', 'JavaScript ES2024', 
+    'RxJS 7+', 'NgRx / Signals', 'Tailwind CSS 4.x', 
+    'SCSS / SASS', 'HTML5 / Semantic SEO', 'Node.js / Express', 
+    'Ionic 8 / Capacitor', 'Git / CI/CD Pipelines', 'Jest / Cypress', 
+    'Micro-frontends', 'PWA / SSR', 'Module Federation'
   ];
 
-  education = [
-    {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Technology',
-      year: '2019'
-    }
-  ];
+  experience: any[] = [];
+  education: any[] = [];
+  services: any[] = [];
+  skillsProgress: any[] = [];
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.fetchData();
+  }
+
+  fetchData(): void {
+    forkJoin({
+      experience: this.dataService.getJson<IBase<any[]>>('experience.json'),
+      education: this.dataService.getJson<IBase<any[]>>('education.json'),
+      services: this.dataService.getJson<any[]>('services.json'),
+      skillsProgress: this.dataService.getJson<IBase<any[]>>('programmingSkillsProgress.json')
+    }).subscribe({
+      next: (res) => {
+        this.experience = res.experience.data;
+        this.education = res.education.data;
+        this.services = res.services;
+        this.skillsProgress = res.skillsProgress.data;
+      },
+      error: (err) => {
+        console.error('Error fetching resume data:', err);
+      }
+    });
+  }
 }
