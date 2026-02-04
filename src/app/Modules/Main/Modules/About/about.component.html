@@ -1,145 +1,254 @@
-<div class="animate-in fade-in duration-700 text-gray-100">
-  <section class="py-24 relative overflow-hidden bg-transparent">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
-        <!-- Portrait Side -->
-        <div class="flex-1 w-full lg:max-w-md lg:sticky lg:top-32">
-          <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-tr from-brand-primary to-indigo-500 rounded-3xl blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
-            <div class="relative aspect-[4/5] rounded-3xl bg-white/5 border border-white/10 overflow-hidden flex items-center justify-center">
-              <!-- Geometric Pattern behind image -->
-              <div class="absolute inset-0 opacity-20">
-                <div class="absolute inset-0" style="background-image: radial-gradient(var(--brand-primary) 1px, transparent 1px); background-size: 20px 20px;"></div>
-              </div>
-              
-              <!-- Main Image -->
-              <img src="Images/AmrMossad.jpeg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Amr Mossad">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-bg/80 via-transparent to-transparent"></div>
+<div class="animate-in fade-in duration-1000 text-gray-100 selection:bg-brand-primary/30">
+  @if (basicInfo && basicInfo.data) {
+    <!-- Dynamic Interactive Background -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+      <div
+        class="absolute top-[10%] -left-20 w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-[120px] floating-blob"></div>
+      <div
+        class="absolute bottom-[10%] -right-20 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[120px] floating-blob delayed"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]"
+           style="background-image: radial-gradient(var(--brand-primary) 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
+    </div>
 
-              <span class="text-9xl font-bold text-white/5 select-none relative z-0">AM</span>
-              
-              <!-- Floating Highlight -->
-              <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl z-10">
-                <div class="flex items-center gap-4">
-                  <div class="text-3xl font-bold text-brand-primary">{{ yearsOfExperience }}+</div>
-                  <div class="h-8 w-px bg-white/20"></div>
-                  <div class="text-[11px] font-bold text-gray-400 uppercase tracking-widest leading-relaxed">
-                    Years of Engineering <br /> Excellence
+    <section class="py-24 lg:py-40 relative">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <!-- Main Layout Grid -->
+        <div class="flex flex-col lg:flex-row gap-20 items-start">
+
+          <!-- Sticky Visual Column -->
+          <div class="w-full lg:w-[420px] lg:sticky sticky-element">
+            <div class="relative group interactive-image-container">
+              <!-- Advanced Cybernetic Glow -->
+              <div
+                class="absolute -inset-4 bg-gradient-to-tr from-brand-primary/40 via-indigo-500/20 to-brand-primary/40 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+
+              <!-- Image Container -->
+              <div
+                class="relative rounded-[3rem] overflow-hidden border border-white/10 glass-panel shadow-2xl image-wrapper">
+                <!-- Technical Corners -->
+                <div class="tech-corner tl"></div>
+                <div class="tech-corner tr"></div>
+                <div class="tech-corner bl"></div>
+                <div class="tech-corner br"></div>
+
+                <!-- HUD Data Points -->
+                <div class="hud-data top-10 left-12">COORD_X: 34.221</div>
+                <div class="hud-data top-14 left-12">COORD_Y: 10.454</div>
+                <div class="hud-data bottom-32 right-12 text-right">SYSTEM_STATUS: OK<br>ENCRYPTION: AES_256</div>
+
+                <!-- Scanning Line Effect -->
+                <div class="scan-line"></div>
+                <div class="noise-overlay"></div>
+
+                <div class="aspect-[4/5] relative">
+                  <img src="Images/AmrMossad.jpeg"
+                       class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-110 group-hover:filter grayscale-[0.5] group-hover:grayscale-0"
+                       alt="Amr Mossad">
+
+                  <!-- HUD Grid Overlay -->
+                  <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                       style="background-image: linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent opacity-80"></div>
+                </div>
+
+                <!-- System Identity Label -->
+                <div class="absolute top-10 right-12 text-right">
+                  <span class="font-mono-code text-white/40 block">Subject.Type</span>
+                  <span
+                    class="text-[10px] font-bold tracking-[0.2em] text-brand-primary uppercase">Core_Engineer_V2</span>
+                </div>
+
+                <!-- Bio-Metric Progress -->
+                <div class="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-brand-bg to-transparent">
+                  <div class="flex flex-col gap-5">
+                    <div class="flex items-center justify-between">
+                      <div class="flex flex-col">
+                        <span
+                          class="text-5xl font-black text-white leading-none tracking-tighter">{{ yearsOfExperience }}
+                          +</span>
+                        <span class="text-[9px] font-bold text-brand-primary uppercase tracking-[0.3em] mt-2">Cycle_Duration</span>
+                      </div>
+                      <div class="text-right">
+                        <span class="text-[10px] font-mono text-gray-500 uppercase block mb-1">Processing_Task</span>
+                        <span class="text-xs font-bold text-white uppercase tracking-widest">Architecting</span>
+                      </div>
+                    </div>
+                    <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden border border-white/10">
+                      <div class="h-full bg-gradient-to-r from-brand-primary to-indigo-500 w-[92%] relative">
+                        <div
+                          class="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.2)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.2)_75%,transparent_75%,transparent)] bg-[length:10px_10px] animate-[pulse-soft_2s_linear_infinite]"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Content Side -->
-        <div class="flex-1 space-y-16">
-          <div class="space-y-8">
-            <div>
-              <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary mb-4">Background</h2>
-              <p class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-                Architecting the future, <br />
-                <span class="text-gray-500">one pixel at a time.</span>
-              </p>
-            </div>
-            
-            <div class="space-y-6 text-lg text-gray-400 leading-relaxed font-medium">
-              <p>
-                I am a Senior Software Engineer with a deep passion for building robust, scalable, and user-centric digital products. My journey in technology has been driven by a relentless curiosity and a commitment to engineering excellence.
-              </p>
-              <p>
-                Specializing in the Angular ecosystem, I focus on creating high-performance enterprise applications that don't just work—they excel. I believe in the power of clean code, thoughtful architecture, and the intersection of engineering and design.
-              </p>
-            </div>
-          </div>
-
-          <!-- Highlight Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:border-brand-primary/30 transition-all">
-              <h4 class="text-lg font-bold text-white mb-3">Core Expertise</h4>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Angular Specialist, TypeScript Expert, RxJS Architect, Micro-frontends, Performance Tuning.
-              </p>
-            </div>
-            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:border-indigo-500/30 transition-all">
-              <h4 class="text-lg font-bold text-white mb-3">Engineering Mindset</h4>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Scalability by design, test-driven development, documentation-first approach.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline-style Experience Highlights -->
-          <div class="space-y-10">
-            <h3 class="text-xl font-bold text-white">Professional Pillars</h3>
-            <div class="space-y-8">
-              <div class="flex gap-6 group">
-                <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center text-brand-primary group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                </div>
-                <div>
-                  <h4 class="text-lg font-bold text-white">Technical Leadership</h4>
-                  <p class="text-sm text-gray-400 leading-relaxed mt-1">
-                    Mentoring teams, establishing coding standards, and driving architectural decisions for complex systems.
-                  </p>
-                </div>
+              <!-- Floating Decrypted Tokens -->
+              <div
+                class="absolute -top-6 -right-8 glass-card px-5 py-2.5 rounded-2xl border border-brand-primary/30 transform rotate-12 hover:rotate-0 transition-all duration-700 shadow-xl shadow-brand-primary/10">
+                <span class="font-mono-code text-brand-primary text-[10px]">AUTH_TOKEN: VALID</span>
               </div>
-              <div class="flex gap-6 group">
-                <div class="flex-shrink-0 w-12 h-12 bg-indigo-900/20 rounded-xl flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
-                </div>
-                <div>
-                  <h4 class="text-lg font-bold text-white">Cloud & DevOps</h4>
-                  <p class="text-sm text-gray-400 leading-relaxed mt-1">
-                    Deploying and managing scalable infrastructures, CI/CD pipelines, and cloud-native solutions.
-                  </p>
-                </div>
+              <div
+                class="absolute top-1/2 -left-12 glass-card px-5 py-2.5 rounded-2xl border border-indigo-500/30 transform -rotate-12 hover:rotate-0 transition-all duration-700 shadow-xl shadow-indigo-500/10">
+                <span class="font-mono-code text-indigo-400 text-[10px] flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-ping"></span>
+                  LIVE_SYNC
+                </span>
+              </div>
+            </div>
+
+            <!-- Profile Meta Bento -->
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div class="pro-card !p-4 flex flex-col items-center text-center gap-2">
+                <span class="font-mono-code">Age</span>
+                <span class="text-lg font-bold text-white">{{ basicInfo.data.age }}</span>
+              </div>
+              <div class="pro-card !p-4 flex flex-col items-center text-center gap-2">
+                <span class="font-mono-code">Class</span>
+                <span class="text-lg font-bold text-white">{{ basicInfo.data.graduatedYear }}</span>
               </div>
             </div>
           </div>
+
+          <!-- Content Column -->
+          <div class="flex-1 space-y-24">
+            <!-- Header Section -->
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <span class="font-mono-code text-brand-primary">System.Get(Biography);</span>
+                <div class="h-px flex-1 bg-gradient-to-r from-brand-primary/30 to-transparent"></div>
+              </div>
+
+              <div class="space-y-4">
+                <h1 class="text-5xl md:text-7xl font-black text-white leading-tight tracking-tighter">
+                  {{ basicInfo.data.title }}
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 font-medium max-w-3xl leading-relaxed">
+                  {{ basicInfo.data.brief }}
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-3 pt-4">
+                @for (skill of ['Angular', 'TypeScript', 'Node.js', 'RxJS', 'Cloud Architecture']; track skill) {
+                  <span class="tech-pill">{{ skill }}</span>
+                }
+              </div>
+            </div>
+
+            <!-- Bento Info Grid -->
+            <div class="bento-grid">
+              <!-- Mission Card -->
+              <div class="pro-card col-span-2 row-span-2 flex flex-col justify-between group">
+                <div class="space-y-4">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center card-icon text-brand-primary">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Mission & Core Vision</h3>
+                  <p class="text-gray-400 leading-relaxed">{{ basicInfo.data.target }}</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-white/5">
+                  <span class="font-mono-code">Status: Operational.v1</span>
+                </div>
+              </div>
+
+              <!-- Contact Grid -->
+              <div class="pro-card col-span-2 grid grid-cols-2 gap-8">
+                <div class="space-y-2">
+                  <span class="font-mono-code block text-gray-500">Comm.Email</span>
+                  <span class="text-sm font-bold text-white break-all">{{ basicInfo.data.email }}</span>
+                </div>
+                <div class="space-y-2">
+                  <span class="font-mono-code block text-gray-500">Comm.Phone</span>
+                  <span class="text-sm font-bold text-white">{{ basicInfo.data.phone }}</span>
+                </div>
+                <div class="space-y-2">
+                  <span class="font-mono-code block text-gray-500">Loc.Current</span>
+                  <span class="text-sm font-bold text-white">{{ basicInfo.data.currentAddress }}</span>
+                </div>
+                <div class="space-y-2">
+                  <span class="font-mono-code block text-gray-500">Loc.Native</span>
+                  <span class="text-sm font-bold text-white">{{ basicInfo.data.address }}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Credentials Section -->
+            <div class="space-y-12">
+              <div class="flex items-center gap-4">
+                <span class="font-mono-code text-indigo-400">System.Validate(Credentials);</span>
+                <div class="h-px flex-1 bg-gradient-to-r from-indigo-500/30 to-transparent"></div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                @for (cert of certificates; track cert.name) {
+                  <div
+                    class="pro-card !p-0 cert-card group/cert border border-white/5 hover:border-brand-primary/40 transition-all duration-700">
+                    <div class="aspect-[16/10] relative overflow-hidden">
+                      <img [src]="cert.path" [alt]="cert.name"
+                           class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover/cert:scale-110">
+                      <div
+                        class="absolute inset-0 bg-brand-bg/80 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-500 flex items-center justify-center p-8 text-center">
+                        <a [href]="cert.path" target="_blank"
+                           class="px-6 py-3 bg-brand-primary text-black font-black uppercase tracking-widest text-[10px] rounded-full transform translate-y-4 group-hover/cert:translate-y-0 transition-all duration-500 shadow-xl shadow-brand-primary/20">
+                          Verify Integrity
+                        </a>
+                      </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                      <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-mono text-gray-500 uppercase">Cert_ID.{{ $index + 1 }}</span>
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse"></div>
+                      </div>
+                      <h4
+                        class="text-sm font-bold text-white group-hover/cert:text-brand-primary transition-colors line-clamp-2 leading-relaxed">
+                        {{ cert.name }}
+                      </h4>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div
+              class="pro-card bg-brand-primary/5 border-brand-primary/20 flex flex-col items-center text-center gap-8 py-16">
+              <div class="space-y-4">
+                <h3 class="text-4xl md:text-5xl font-black text-white tracking-tight">
+                  System.Ready(New_Collaboration);</h3>
+                <p class="text-gray-400 text-lg max-w-xl mx-auto">
+                  Currently seeking high-impact opportunities where engineering meets innovation.
+                </p>
+              </div>
+              <a routerLink="/contact"
+                 class="group relative px-10 py-5 bg-brand-primary text-black font-black uppercase tracking-[0.2em] rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-brand-primary/30">
+                <span class="relative z-10">Initialize Handshake</span>
+                <div
+                  class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity rounded-2xl"></div>
+              </a>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+  } @else {
+    <!-- Ultra Pro Loading State -->
+    <div class="min-h-screen flex flex-col items-center justify-center gap-8 bg-brand-bg">
+      <div class="relative w-24 h-24">
+        <div class="absolute inset-0 border-4 border-brand-primary/20 rounded-full"></div>
+        <div class="absolute inset-0 border-4 border-t-brand-primary rounded-full animate-spin"></div>
+        <div class="absolute inset-4 border-4 border-indigo-500/20 rounded-full animate-pulse"></div>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <span class="font-mono-code text-brand-primary animate-pulse">SYSTEM_BOOTING...</span>
+        <span class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">Decrypting Profile Data</span>
       </div>
     </div>
-  </section>
-  
-  <!-- Certificates Section -->
-  <section class="py-24 bg-white/2">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-primary mb-4">Recognition</h2>
-        <h3 class="text-4xl font-bold text-white mb-6">Professional Certificates</h3>
-        <p class="text-lg text-gray-400 max-w-2xl">
-          A collection of my professional certifications and achievements in software engineering and cloud technologies.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        @for (cert of certificates; track cert.name) {
-          <div class="glass-card group relative rounded-3xl overflow-hidden">
-            <div class="aspect-[4/3] overflow-hidden bg-gray-900">
-              <img [src]="cert.path" [alt]="cert.name" 
-                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-            </div>
-            
-            <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <div class="p-4 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl">
-                <h4 class="text-sm font-bold text-white group-hover:text-brand-primary transition-colors line-clamp-2">
-                  {{ cert.name }}
-                </h4>
-              </div>
-            </div>
-            
-            <!-- View Button Overlay -->
-            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-               <a [href]="cert.path" target="_blank" 
-                  class="px-6 py-3 bg-brand-primary text-brand-bg text-xs font-bold uppercase tracking-widest rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:scale-105 active:scale-95">
-                 View Certificate
-               </a>
-            </div>
-          </div>
-        }
-      </div>
-    </div>
-  </section>
+  }
 </div>
