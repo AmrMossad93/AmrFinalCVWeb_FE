@@ -77,6 +77,66 @@ select option {
   letter-spacing: -0.08em;
 }
 
+/* Redesign Additions */
+.control-panel-glow {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.3), transparent);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.system-tag {
+  @apply text-[9px] font-black uppercase tracking-[0.3em] px-3 py-1 rounded;
+  background-color: color-mix(in srgb, var(--color-brand-primary), transparent 90%);
+  color: var(--color-brand-primary);
+  border: 1px solid color-mix(in srgb, var(--color-brand-primary), transparent 80%);
+}
+
+.category-tab {
+  @apply relative px-6 py-4 text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 overflow-hidden;
+  &::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 translate-y-full transition-transform duration-500;
+    background-color: var(--color-brand-primary);
+  }
+  &::before {
+    content: '';
+    @apply absolute inset-0 transition-colors duration-500;
+    background-color: transparent;
+  }
+  &.active {
+    @apply text-white;
+    &::after {
+      @apply translate-y-0;
+    }
+    &::before {
+      background-color: color-mix(in srgb, var(--color-brand-primary), transparent 97%);
+    }
+  }
+  &:not(.active) {
+    @apply text-gray-500 hover:text-gray-300;
+  }
+}
+
+.custom-select-trigger {
+  @apply flex items-center justify-between bg-white/[0.02] border border-white/5 rounded-xl px-6 py-4 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 hover:bg-white/[0.05] hover:border-white/10 transition-all cursor-pointer;
+}
+
+input::selection {
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-bg);
+}
+
 /* Background Refinement */
 .bg-brand-bg::after {
   content: "";
