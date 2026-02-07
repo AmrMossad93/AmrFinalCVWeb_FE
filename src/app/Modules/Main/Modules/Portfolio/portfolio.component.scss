@@ -148,8 +148,9 @@ select option {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
   overflow: hidden;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-width: fit-content;
+  white-space: nowrap;
   &::after {
     content: '';
     position: absolute;

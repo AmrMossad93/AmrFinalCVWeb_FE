@@ -1,7 +1,7 @@
 <div class="animate-in fade-in duration-1000 min-h-screen selection:bg-brand-primary selection:text-brand-bg relative overflow-x-hidden">
   
   <!-- Hero Section Refinement -->
-  <section class="relative pt-48 pb-32 overflow-hidden z-10">
+  <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden z-10">
     <!-- Architectural Overlays -->
     <div class="absolute inset-0 -z-10">
       <div class="absolute inset-0 bg-gradient-to-b from-brand-bg/0 via-brand-bg/60 to-brand-bg"></div>
@@ -11,40 +11,40 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex flex-col items-center text-center">
         <!-- Modernized Badge -->
-        <div class="group relative inline-flex items-center gap-3 px-8 py-2.5 rounded-full bg-white/[0.01] border border-white/5 mb-12 backdrop-blur-2xl hover:border-brand-primary/30 transition-all duration-700 cursor-default">
+        <div class="group relative inline-flex items-center gap-3 px-6 py-2 sm:px-8 sm:py-2.5 rounded-full bg-white/[0.01] border border-white/5 mb-8 sm:mb-12 backdrop-blur-2xl hover:border-brand-primary/30 transition-all duration-700 cursor-default">
           <div class="absolute inset-0 rounded-full bg-brand-primary/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-40"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
           </span>
-          <span class="text-[9px] font-black uppercase tracking-[0.5em] text-gray-400">Engineering Excellence v5.0</span>
+          <span class="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.3em] sm:tracking-[0.5em] text-gray-400">Engineering Excellence v5.0</span>
         </div>
         
         <!-- Typography: More refined, better scale -->
-        <h1 class="text-7xl md:text-[10rem] font-black text-white mb-12 tracking-[-0.06em] leading-[0.8] max-w-6xl">
+        <h1 class="text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] font-black text-white mb-8 sm:mb-12 tracking-[-0.06em] leading-[0.9] sm:leading-[0.8] max-w-6xl">
           Digital<br>
           <span class="text-gradient drop-shadow-[0_0_80px_rgba(16,185,129,0.2)]">Architectures</span>
         </h1>
         
-        <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mb-20 opacity-60 tracking-tight">
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mb-12 sm:mb-20 opacity-60 tracking-tight px-4">
           A high-end showcase of full-stack engineering, cloud architectures, and cinematic digital interfaces.
         </p>
 
         <!-- Refined Stats: More minimalist -->
-        <div class="flex flex-wrap justify-center gap-12 md:gap-32 items-center py-10 px-16 rounded-[4rem] bg-white/[0.01] border border-white/5 backdrop-blur-2xl relative group">
+        <div class="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-32 items-center py-8 px-8 sm:py-10 sm:px-16 rounded-[2rem] sm:rounded-[4rem] bg-white/[0.01] border border-white/5 backdrop-blur-2xl relative group">
           <div class="absolute inset-0 bg-brand-primary/2 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
           
-          <div class="flex flex-col items-center gap-3">
-            <span class="text-6xl font-black text-white tracking-tighter tabular-nums">{{totalProjects}}</span>
-            <span class="text-[8px] font-black uppercase tracking-[0.4em] text-brand-primary/60">Deployments</span>
+          <div class="flex flex-col items-center gap-2 sm:gap-3">
+            <span class="text-4xl sm:text-6xl font-black text-white tracking-tighter tabular-nums">{{totalProjects}}</span>
+            <span class="text-[7px] sm:text-[8px] font-black uppercase tracking-[0.4em] text-brand-primary/60">Deployments</span>
           </div>
-          <div class="hidden md:flex flex-col items-center gap-3">
-            <span class="text-6xl font-black text-white tracking-tighter tabular-nums">{{categories.length}}</span>
-            <span class="text-[8px] font-black uppercase tracking-[0.4em] text-brand-primary/60">Core Domains</span>
+          <div class="hidden sm:flex flex-col items-center gap-2 sm:gap-3">
+            <span class="text-4xl sm:text-6xl font-black text-white tracking-tighter tabular-nums">{{categories.length}}</span>
+            <span class="text-[7px] sm:text-[8px] font-black uppercase tracking-[0.4em] text-brand-primary/60">Core Domains</span>
           </div>
-          <div class="flex flex-col items-center gap-3">
-            <span class="text-6xl font-black text-white tracking-tighter tabular-nums">99%</span>
-            <span class="text-[8px] font-black uppercase tracking-[0.4em] text-brand-primary/60">Efficiency</span>
+          <div class="flex flex-col items-center gap-2 sm:gap-3">
+            <span class="text-4xl sm:text-6xl font-black text-white tracking-tighter tabular-nums">99%</span>
+            <span class="text-[7px] sm:text-[8px] font-black uppercase tracking-[0.4em] text-brand-primary/60">Efficiency</span>
           </div>
         </div>
       </div>
@@ -52,41 +52,41 @@
   </section>
 
   <!-- Professional Control Interface -->
-  <section class="sticky top-0 z-50 py-12 border-y border-white/5 bg-brand-bg/80 backdrop-blur-3xl transition-all duration-700">
+  <section class="sticky top-0 z-50 py-6 sm:py-12 border-y border-white/5 bg-brand-bg/80 backdrop-blur-3xl transition-all duration-700">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="flex flex-col space-y-12">
+      <div class="flex flex-col space-y-8 sm:space-y-12">
         
         <!-- Top Meta Bar -->
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div class="flex items-center gap-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
+          <div class="flex items-center gap-4 sm:gap-6">
             <div class="flex items-center gap-3">
-              <div class="relative flex h-3 w-3">
+              <div class="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-20"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-primary/50 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-brand-primary/50 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></span>
               </div>
-              <span class="text-[11px] font-black uppercase tracking-[0.5em] text-white">System.Matrix</span>
+              <span class="text-[9px] sm:text-[11px] font-black uppercase tracking-[0.3em] sm:tracking-[0.5em] text-white">System.Matrix</span>
             </div>
             <div class="h-4 w-px bg-white/10 hidden md:block"></div>
             <div class="flex items-center gap-2">
-              <span class="text-[9px] font-bold text-gray-600 uppercase tracking-widest">Index Status:</span>
-              <span class="text-[9px] font-black text-brand-primary uppercase tracking-widest animate-pulse">Operational</span>
+              <span class="text-[8px] sm:text-[9px] font-bold text-gray-600 uppercase tracking-widest">Index Status:</span>
+              <span class="text-[8px] sm:text-[9px] font-black text-brand-primary uppercase tracking-widest animate-pulse">Operational</span>
             </div>
           </div>
           
-          <div class="flex items-center gap-4 px-5 py-2 rounded-full bg-white/[0.02] border border-white/5 backdrop-blur-xl">
+          <div class="flex items-center gap-4 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-white/[0.02] border border-white/5 backdrop-blur-xl w-fit">
             <div class="flex -space-x-2">
-              <div *ngFor="let i of [1,2,3]" class="w-5 h-5 rounded-full border border-brand-bg bg-brand-primary/20 flex items-center justify-center">
+              <div *ngFor="let i of [1,2,3]" class="w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-brand-bg bg-brand-primary/20 flex items-center justify-center">
                 <div class="w-1 h-1 rounded-full bg-brand-primary"></div>
               </div>
             </div>
-            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-gray-400">
+            <span class="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-400">
               Validated {{totalProjects}} Nodes
             </span>
           </div>
         </div>
 
         <!-- Main Controls Deck -->
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4 sm:gap-6">
           
           <!-- Search System -->
           <div class="relative group">
@@ -97,27 +97,27 @@
                 [(ngModel)]="searchQuery" 
                 (input)="onSearch(searchQuery)"
                 placeholder="QUERY SYSTEM REPOSITORY..."
-                class="w-full bg-white/[0.02] border border-white/5 rounded-2xl px-16 py-6 text-white placeholder:text-gray-700 focus:outline-none focus:border-brand-primary/40 focus:bg-white/[0.04] transition-all duration-500 font-mono text-[11px] tracking-widest"
+                class="w-full bg-white/[0.02] border border-white/5 rounded-2xl px-12 py-4 sm:px-16 sm:py-6 text-white placeholder:text-gray-700 focus:outline-none focus:border-brand-primary/40 focus:bg-white/[0.04] transition-all duration-500 font-mono text-[9px] sm:text-[11px] tracking-widest"
               >
-              <div class="absolute left-6 top-1/2 -translate-y-1/2">
-                <svg class="w-5 h-5 text-gray-700 group-focus-within:text-brand-primary transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="absolute left-5 sm:left-6 top-1/2 -translate-y-1/2">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 group-focus-within:text-brand-primary transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <div class="absolute right-6 top-1/2 -translate-y-1/2 flex items-center gap-2 opacity-0 group-focus-within:opacity-100 transition-opacity">
-                <span class="text-[8px] font-black text-brand-primary/40 uppercase tracking-tighter">Syncing Query</span>
+              <div class="absolute right-5 sm:right-6 top-1/2 -translate-y-1/2 flex items-center gap-2 opacity-0 group-focus-within:opacity-100 transition-opacity">
+                <span class="text-[7px] sm:text-[8px] font-black text-brand-primary/40 uppercase tracking-tighter hidden sm:block">Syncing Query</span>
                 <div class="w-1.5 h-4 bg-brand-primary animate-pulse"></div>
               </div>
             </div>
           </div>
 
           <!-- Categories -->
-          <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-2 backdrop-blur-xl">
-            <div class="flex flex-wrap items-center justify-center gap-2">
+          <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-1.5 sm:p-2 backdrop-blur-xl">
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-2">
               <button 
                 (click)="selectedCategory=''; onFilterChange()"
                 [class.active]="!selectedCategory"
-                class="category-tab min-w-[140px] rounded-xl"
+                class="category-tab min-w-[100px] sm:min-w-[140px] rounded-xl px-4 py-3 sm:px-6 sm:py-4"
               >
                 Root
               </button>
@@ -125,7 +125,7 @@
                 *ngFor="let cat of categories"
                 (click)="selectedCategory=cat; onFilterChange()"
                 [class.active]="selectedCategory === cat"
-                class="category-tab min-w-[140px] rounded-xl"
+                class="category-tab min-w-[100px] sm:min-w-[140px] rounded-xl px-4 py-3 sm:px-6 sm:py-4"
               >
                 {{cat}}
               </button>
@@ -134,19 +134,19 @@
         </div>
 
         <!-- Secondary Filters Row -->
-        <div class="flex flex-wrap items-center gap-4 md:gap-8 justify-between">
-          <div class="flex flex-wrap items-center gap-4 md:gap-6">
+        <div class="flex flex-col lg:flex-row lg:items-center gap-4 sm:gap-6 justify-between">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
             <!-- Stack Select -->
-            <div class="group relative min-w-[220px]">
+            <div class="group relative flex-1 sm:min-w-[220px]">
               <div class="flex items-center gap-3 mb-2 ml-1">
                 <div class="w-1 h-1 rounded-full bg-brand-primary/40"></div>
-                <span class="text-[8px] font-black text-gray-600 uppercase tracking-[0.4em]">Core Protocol</span>
+                <span class="text-[7px] sm:text-[8px] font-black text-gray-600 uppercase tracking-[0.3em] sm:tracking-[0.4em]">Core Protocol</span>
               </div>
               <div class="relative">
                 <select 
                   [(ngModel)]="selectedTech" 
                   (change)="onFilterChange()"
-                  class="w-full bg-white/[0.02] border border-white/5 text-[10px] font-black text-white px-6 py-4 rounded-xl focus:outline-none focus:border-brand-primary/30 cursor-pointer appearance-none uppercase tracking-widest transition-all hover:bg-white/[0.04]"
+                  class="w-full bg-white/[0.02] border border-white/5 text-[9px] sm:text-[10px] font-black text-white px-5 py-3 sm:px-6 sm:py-4 rounded-xl focus:outline-none focus:border-brand-primary/30 cursor-pointer appearance-none uppercase tracking-widest transition-all hover:bg-white/[0.04]"
                 >
                   <option value="">All Protocols</option>
                   <option *ngFor="let tech of technologies" [value]="tech">{{tech}}</option>
@@ -158,16 +158,16 @@
             </div>
 
             <!-- Sort Select -->
-            <div class="group relative min-w-[220px]">
+            <div class="group relative flex-1 sm:min-w-[220px]">
               <div class="flex items-center gap-3 mb-2 ml-1">
                 <div class="w-1 h-1 rounded-full bg-brand-primary/40"></div>
-                <span class="text-[8px] font-black text-gray-600 uppercase tracking-[0.4em]">Sort Order</span>
+                <span class="text-[7px] sm:text-[8px] font-black text-gray-600 uppercase tracking-[0.3em] sm:tracking-[0.4em]">Sort Order</span>
               </div>
               <div class="relative">
                 <select 
                   [(ngModel)]="sortBy" 
                   (change)="onSortChange(sortBy)"
-                  class="w-full bg-white/[0.02] border border-white/5 text-[10px] font-black text-white px-6 py-4 rounded-xl focus:outline-none focus:border-brand-primary/30 cursor-pointer appearance-none uppercase tracking-widest transition-all hover:bg-white/[0.04]"
+                  class="w-full bg-white/[0.02] border border-white/5 text-[9px] sm:text-[10px] font-black text-white px-5 py-3 sm:px-6 sm:py-4 rounded-xl focus:outline-none focus:border-brand-primary/30 cursor-pointer appearance-none uppercase tracking-widest transition-all hover:bg-white/[0.04]"
                 >
                   <option value="newest">Latest Deployment</option>
                   <option value="name">Alphabetical</option>
@@ -182,12 +182,12 @@
           <!-- System Reset -->
           <button 
             (click)="selectedCategory=''; selectedTech=''; searchQuery=''; onFilterChange()"
-            class="group flex items-center gap-3 px-8 py-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-red-500/30 hover:bg-red-500/5 transition-all duration-500"
+            class="group flex items-center justify-center gap-3 px-6 py-3 sm:px-8 sm:py-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-red-500/30 hover:bg-red-500/5 transition-all duration-500 w-full lg:w-auto"
           >
-            <svg class="w-4 h-4 text-gray-600 group-hover:text-red-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-600 group-hover:text-red-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
             </svg>
-            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-gray-500 group-hover:text-red-500 transition-colors">Reset Matrix</span>
+            <span class="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-500 group-hover:text-red-500 transition-colors">Reset Matrix</span>
           </button>
         </div>
 
@@ -196,9 +196,9 @@
   </section>
 
   <!-- Architectural Project Matrix -->
-  <section class="py-40 px-6 lg:px-8 relative z-10">
+  <section class="py-20 md:py-40 px-6 lg:px-8 relative z-10">
     <div class="max-w-7xl mx-auto">
-      <div *ngIf="projects.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-20">
+      <div *ngIf="projects.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16 lg:gap-20">
         <div *ngFor="let project of projects; let i = index"
              class="project-card-v5 group relative cursor-pointer">
           
@@ -206,10 +206,10 @@
           <a [routerLink]="['/portfolio', project.id]" class="absolute inset-0 z-[60] cursor-pointer"></a>
 
           <!-- Outer Shadow/Glow -->
-          <div class="absolute -inset-4 bg-brand-primary/0 group-hover:bg-brand-primary/[0.03] rounded-[3rem] blur-3xl transition-all duration-1000"></div>
+          <div class="absolute -inset-4 bg-brand-primary/0 group-hover:bg-brand-primary/[0.03] rounded-[2rem] sm:rounded-[3rem] blur-3xl transition-all duration-1000"></div>
 
           <!-- Main Card Container -->
-          <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-[#080808] border border-white/[0.03] transition-all duration-1000 group-hover:border-brand-primary/20 group-hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.9)]">
+          <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-[#080808] border border-white/[0.03] transition-all duration-1000 group-hover:border-brand-primary/20 group-hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.9)]">
             
             <!-- Background Image with Parallax-like effect -->
             <div class="absolute inset-0 overflow-hidden">
@@ -225,61 +225,61 @@
             </div>
 
             <!-- Content Overlay (Default State) -->
-            <div class="absolute inset-0 p-10 flex flex-col justify-between z-10 transition-all duration-700 group-hover:opacity-0 group-hover:scale-95 group-hover:-translate-y-8">
+            <div class="absolute inset-0 p-8 sm:p-10 flex flex-col justify-between z-10 transition-all duration-700 group-hover:opacity-0 group-hover:scale-95 group-hover:-translate-y-8">
               <div class="flex justify-between items-start">
                 <div class="flex flex-col gap-2">
-                  <span class="text-[8px] font-black uppercase tracking-[0.5em] text-brand-primary">{{project.category}}</span>
-                  <span class="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em]">{{project.type}}</span>
+                  <span class="text-[7px] sm:text-[8px] font-black uppercase tracking-[0.4em] sm:tracking-[0.5em] text-brand-primary">{{project.category}}</span>
+                  <span class="text-[9px] sm:text-[10px] font-bold text-white/40 uppercase tracking-[0.2em]">{{project.type}}</span>
                 </div>
-                <div class="w-12 h-12 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center backdrop-blur-xl">
-                  <span class="text-[10px] font-black text-white/20">0{{i + 1}}</span>
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center backdrop-blur-xl">
+                  <span class="text-[9px] sm:text-[10px] font-black text-white/20">0{{i + 1}}</span>
                 </div>
               </div>
 
-              <div class="space-y-6">
-                <h3 class="text-4xl font-black text-white tracking-tighter leading-none max-w-[80%]">
+              <div class="space-y-4 sm:space-y-6">
+                <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tighter leading-none max-w-[90%]">
                   {{ project.name }}
                 </h3>
                 <div class="flex items-center gap-4">
-                  <div class="h-px w-8 bg-brand-primary/40"></div>
-                  <span class="text-[9px] font-black uppercase tracking-[0.3em] text-white/40">Initialize Case</span>
+                  <div class="h-px w-6 sm:w-8 bg-brand-primary/40"></div>
+                  <span class="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-white/40">Initialize Case</span>
                 </div>
               </div>
             </div>
 
-            <!-- Detailed Overlay (Hover State) -->
-            <div class="absolute inset-0 bg-brand-bg/60 backdrop-blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-1000 flex flex-col p-12 translate-y-8 group-hover:translate-y-0 z-20">
+            <!-- Detailed Overlay (Hover State - Hidden on Mobile by opacity and touch behavior) -->
+            <div class="absolute inset-0 bg-brand-bg/60 backdrop-blur-2xl opacity-0 lg:group-hover:opacity-100 transition-all duration-1000 flex flex-col p-8 sm:p-12 translate-y-8 lg:group-hover:translate-y-0 z-20">
               <div class="flex flex-col h-full">
                 <!-- Header -->
-                <div class="flex items-center gap-3 mb-8">
-                  <div class="w-8 h-px bg-brand-primary"></div>
-                  <span class="text-brand-primary font-black text-[8px] uppercase tracking-[0.5em]">Technical Dossier</span>
+                <div class="flex items-center gap-3 mb-6 sm:mb-8">
+                  <div class="w-6 sm:w-8 h-px bg-brand-primary"></div>
+                  <span class="text-brand-primary font-black text-[7px] sm:text-[8px] uppercase tracking-[0.4em] sm:tracking-[0.5em]">Technical Dossier</span>
                 </div>
                 
-                <h3 class="text-4xl font-black text-white mb-6 tracking-tighter leading-[0.9]">
+                <h3 class="text-3xl sm:text-4xl font-black text-white mb-4 sm:mb-6 tracking-tighter leading-[0.9]">
                   {{ project.name }}
                 </h3>
                 
-                <p class="text-[13px] text-gray-400 leading-relaxed line-clamp-4 font-medium mb-8 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-100">
+                <p class="text-[11px] sm:text-[13px] text-gray-400 leading-relaxed line-clamp-4 font-medium mb-6 sm:mb-8 opacity-0 lg:group-hover:opacity-100 transition-all duration-1000 delay-100">
                   {{ project.description }}
                 </p>
 
                 <!-- Tech Stack Section -->
                 <div class="mb-auto">
-                  <span class="text-[8px] font-black uppercase tracking-[0.3em] text-gray-600 block mb-4">Core Frameworks</span>
+                  <span class="text-[7px] sm:text-[8px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-600 block mb-3 sm:mb-4">Core Frameworks</span>
                   <div class="flex flex-wrap gap-2">
                     <span *ngFor="let tech of project.technologies.slice(0, 5)"
-                          class="px-4 py-2 rounded-lg bg-white/[0.03] border border-white/5 text-[8px] font-black text-gray-400 uppercase tracking-[0.2em] transition-all">
+                          class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-white/[0.03] border border-white/5 text-[7px] sm:text-[8px] font-black text-gray-400 uppercase tracking-[0.1em] sm:tracking-[0.2em] transition-all">
                       {{tech}}
                     </span>
                   </div>
                 </div>
                 
                 <!-- Action Button Visual (Whole Card is captured by stretched link) -->
-                <div class="pt-8">
-                  <div class="group/btn relative flex items-center justify-center w-full py-6 bg-white text-brand-bg font-black uppercase tracking-[0.4em] text-[10px] rounded-2xl overflow-hidden transition-all group-hover:shadow-[0_20px_50px_rgba(255,255,255,0.2)] group-hover:scale-[1.02]">
+                <div class="pt-6 sm:pt-8">
+                  <div class="group/btn relative flex items-center justify-center w-full py-5 sm:py-6 bg-white text-brand-bg font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[9px] sm:text-[10px] rounded-xl sm:rounded-2xl overflow-hidden transition-all lg:group-hover:shadow-[0_20px_50px_rgba(255,255,255,0.2)] lg:group-hover:scale-[1.02]">
                     <span class="relative z-10">Expand Matrix</span>
-                    <div class="absolute inset-0 bg-brand-primary translate-y-full group-hover/btn:translate-y-0 transition-transform duration-700"></div>
+                    <div class="absolute inset-0 bg-brand-primary translate-y-full lg:group-hover/btn:translate-y-0 transition-transform duration-700"></div>
                   </div>
                 </div>
               </div>
@@ -289,39 +289,39 @@
       </div>
 
       <!-- Professional System Empty State -->
-      <div *ngIf="projects.length === 0" class="flex flex-col items-center justify-center py-48 text-center bg-white/[0.01] rounded-[4rem] border border-white/5 backdrop-blur-md relative overflow-hidden">
+      <div *ngIf="projects.length === 0" class="flex flex-col items-center justify-center py-24 sm:py-48 text-center bg-white/[0.01] rounded-[2rem] sm:rounded-[4rem] border border-white/5 backdrop-blur-md relative overflow-hidden px-6">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.05),transparent_70%)]"></div>
-        <div class="relative w-40 h-40 mb-12">
+        <div class="relative w-32 h-32 sm:w-40 sm:h-40 mb-8 sm:mb-12">
           <div class="absolute inset-0 bg-brand-primary/10 blur-[60px] rounded-full animate-pulse"></div>
           <div class="relative w-full h-full rounded-full border border-white/10 flex items-center justify-center bg-black/40 backdrop-blur-2xl">
-            <svg class="w-16 h-16 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-12 h-12 sm:w-16 sm:h-16 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
         </div>
-        <h3 class="text-5xl font-black text-white mb-6 tracking-tighter uppercase leading-none">Matrix Disconnected</h3>
-        <p class="text-gray-500 max-w-md mx-auto mb-14 font-medium text-lg leading-relaxed opacity-60">
+        <h3 class="text-3xl sm:text-5xl font-black text-white mb-4 sm:mb-6 tracking-tighter uppercase leading-none">Matrix Disconnected</h3>
+        <p class="text-gray-500 max-w-sm sm:max-w-md mx-auto mb-10 sm:mb-14 font-medium text-base sm:text-lg leading-relaxed opacity-60">
           No system clusters found matching your current search parameters. Please re-align your filter matrix.
         </p>
         <button (click)="selectedCategory=''; selectedTech=''; searchQuery=''; onFilterChange()" 
-                class="group relative px-14 py-6 bg-white/[0.03] text-white font-black uppercase tracking-[0.4em] text-[10px] rounded-2xl border border-white/10 hover:bg-white hover:text-brand-bg transition-all duration-500">
+                class="group relative px-10 py-5 sm:px-14 sm:py-6 bg-white/[0.03] text-white font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[9px] sm:text-[10px] rounded-xl sm:rounded-2xl border border-white/10 hover:bg-white hover:text-brand-bg transition-all duration-500">
           <span class="relative z-10">Re-Initialize Matrix</span>
           <div class="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
         </button>
       </div>
 
       <!-- Modern Minimalist Global Pagination -->
-      <div *ngIf="totalPages > 1" class="mt-40 flex flex-col items-center gap-10">
-        <div class="flex items-center gap-4 p-2 bg-white/[0.02] rounded-[2.5rem] border border-white/5 backdrop-blur-2xl">
+      <div *ngIf="totalPages > 1" class="mt-24 sm:mt-40 flex flex-col items-center gap-8 sm:gap-10 px-6">
+        <div class="flex items-center gap-3 sm:gap-4 p-1.5 sm:p-2 bg-white/[0.02] rounded-full sm:rounded-[2.5rem] border border-white/5 backdrop-blur-2xl">
           <button 
             (click)="onPageChange(currentPage - 1)" 
             [disabled]="currentPage === 1"
-            class="w-16 h-16 flex items-center justify-center bg-white/[0.03] border border-white/10 rounded-full text-gray-600 hover:text-white hover:border-brand-primary/40 disabled:opacity-5 disabled:cursor-not-allowed transition-all duration-500"
+            class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center bg-white/[0.03] border border-white/10 rounded-full text-gray-600 hover:text-white hover:border-brand-primary/40 disabled:opacity-5 disabled:cursor-not-allowed transition-all duration-500"
           >
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
           </button>
           
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2 sm:gap-3">
             <button 
               *ngFor="let page of pages" 
               (click)="onPageChange(page)"
@@ -329,7 +329,7 @@
               [class.text-brand-bg]="currentPage === page"
               [class.shadow-[0_0_40px_rgba(16,185,129,0.3)]]="currentPage === page"
               [class.scale-110]="currentPage === page"
-              class="w-14 h-14 rounded-full text-[11px] font-black transition-all duration-500 transform border border-white/5 hover:border-brand-primary/30"
+              class="w-10 h-10 sm:w-14 sm:h-14 rounded-full text-[9px] sm:text-[11px] font-black transition-all duration-500 transform border border-white/5 hover:border-brand-primary/30"
             >
               {{ page }}
             </button>
@@ -338,21 +338,21 @@
           <button 
             (click)="onPageChange(currentPage + 1)" 
             [disabled]="currentPage === totalPages"
-            class="w-16 h-16 flex items-center justify-center bg-white/[0.03] border border-white/10 rounded-full text-gray-600 hover:text-white hover:border-brand-primary/40 disabled:opacity-5 disabled:cursor-not-allowed transition-all duration-500"
+            class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center bg-white/[0.03] border border-white/10 rounded-full text-gray-600 hover:text-white hover:border-brand-primary/40 disabled:opacity-5 disabled:cursor-not-allowed transition-all duration-500"
           >
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
-        <div class="flex flex-col items-center gap-2">
-           <span class="text-[9px] font-black uppercase tracking-[0.5em] text-gray-600">Matrix Index</span>
-           <span class="text-xs font-bold text-white tracking-widest">{{currentPage}} / {{totalPages}}</span>
+        <div class="flex flex-col items-center gap-1 sm:gap-2">
+           <span class="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.4em] sm:tracking-[0.5em] text-gray-600">Matrix Index</span>
+           <span class="text-[10px] sm:text-xs font-bold text-white tracking-widest">{{currentPage}} / {{totalPages}}</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Ultra-Professional Terminal CTA -->
-  <section class="py-64 relative overflow-hidden">
+  <section class="py-32 md:py-64 relative overflow-hidden">
     <!-- Architectural Background Layer -->
     <div class="absolute inset-0 z-0">
       <div class="absolute inset-0 bg-[#050505]/80"></div>
@@ -364,50 +364,50 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
       <div class="relative group">
         <!-- Dynamic HUD Elements -->
-        <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-primary/10 blur-[120px] rounded-full animate-pulse"></div>
-        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-indigo-500/5 blur-[120px] rounded-full animate-pulse" style="animation-delay: -2s"></div>
+        <div class="absolute -top-24 -left-24 w-64 h-64 sm:w-96 sm:h-96 bg-brand-primary/10 blur-[120px] rounded-full animate-pulse"></div>
+        <div class="absolute -bottom-24 -right-24 w-64 h-64 sm:w-96 sm:h-96 bg-indigo-500/5 blur-[120px] rounded-full animate-pulse" style="animation-delay: -2s"></div>
 
-        <div class="relative flex flex-col items-center py-32 px-12 rounded-[4rem] border border-white/5 bg-white/[0.01] backdrop-blur-3xl overflow-hidden shadow-3xl">
+        <div class="relative flex flex-col items-center py-16 px-6 sm:py-32 sm:px-12 rounded-[2rem] sm:rounded-[4rem] border border-white/5 bg-white/[0.01] backdrop-blur-3xl overflow-hidden shadow-3xl">
           <!-- Scanning Line Effect -->
           <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
             <div class="w-full h-[2px] bg-brand-primary/30 blur-sm absolute top-0 left-0 animate-[scan_4s_linear_infinite]"></div>
           </div>
 
           <!-- Technical HUD Markers -->
-          <div class="absolute top-10 left-12 flex flex-col gap-1">
+          <div class="absolute top-6 left-8 sm:top-10 sm:left-12 flex flex-col gap-1">
             <div class="flex items-center gap-2">
               <div class="w-1 h-1 rounded-full bg-brand-primary"></div>
-              <span class="text-[8px] font-mono text-gray-600 tracking-widest uppercase">Protocol.Active</span>
+              <span class="text-[7px] sm:text-[8px] font-mono text-gray-600 tracking-widest uppercase">Protocol.Active</span>
             </div>
-            <span class="text-[8px] font-mono text-gray-700 tracking-tighter">0x0045_INIT_HANDSHAKE</span>
+            <span class="text-[7px] sm:text-[8px] font-mono text-gray-700 tracking-tighter">0x0045_INIT_HANDSHAKE</span>
           </div>
 
-          <div class="absolute top-10 right-12 text-right">
-            <span class="text-[8px] font-mono text-brand-primary/40 uppercase tracking-[0.4em]">Ready for Connection</span>
+          <div class="absolute top-6 right-8 sm:top-10 sm:right-12 text-right hidden sm:block">
+            <span class="text-[7px] sm:text-[8px] font-mono text-brand-primary/40 uppercase tracking-[0.4em]">Ready for Connection</span>
           </div>
 
           <!-- Main Content -->
           <div class="relative z-10 flex flex-col items-center text-center">
-            <div class="mb-12 inline-flex items-center gap-4 px-6 py-2 rounded-full bg-brand-primary/5 border border-brand-primary/10">
-              <span class="relative flex h-2 w-2">
+            <div class="mb-8 sm:mb-12 inline-flex items-center gap-3 sm:gap-4 px-4 py-1.5 sm:px-6 sm:py-2 rounded-full bg-brand-primary/5 border border-brand-primary/10">
+              <span class="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-40"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
+                <span class="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-brand-primary"></span>
               </span>
-              <span class="text-[9px] font-black uppercase tracking-[0.5em] text-brand-primary">Global Deployment Ready</span>
+              <span class="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.3em] sm:tracking-[0.5em] text-brand-primary">Global Deployment Ready</span>
             </div>
 
-            <h2 class="text-6xl md:text-[9rem] font-black text-white mb-12 tracking-tightest leading-[0.8] max-w-5xl">
+            <h2 class="text-4xl sm:text-6xl md:text-8xl lg:text-[9rem] font-black text-white mb-8 sm:mb-12 tracking-tightest leading-[0.9] sm:leading-[0.8] max-w-5xl">
               Ready to Forge the<br>
               <span class="text-gradient drop-shadow-[0_0_60px_rgba(16,185,129,0.3)]">Digital Future?</span>
             </h2>
 
-            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto font-light mb-24 opacity-60 leading-relaxed tracking-tight">
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto font-light mb-12 sm:mb-24 opacity-60 leading-relaxed tracking-tight px-4">
               Architecting high-end digital environments where complex engineering meets cinematic aesthetics.
             </p>
             
-            <div class="flex flex-col sm:flex-row items-center gap-8 w-full max-w-2xl">
+            <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 w-full max-w-2xl px-6">
               <!-- Primary Action -->
-              <a routerLink="/contact" class="group/btn relative flex-1 w-full py-8 bg-brand-primary text-brand-bg font-black uppercase tracking-[0.4em] text-[11px] rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_80px_rgba(16,185,129,0.4)] text-center">
+              <a routerLink="/contact" class="group/btn relative flex-1 w-full py-6 sm:py-8 bg-brand-primary text-brand-bg font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[10px] sm:text-[11px] rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_80px_rgba(16,185,129,0.4)] text-center">
                 <span class="relative z-10 flex items-center justify-center gap-3">
                   <span class="w-1.5 h-1.5 rounded-full bg-brand-bg animate-pulse"></span>
                   Initiate Protocol
@@ -416,9 +416,9 @@
               </a>
 
               <!-- Secondary Action -->
-              <a routerLink="/resume" class="group/btn relative flex-1 w-full py-8 bg-white/[0.02] text-white font-black uppercase tracking-[0.4em] text-[11px] rounded-2xl border border-white/5 transition-all duration-500 hover:bg-white hover:text-black text-center overflow-hidden">
+              <a routerLink="/resume" class="group/btn relative flex-1 w-full py-6 sm:py-8 bg-white/[0.02] text-white font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[10px] sm:text-[11px] rounded-xl sm:rounded-2xl border border-white/5 transition-all duration-500 hover:bg-white hover:text-black text-center overflow-hidden">
                 <span class="relative z-10 flex items-center justify-center gap-3">
-                  <svg class="w-4 h-4 opacity-40 group-hover/btn:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 opacity-40 group-hover/btn:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   View Dossier
@@ -432,20 +432,20 @@
           </div>
 
           <!-- Bottom HUD Footer -->
-          <div class="absolute bottom-10 inset-x-12 flex items-center justify-between border-t border-white/5 pt-8 opacity-40">
-            <div class="flex items-center gap-8">
-              <div class="flex flex-col gap-1">
-                <span class="text-[7px] font-mono text-gray-600 uppercase tracking-widest">Lat_Long</span>
-                <span class="text-[8px] font-mono text-white">30.0444° N, 31.2357° E</span>
+          <div class="absolute bottom-6 inset-x-8 sm:bottom-10 sm:inset-x-12 flex items-center justify-between border-t border-white/5 pt-6 sm:pt-8 opacity-40">
+            <div class="flex items-center gap-4 sm:gap-8">
+              <div class="flex flex-col gap-0.5 sm:gap-1">
+                <span class="text-[6px] sm:text-[7px] font-mono text-gray-600 uppercase tracking-widest">Lat_Long</span>
+                <span class="text-[7px] sm:text-[8px] font-mono text-white">30.0444° N, 31.2357° E</span>
               </div>
-              <div class="flex flex-col gap-1">
-                <span class="text-[7px] font-mono text-gray-600 uppercase tracking-widest">Status</span>
-                <span class="text-[8px] font-mono text-brand-primary uppercase">Standby</span>
+              <div class="flex flex-col gap-0.5 sm:gap-1 hidden xs:flex">
+                <span class="text-[6px] sm:text-[7px] font-mono text-gray-600 uppercase tracking-widest">Status</span>
+                <span class="text-[7px] sm:text-[8px] font-mono text-brand-primary uppercase">Standby</span>
               </div>
             </div>
-            <div class="flex items-center gap-4">
-              <span class="text-[7px] font-mono text-gray-600 uppercase tracking-widest">Sys_Ver</span>
-              <span class="text-[8px] font-mono text-white">v5.0.4_Stable</span>
+            <div class="flex items-center gap-3 sm:gap-4">
+              <span class="text-[6px] sm:text-[7px] font-mono text-gray-600 uppercase tracking-widest">Sys_Ver</span>
+              <span class="text-[7px] sm:text-[8px] font-mono text-white">v5.0.4_Stable</span>
             </div>
           </div>
         </div>
