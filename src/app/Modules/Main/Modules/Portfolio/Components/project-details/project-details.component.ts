@@ -1,6 +1,7 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProject } from '../../DTO/Interface/Project/project';
+import { Fancybox } from "@fancyapps/ui";
 
 @Component({
   selector: 'app-project-details',
@@ -8,14 +9,13 @@ import { IProject } from '../../DTO/Interface/Project/project';
   styleUrl: './project-details.component.scss',
   standalone: false
 })
-export class ProjectDetailsComponent implements OnInit {
+export class ProjectDetailsComponent implements OnInit, AfterViewInit {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
 
   project?: IProject;
   loading = true;
   activeImageIndex = 0;
-  isLightboxOpen = false;
 
   ngOnInit(): void {
     this.route.data.subscribe(res => {
@@ -24,6 +24,32 @@ export class ProjectDetailsComponent implements OnInit {
         this.router.navigate(['/portfolio']);
       }
       this.loading = false;
+    });
+  }
+
+  ngAfterViewInit(): void {
+    (Fancybox as any).bind("[data-fancybox='project-gallery']", {
+      Toolbar: {
+        display: {
+          left: ["infobar"],
+          middle: [
+            "zoomIn",
+            "zoomOut",
+            "fullScreen",
+            "prev",
+            "next",
+          ],
+          right: ["slideshow", "download", "thumbs", "close"],
+        },
+      },
+      Images: {
+        Panzoom: {
+          maxScale: 2,
+        },
+      },
+      showClass: "fancybox-fadeIn",
+      hideClass: "fancybox-fadeOut",
+      animated: true,
     });
   }
 
@@ -41,15 +67,5 @@ export class ProjectDetailsComponent implements OnInit {
     if (event) event.stopPropagation();
     if (!this.project) return;
     this.activeImageIndex = (this.activeImageIndex - 1 + this.project.gallery.length) % this.project.gallery.length;
-  }
-
-  openLightbox(): void {
-    this.isLightboxOpen = true;
-    document.body.style.overflow = 'hidden';
-  }
-
-  closeLightbox(): void {
-    this.isLightboxOpen = false;
-    document.body.style.overflow = 'auto';
   }
 }

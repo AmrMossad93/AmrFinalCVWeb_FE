@@ -135,20 +135,27 @@
             </div>
 
             <div class="group relative aspect-square sm:aspect-[16/10] overflow-hidden rounded-[2rem] sm:rounded-[3rem] bg-[#0c0c0c]/80 border border-white/[0.03] transition-all duration-1000 hover:border-brand-primary/20 shadow-2xl">
-              <img 
-                *ngFor="let img of project.gallery; let i = index"
-                [src]="img" 
-                class="absolute inset-0 w-full h-full object-contain p-4 sm:p-8 md:p-16 transition-all duration-1000 ease-[cubic-bezier(0.2,0,0,1)]"
-                [class.opacity-100]="activeImageIndex === i"
-                [class.opacity-0]="activeImageIndex !== i"
-                [class.scale-100]="activeImageIndex === i"
-                [class.scale-110]="activeImageIndex !== i"
-                [class.translate-y-0]="activeImageIndex === i"
-                [class.translate-y-8]="activeImageIndex !== i"
-              >
+              <a *ngFor="let img of project.gallery; let i = index"
+                 [href]="img"
+                 data-fancybox="project-gallery"
+                 [attr.data-caption]="project.name + ' - Node ' + (i + 1)"
+                 class="absolute inset-0 w-full h-full block"
+                 [class.pointer-events-none]="activeImageIndex !== i"
+                 [class.z-10]="activeImageIndex === i">
+                <img 
+                  [src]="img" 
+                  class="w-full h-full object-contain p-4 sm:p-8 md:p-16 transition-all duration-1000 ease-[cubic-bezier(0.2,0,0,1)]"
+                  [class.opacity-100]="activeImageIndex === i"
+                  [class.opacity-0]="activeImageIndex !== i"
+                  [class.scale-100]="activeImageIndex === i"
+                  [class.scale-110]="activeImageIndex !== i"
+                  [class.translate-y-0]="activeImageIndex === i"
+                  [class.translate-y-8]="activeImageIndex !== i"
+                >
+              </a>
               
               <!-- Gallery Navigation (Hidden on small screens, show on hover) -->
-              <div class="absolute inset-x-4 sm:inset-x-8 top-1/2 -translate-y-1/2 flex items-center justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-700">
+              <div class="absolute inset-x-4 sm:inset-x-8 top-1/2 -translate-y-1/2 flex items-center justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-700 z-20">
                 <button (click)="prevImage($event)" class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-black/60 backdrop-blur-2xl border border-white/10 text-white hover:bg-brand-primary hover:text-brand-bg hover:scale-110 transition-all pointer-events-auto">
                   <svg class="w-5 h-5 sm:w-6 sm:h-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
                 </button>
@@ -157,10 +164,10 @@
                 </button>
               </div>
 
-              <!-- Fullscreen Prompt -->
-              <button (click)="openLightbox()" class="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 px-6 py-2 sm:px-8 sm:py-3 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full text-[7px] sm:text-[8px] font-black text-white/40 uppercase tracking-[0.3em] sm:tracking-[0.4em] hover:text-brand-primary hover:border-brand-primary/40 transition-all">
+              <!-- Fullscreen Prompt (Visual only, click is captured by anchor) -->
+              <div class="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 px-6 py-2 sm:px-8 sm:py-3 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full text-[7px] sm:text-[8px] font-black text-white/40 uppercase tracking-[0.3em] sm:tracking-[0.4em] pointer-events-none z-20">
                 Expand Viewport
-              </button>
+              </div>
             </div>
 
             <!-- Enhanced Thumbnails -->
@@ -276,56 +283,4 @@
     </div>
   </div>
 
-  <!-- High-End Lightbox -->
-  <div *ngIf="isLightboxOpen && project" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-[100px] animate-in fade-in duration-700 flex flex-col">
-    <!-- Lightbox Controls -->
-    <div class="flex items-center justify-between p-6 sm:p-10">
-      <div class="flex flex-col gap-1 sm:gap-2">
-        <span class="text-[8px] sm:text-[9px] font-black text-brand-primary uppercase tracking-[0.4em] sm:tracking-[0.6em] animate-pulse">Node 0{{activeImageIndex + 1}}</span>
-        <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">{{ project.name }}</h3>
-      </div>
-      <button (click)="closeLightbox()" class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-white/[0.02] border border-white/5 text-white hover:bg-brand-primary hover:text-brand-bg transition-all duration-700">
-        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
-    </div>
-
-    <!-- Main Visual Stage -->
-    <div class="flex-grow relative flex items-center justify-center p-4 sm:p-10 md:p-24 overflow-hidden">
-      <button (click)="prevImage($event)" class="absolute left-4 sm:left-10 md:left-20 w-12 h-12 sm:w-24 sm:h-24 rounded-full bg-white/[0.01] border border-white/5 text-white hover:bg-brand-primary hover:text-brand-bg hover:scale-110 transition-all z-10 duration-700">
-        <svg class="w-6 h-6 sm:w-10 sm:h-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
-      </button>
-      <button (click)="nextImage($event)" class="absolute right-4 sm:right-10 md:right-20 w-12 h-12 sm:w-24 sm:h-24 rounded-full bg-white/[0.01] border border-white/5 text-white hover:bg-brand-primary hover:text-brand-bg hover:scale-110 transition-all z-10 duration-700">
-        <svg class="w-6 h-6 sm:w-10 sm:h-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-      </button>
-
-      <div class="w-full h-full flex items-center justify-center relative">
-        <img 
-          *ngFor="let img of project.gallery; let i = index"
-          [src]="img" 
-          class="absolute max-w-full max-h-full object-contain transition-all duration-1000 ease-[cubic-bezier(0.2,0,0,1)] shadow-[0_40px_100px_rgba(0,0,0,0.8)] rounded-2xl sm:rounded-3xl z-10"
-          [class.opacity-100]="activeImageIndex === i"
-          [class.opacity-0]="activeImageIndex !== i"
-          [class.scale-100]="activeImageIndex === i"
-          [class.scale-90]="activeImageIndex !== i"
-        >
-      </div>
-    </div>
-
-    <!-- Lightbox Index -->
-    <div class="p-8 sm:p-12 bg-black/40 border-t border-white/5">
-      <div class="max-w-6xl mx-auto flex justify-center gap-4 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth">
-        <button 
-          *ngFor="let img of project.gallery; let i = index"
-          (click)="activeImageIndex = i"
-          class="relative flex-shrink-0 w-20 sm:w-32 aspect-[16/10] rounded-lg sm:rounded-[1.5rem] overflow-hidden border-2 transition-all duration-700"
-          [class.border-brand-primary]="activeImageIndex === i"
-          [class.border-transparent]="activeImageIndex !== i"
-          [class.opacity-40]="activeImageIndex !== i"
-          [class.scale-90]="activeImageIndex !== i"
-        >
-          <img [src]="img" class="w-full h-full object-cover">
-        </button>
-      </div>
-    </div>
-  </div>
 </div>
