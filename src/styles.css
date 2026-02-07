@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: var(--color-brand-bg);
+  background-color: rgba(11, 22, 21, 0.9);
   color: #f3f4f6;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

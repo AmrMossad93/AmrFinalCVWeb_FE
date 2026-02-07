@@ -17,25 +17,30 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
   private lines!: THREE.LineSegments;
   private animationId!: number;
 
-  private readonly PARTICLE_COUNT = 600;
-  private readonly MAX_DISTANCE = 110;
-  private readonly SPHERE_RADIUS = 800;
+  private readonly PARTICLE_COUNT = 800;
+  private readonly MAX_DISTANCE = 150;
+  private readonly SPHERE_RADIUS = 900;
 
   private mouse = new THREE.Vector2(-1000, -1000);
 
   constructor(private ngZone: NgZone) {}
 
   ngAfterViewInit() {
+    console.log('MatrixBackground: ngAfterViewInit called');
+    // Use a small delay to ensure the DOM is ready and styles are applied
     setTimeout(() => {
       try {
-        this.initThree();
-        this.ngZone.runOutsideAngular(() => {
-          this.animate();
-        });
+        const initialized = this.initThree();
+        if (initialized) {
+          console.log('MatrixBackground: Three.js initialized successfully');
+          this.ngZone.runOutsideAngular(() => {
+            this.animate();
+          });
+        }
       } catch (error) {
         console.error('MatrixBackground: Error during Three.js initialization:', error);
       }
-    }, 100);
+    }, 0);
   }
 
   ngOnDestroy() {
@@ -62,20 +67,27 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
     this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
   }
 
-  private initThree() {
+  private initThree(): boolean {
     const canvas = this.canvasRef?.nativeElement;
     if (!canvas) {
       console.warn('MatrixBackground: Canvas element not found');
-      return;
+      return false;
     }
+
+    console.log('MatrixBackground: Canvas found, initializing Three.js', {
+      width: window.innerWidth,
+      height: window.innerHeight,
+      canvasWidth: canvas.clientWidth,
+      canvasHeight: canvas.clientHeight
+    });
 
     // Scene setup
     this.scene = new THREE.Scene();
 
     // Camera setup
     const aspect = window.innerWidth / window.innerHeight;
-    this.camera = new THREE.PerspectiveCamera(75, aspect, 5, 5000);
-    this.camera.position.z = 1200;
+    this.camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 2000);
+    this.camera.position.z = 1000;
 
     // Renderer setup
     try {
@@ -86,11 +98,13 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
         powerPreference: 'high-performance'
       });
       this.renderer.setSize(window.innerWidth, window.innerHeight);
-      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limit pixel ratio for performance
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       this.renderer.setClearColor(0x000000, 0);
+      
+      console.log('MatrixBackground: Renderer created');
     } catch (e) {
       console.error('MatrixBackground: WebGL not supported', e);
-      return;
+      return false;
     }
 
     // Particles setup
@@ -108,9 +122,9 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
       positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
       positions[i * 3 + 2] = r * Math.cos(phi);
 
-      velocities[i * 3] = (Math.random() - 0.5) * 0.8;
-      velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.8;
-      velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.8;
+      velocities[i * 3] = (Math.random() - 0.5) * 0.5;
+      velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.5;
+      velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.5;
     }
 
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -131,12 +145,13 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
 
     const material = new THREE.PointsMaterial({
       color: 0x10b981,
-      size: 2,
+      size: 3,
       transparent: true,
-      opacity: 0.8,
+      opacity: 0.6,
       sizeAttenuation: true,
       map: texture,
-      alphaTest: 0.5
+      alphaTest: 0.01,
+      blending: THREE.AdditiveBlending
     });
 
     this.particles = new THREE.Points(geometry, material);
@@ -144,19 +159,20 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
 
     // Lines setup
     const lineGeometry = new THREE.BufferGeometry();
-    // Pre-allocate a large enough buffer for lines to avoid re-creating it every frame
-    // Max lines could be PARTICLE_COUNT * (PARTICLE_COUNT - 1) / 2, but we limit it
     const maxLines = 4000;
     lineGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(maxLines * 2 * 3), 3));
 
     const lineMaterial = new THREE.LineBasicMaterial({
       color: 0x10b981,
       transparent: true,
-      opacity: 0.2
+      opacity: 0.15,
+      blending: THREE.AdditiveBlending
     });
 
     this.lines = new THREE.LineSegments(lineGeometry, lineMaterial);
     this.scene.add(this.lines);
+
+    return true;
   }
 
   private animate = () => {
@@ -172,10 +188,10 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
       const linePositionAttr = this.lines.geometry.getAttribute('position') as THREE.BufferAttribute;
       const linePositions = linePositionAttr.array as Float32Array;
       let lineCount = 0;
-      const maxLines = (linePositions.length / 6);
+      const totalPossibleLines = linePositions.length / 6;
 
-      const mouseX = this.mouse.x * 800;
-      const mouseY = this.mouse.y * 800;
+      const mouseX = this.mouse.x * 1000;
+      const mouseY = this.mouse.y * 1000;
 
       for (let i = 0; i < this.PARTICLE_COUNT; i++) {
         const ix = i * 3;
@@ -191,40 +207,42 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
         const dy_m = positions[iy] - mouseY;
         const dist_m_sq = dx_m * dx_m + dy_m * dy_m;
 
-        if (dist_m_sq < 30000) {
+        if (dist_m_sq < 40000) {
           const dist_m = Math.sqrt(dist_m_sq);
-          const force = (173 - dist_m) / 173;
-          positions[ix] += dx_m * force * 0.02;
-          positions[iy] += dy_m * force * 0.02;
+          const force = (200 - dist_m) / 200;
+          positions[ix] += dx_m * force * 0.03;
+          positions[iy] += dy_m * force * 0.03;
         }
 
-        // Boundary checks
+        // Boundary checks - wrap around or bounce
         const distSq = positions[ix] * positions[ix] + positions[iy] * positions[iy] + positions[iz] * positions[iz];
-        if (distSq > this.SPHERE_RADIUS * this.SPHERE_RADIUS) {
+        const limit = this.SPHERE_RADIUS * this.SPHERE_RADIUS;
+        if (distSq > limit) {
           const dist = Math.sqrt(distSq);
-          const nx = positions[ix] / dist;
-          const ny = positions[iy] / dist;
-          const nz = positions[iz] / dist;
-          const dot = velocities[ix] * nx + velocities[iy] * ny + velocities[iz] * nz;
+          positions[ix] = (positions[ix] / dist) * this.SPHERE_RADIUS * 0.98;
+          positions[iy] = (positions[iy] / dist) * this.SPHERE_RADIUS * 0.98;
+          positions[iz] = (positions[iz] / dist) * this.SPHERE_RADIUS * 0.98;
           
-          if (dot > 0) {
-            velocities[ix] -= 2 * dot * nx;
-            velocities[iy] -= 2 * dot * ny;
-            velocities[iz] -= 2 * dot * nz;
-          }
+          velocities[ix] *= -0.8;
+          velocities[iy] *= -0.8;
+          velocities[iz] *= -0.8;
         }
 
-        // Lines between nearby particles
+        // Lines between nearby particles - optimized distance check
         for (let j = i + 1; j < this.PARTICLE_COUNT; j++) {
-          if (lineCount >= maxLines) break;
+          if (lineCount >= totalPossibleLines) break;
 
           const jx = j * 3;
           const jy = j * 3 + 1;
           const jz = j * 3 + 2;
 
           const dx = positions[ix] - positions[jx];
+          if (Math.abs(dx) > this.MAX_DISTANCE) continue;
           const dy = positions[iy] - positions[jy];
+          if (Math.abs(dy) > this.MAX_DISTANCE) continue;
           const dz = positions[iz] - positions[jz];
+          if (Math.abs(dz) > this.MAX_DISTANCE) continue;
+          
           const dist_sq = dx * dx + dy * dy + dz * dz;
 
           if (dist_sq < this.MAX_DISTANCE * this.MAX_DISTANCE) {
@@ -244,8 +262,10 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
       linePositionAttr.needsUpdate = true;
       this.lines.geometry.setDrawRange(0, lineCount * 2);
 
-      this.particles.rotation.y += 0.0002;
-      this.lines.rotation.y += 0.0002;
+      this.particles.rotation.y += 0.0005;
+      this.lines.rotation.y += 0.0005;
+      this.particles.rotation.x += 0.0002;
+      this.lines.rotation.x += 0.0002;
     }
 
     this.renderer.render(this.scene, this.camera);

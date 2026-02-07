@@ -20,7 +20,7 @@
         <div class="absolute inset-0 bg-[#050505]/80"></div>
         <!-- Architectural Grid Overlay -->
         <div class="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,rgba(16,185,129,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(16,185,129,0.2)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/40 to-[#050505]"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/40 to-[#050505]/90"></div>
       </div>
 
       <!-- Technical HUD Decor -->
@@ -134,7 +134,7 @@
               </div>
             </div>
 
-            <div class="group relative aspect-[16/10] overflow-hidden rounded-[3rem] bg-[#0c0c0c] border border-white/[0.03] transition-all duration-1000 hover:border-brand-primary/20 shadow-2xl">
+            <div class="group relative aspect-[16/10] overflow-hidden rounded-[3rem] bg-[#0c0c0c]/80 border border-white/[0.03] transition-all duration-1000 hover:border-brand-primary/20 shadow-2xl">
               <img 
                 *ngFor="let img of project.gallery; let i = index"
                 [src]="img" 

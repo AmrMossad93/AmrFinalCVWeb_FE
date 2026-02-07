@@ -50,7 +50,7 @@
 
   <!-- Mobile Menu -->
   <div *ngIf="isMenuOpen" 
-       class="md:hidden border-t border-white/5 bg-brand-bg py-4 px-4 space-y-1 animate-in slide-in-from-top duration-300">
+       class="md:hidden border-t border-white/5 bg-brand-bg/95 backdrop-blur-2xl py-4 px-4 space-y-1 animate-in slide-in-from-top duration-300">
     <a routerLink="/home" (click)="isMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white transition-colors">Home</a>
     <a routerLink="/about" (click)="isMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white transition-colors">About</a>
     <a routerLink="/resume" (click)="isMenuOpen = false" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white transition-colors">Resume</a>
