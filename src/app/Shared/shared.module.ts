@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HeroComponent } from '../Modules/Main/Components/hero/hero.component';
 import { SectionTitleComponent } from '../Modules/Main/Components/section-title/section-title.component';
 import { SkillBadgeComponent } from '../Modules/Main/Components/skill-badge/skill-badge.component';
-import { MatrixBackgroundComponent } from './components/Fixed/matrix-background/matrix-background.component';
+import { MatrixBackgroundComponent } from './Components/Fixed/matrix-background/matrix-background.component';
 
 @NgModule({
   declarations: [
