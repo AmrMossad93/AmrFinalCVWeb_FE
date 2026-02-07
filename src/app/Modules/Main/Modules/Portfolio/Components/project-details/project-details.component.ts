@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProjectService } from '../../../../../Core/services/project.service';
-import { Project } from '../../../../../Core/models/project.model';
+import { IProject } from '../../DTO/Interface/Project/project';
 
 @Component({
   selector: 'app-project-details',
@@ -10,32 +9,18 @@ import { Project } from '../../../../../Core/models/project.model';
   standalone: false
 })
 export class ProjectDetailsComponent implements OnInit {
-  project?: Project;
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+
+  project?: IProject;
   loading = true;
   activeImageIndex = 0;
   isLightboxOpen = false;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private projectService: ProjectService
-  ) {}
-
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      const id = params['id'];
-      if (id) {
-        this.loadProject(id);
-      }
-    });
-  }
-
-  loadProject(id: string): void {
-    this.loading = true;
-    this.projectService.getProjectById(id).subscribe((project: Project | undefined) => {
-      if (project) {
-        this.project = project;
-      } else {
+    this.route.data.subscribe(res => {
+      this.project = res['project'];
+      if (!this.project) {
         this.router.navigate(['/portfolio']);
       }
       this.loading = false;
