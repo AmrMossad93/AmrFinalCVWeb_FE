@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../../../Core/services/Data/data.service';
-import { IBase } from '../../../../Core/models/Interface/Base/base';
-import { forkJoin } from 'rxjs';
+import {Component, inject, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {IBase} from '../../../../Core/models/Interface/Base/base';
+import {IExperience} from './DTO/Interface/Experience/experience';
+import {IEducation} from './DTO/Interface/Education/education';
+import {IService} from './DTO/Interface/Services/services';
+import {ISkill} from './DTO/Interface/Skills/skills';
 
 @Component({
   selector: 'app-resume',
@@ -10,43 +13,29 @@ import { forkJoin } from 'rxjs';
   standalone: false
 })
 export class ResumeComponent implements OnInit {
+  private readonly activatedRoute = inject(ActivatedRoute);
+
   yearsOfExperience: number = new Date().getFullYear() - 2017;
-  
+
   skills = [
-    'Angular 19+', 'TypeScript 5.x', 'JavaScript ES2024', 
-    'RxJS 7+', 'NgRx / Signals', 'Tailwind CSS 4.x', 
-    'SCSS / SASS', 'HTML5 / Semantic SEO', 'Node.js / Express', 
-    'Ionic 8 / Capacitor', 'Git / CI/CD Pipelines', 'Jest / Cypress', 
+    'Angular 19+', 'TypeScript 5.x', 'JavaScript ES2024',
+    'RxJS 7+', 'NgRx / Signals', 'Tailwind CSS 4.x',
+    'SCSS / SASS', 'HTML5 / Semantic SEO', 'Node.js / Express',
+    'Ionic 8 / Capacitor', 'Git / CI/CD Pipelines', 'Jest / Cypress',
     'Micro-frontends', 'PWA / SSR', 'Module Federation'
   ];
 
-  experience: any[] = [];
-  education: any[] = [];
-  services: any[] = [];
-  skillsProgress: any[] = [];
-
-  constructor(private dataService: DataService) {}
+  experience: IExperience[] = [];
+  education: IEducation[] = [];
+  services: IService[] = [];
+  skillsProgress: ISkill[] = [];
 
   ngOnInit(): void {
-    this.fetchData();
-  }
-
-  fetchData(): void {
-    forkJoin({
-      experience: this.dataService.getJson<IBase<any[]>>('experience.json'),
-      education: this.dataService.getJson<IBase<any[]>>('education.json'),
-      services: this.dataService.getJson<any[]>('services.json'),
-      skillsProgress: this.dataService.getJson<IBase<any[]>>('programmingSkillsProgress.json')
-    }).subscribe({
-      next: (res) => {
-        this.experience = res.experience.data;
-        this.education = res.education.data;
-        this.services = res.services;
-        this.skillsProgress = res.skillsProgress.data;
-      },
-      error: (err) => {
-        console.error('Error fetching resume data:', err);
-      }
+    this.activatedRoute.data.subscribe(res => {
+      this.experience = (res['experience'] as IBase<IExperience[]>).data;
+      this.education = (res['education'] as IBase<IEducation[]>).data;
+      this.services = res['services'] as IService[];
+      this.skillsProgress = (res['skillsProgress'] as IBase<ISkill[]>).data;
     });
   }
 }
