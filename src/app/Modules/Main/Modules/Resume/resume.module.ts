@@ -7,6 +7,7 @@ import {experienceResolver} from './Resolvers/Experience/experience-resolver';
 import {educationResolver} from './Resolvers/Education/education-resolver';
 import {servicesResolver} from './Resolvers/Services/services-resolver';
 import {skillsResolver} from './Resolvers/Skills/skills-resolver';
+import {projectsResolver} from '../Portfolio/Resolvers/Projects/projects-resolver';
 
 @NgModule({
   declarations: [ResumeComponent],
@@ -21,7 +22,8 @@ import {skillsResolver} from './Resolvers/Skills/skills-resolver';
           experience: experienceResolver,
           education: educationResolver,
           services: servicesResolver,
-          skillsProgress: skillsResolver
+          skillsProgress: skillsResolver,
+          projects: projectsResolver
         }
       }
     ])

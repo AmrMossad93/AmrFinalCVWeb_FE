@@ -29,6 +29,7 @@ export class ResumeComponent implements OnInit {
   education: IEducation[] = [];
   services: IService[] = [];
   skillsProgress: ISkill[] = [];
+  projectsCount = 0;
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(res => {
@@ -36,6 +37,7 @@ export class ResumeComponent implements OnInit {
       this.education = (res['education'] as IBase<IEducation[]>).data;
       this.services = res['services'] as IService[];
       this.skillsProgress = (res['skillsProgress'] as IBase<ISkill[]>).data;
+      this.projectsCount = res['projects']?.length || 0;
     });
   }
 }
