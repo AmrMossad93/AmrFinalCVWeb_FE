@@ -655,13 +655,128 @@
       "projectName": "Offline Violation",
       "projectDetail": "It wan an app that process the violation and returns the result to the user",
       "type": "Web",
-      "coreDevelopment": "HTML5 , CSS3 ,  Angular 20 , Bootstrap 5, TypeScript , NodeJS , ExpressJs",
+      "coreDevelopment": "HTML5 , CSS3 ,  Angular 20 , Bootstrap 5, TypeScript , NodeJS , ExpressJs , SpringBoot , SSE , Docker",
       "client": "Tahakom",
       "category": "Violations",
       "webSiteURL": null,
       "images": [
         "assets/Me/Images/Projects/OfflineViolation/1.png",
-        "assets/Me/Images/Projects/OfflineViolation/2.png"
+        "assets/Me/Images/Projects/OfflineViolation/2.png",
+        "assets/Me/Images/Projects/OfflineViolation/3.png",
+        "assets/Me/Images/Projects/OfflineViolation/4.png"
+      ],
+      "videoUrl": null
+    },
+    {
+      "id": 39,
+      "projectName": "UrbanEye",
+      "projectDetail": "A project for processing violations. Built with real-time updates via SSE, map visualization with Google Maps, and cloud services on GCP.",
+      "type": "Web",
+      "coreDevelopment": "Angular , TypeScript , Node.js , SSE , GCP , Google Maps , Tailwind , PrimeNG",
+      "client": "Tahakom",
+      "category": "Violations",
+      "webSiteURL": null,
+      "images": [
+        "assets/Me/Images/Projects/UrbanEye/1.png",
+        "assets/Me/Images/Projects/UrbanEye/2.png",
+        "assets/Me/Images/Projects/UrbanEye/3.png",
+        "assets/Me/Images/Projects/UrbanEye/4.png",
+        "assets/Me/Images/Projects/UrbanEye/5.png",
+        "assets/Me/Images/Projects/UrbanEye/6.png",
+        "assets/Me/Images/Projects/UrbanEye/7.png",
+        "assets/Me/Images/Projects/UrbanEye/8.png",
+        "assets/Me/Images/Projects/UrbanEye/9.png",
+        "assets/Me/Images/Projects/UrbanEye/10.png",
+        "assets/Me/Images/Projects/UrbanEye/11.png",
+        "assets/Me/Images/Projects/UrbanEye/12.png",
+        "assets/Me/Images/Projects/UrbanEye/13.png"
+      ],
+      "videoUrl": null
+    },
+    {
+      "id": 40,
+      "projectName": "PocketLLM",
+      "projectDetail": "Fullstack local LLM chat app with Ollama. Choose the model from the frontend and chat; all data stays on-device, no internet or cloud—ideal for sensitive or air-gapped use.",
+      "type": "Web",
+      "coreDevelopment": "Angular , TypeScript , Spring Boot , SQL , Ollama , Docker , Tailwind , HTML",
+      "client": "Tahakom",
+      "category": "AI / LLM",
+      "webSiteURL": null,
+      "images": [
+        "assets/Me/Images/Projects/PocketLLM/1.png",
+        "assets/Me/Images/Projects/PocketLLM/2.png",
+        "assets/Me/Images/Projects/PocketLLM/3.png"
+      ],
+      "videoUrl": null
+    },
+    {
+      "id": 41,
+      "projectName": "MASAR Marketplace",
+      "projectDetail": "Multi-tenant B2B/B2C marketplace for MASSAR Tech. Products, inventory, orders, warehouses per tenant; bilingual (Arabic/English).",
+      "type": "Web",
+      "coreDevelopment": "Spring Boot , Java 21 , SQL Server , JWT , Liquibase , MapStruct , Angular , Bootstrap , Tailwind , OpenAPI",
+      "client": "MASSAR Tech.",
+      "category": "Marketplace",
+      "webSiteURL": null,
+      "images": [
+        "assets/Me/Images/Projects/MassarMarketPlace/1.png",
+        "assets/Me/Images/Projects/MassarMarketPlace/2.png",
+        "assets/Me/Images/Projects/MassarMarketPlace/3.png",
+        "assets/Me/Images/Projects/MassarMarketPlace/4.png",
+        "assets/Me/Images/Projects/MassarMarketPlace/5.png",
+        "assets/Me/Images/Projects/MassarMarketPlace/6.png",
+        "assets/Me/Images/Projects/MassarMarketPlace/7.png",
+        "assets/Me/Images/Projects/MassarMarketPlace/8.png",
+        "assets/Me/Images/Projects/MassarMarketPlace/9.png"
+      ],
+      "videoUrl": null
+    },
+    {
+      "id": 42,
+      "projectName": "Job Aggregator",
+      "projectDetail": "AI-powered job matching app I built. Upload CVs; external AI analyzes roles and keywords. Recommends jobs and companies by date range and skills. Auth (JWT), CV builder, CV analyze, job and company modules; controller–service–repository. Mobile app (Ionic, Angular, Capacitor, iOS/Android) not yet deployed.",
+      "type": "Web",
+      "coreDevelopment": "Spring Boot , Java 17 , Spring Security , JWT , Spring Data JPA , SQL Server , OpenFeign , Angular , Tailwind , Ionic , Capacitor , iOS , Android",
+      "client": "MASSAR Tech.",
+      "category": "HR",
+      "webSiteURL": null,
+      "images": [
+        "assets/Me/Images/Projects/JobAggregator/1.png",
+        "assets/Me/Images/Projects/JobAggregator/2.png",
+        "assets/Me/Images/Projects/JobAggregator/3.png",
+        "assets/Me/Images/Projects/JobAggregator/4.png",
+        "assets/Me/Images/Projects/JobAggregator/5.png",
+        "assets/Me/Images/Projects/JobAggregator/6.png",
+        "assets/Me/Images/Projects/JobAggregator/7.png",
+        "assets/Me/Images/Projects/JobAggregator/8.png"
+      ],
+      "videoUrl": null
+    },
+    {
+      "id": 43,
+      "projectName": "Salon Management",
+      "projectDetail": "Multi-tenant salon backend: salons & branches, users (Owner/Staff/Customer), services catalog, staff & schedules, booking engine, customers & loyalty, dashboard analytics. JWT auth, soft deletes, audit fields, bilingual (EN/AR).",
+      "type": "Web",
+      "coreDevelopment": "Spring Boot 3 , Java 21 , Spring Data JPA , Spring Security , JWT , MapStruct , Lombok , OpenAPI , PostgreSQL , Angular , Tailwind , PrimeNG , SSE",
+      "client": "MASSAR Tech.",
+      "category": "Salon Management",
+      "webSiteURL": null,
+      "images": [
+        "assets/Me/Images/Projects/SalonManagement/1.png",
+        "assets/Me/Images/Projects/SalonManagement/2.png",
+        "assets/Me/Images/Projects/SalonManagement/3.png",
+        "assets/Me/Images/Projects/SalonManagement/4.png",
+        "assets/Me/Images/Projects/SalonManagement/5.png",
+        "assets/Me/Images/Projects/SalonManagement/6.png",
+        "assets/Me/Images/Projects/SalonManagement/7.png",
+        "assets/Me/Images/Projects/SalonManagement/8.png",
+        "assets/Me/Images/Projects/SalonManagement/9.png",
+        "assets/Me/Images/Projects/SalonManagement/10.png",
+        "assets/Me/Images/Projects/SalonManagement/11.png",
+        "assets/Me/Images/Projects/SalonManagement/12.png",
+        "assets/Me/Images/Projects/SalonManagement/13.png",
+        "assets/Me/Images/Projects/SalonManagement/14.png",
+        "assets/Me/Images/Projects/SalonManagement/15.png"
       ],
       "videoUrl": null
     }

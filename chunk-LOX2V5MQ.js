@@ -1,0 +1,1 @@
+import{Ka as i,l as e,o}from"./chunk-C2P6U3L3.js";var a=class t{constructor(r){this.http=r}getJson(r){return this.http.get("Data/"+r)}static \u0275fac=function(n){return new(n||t)(o(i))};static \u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"})};export{a};
