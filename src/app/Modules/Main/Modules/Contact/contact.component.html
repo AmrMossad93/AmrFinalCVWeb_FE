@@ -60,20 +60,42 @@
       <!-- Contact Form -->
       <div class="lg:col-span-8">
         <div class="p-8 lg:p-12 bg-white/5 rounded-[2.5rem] border border-white/10 shadow-xl relative overflow-hidden">
-          <form class="space-y-8 relative z-10">
+          <form class="space-y-8 relative z-10" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            @if (submitSuccess) {
+              <p class="text-green-400 font-medium">Your message has been sent. Thank you!</p>
+            }
+            @if (submitError) {
+              <p class="text-red-400 font-medium">{{ submitError }}</p>
+            }
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="space-y-2">
                 <label class="text-[11px] font-bold text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
-                <input type="text" placeholder="John Doe" class="w-full px-6 py-4 bg-white/5 border border-transparent focus:border-brand-primary/50 focus:bg-white/10 rounded-xl transition-all outline-none text-white font-medium">
+                <input type="text" formControlName="fullName" placeholder="John Doe" class="w-full px-6 py-4 bg-white/5 border border-transparent focus:border-brand-primary/50 focus:bg-white/10 rounded-xl transition-all outline-none text-white font-medium">
+                @if (contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched) {
+                  <span class="text-red-400 text-sm">Required</span>
+                }
               </div>
               <div class="space-y-2">
                 <label class="text-[11px] font-bold text-gray-500 uppercase tracking-widest ml-1">Email Address</label>
-                <input type="email" placeholder="john@company.com" class="w-full px-6 py-4 bg-white/5 border border-transparent focus:border-brand-primary/50 focus:bg-white/10 rounded-xl transition-all outline-none text-white font-medium">
+                <input type="email" formControlName="email" placeholder="john@company.com" class="w-full px-6 py-4 bg-white/5 border border-transparent focus:border-brand-primary/50 focus:bg-white/10 rounded-xl transition-all outline-none text-white font-medium">
+                @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                  <span class="text-red-400 text-sm">Valid email required</span>
+                }
               </div>
             </div>
             <div class="space-y-2">
+              <label class="text-[11px] font-bold text-gray-500 uppercase tracking-widest ml-1">Subject</label>
+              <input type="text" formControlName="subject" placeholder="Project inquiry" class="w-full px-6 py-4 bg-white/5 border border-transparent focus:border-brand-primary/50 focus:bg-white/10 rounded-xl transition-all outline-none text-white font-medium">
+              @if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
+                <span class="text-red-400 text-sm">Required</span>
+              }
+            </div>
+            <div class="space-y-2">
               <label class="text-[11px] font-bold text-gray-500 uppercase tracking-widest ml-1">Message</label>
-              <textarea rows="6" placeholder="Tell me about your project..." class="w-full px-6 py-4 bg-white/5 border border-transparent focus:border-brand-primary/50 focus:bg-white/10 rounded-xl transition-all outline-none text-white font-medium resize-none"></textarea>
+              <textarea formControlName="message" rows="6" placeholder="Tell me about your project..." class="w-full px-6 py-4 bg-white/5 border border-transparent focus:border-brand-primary/50 focus:bg-white/10 rounded-xl transition-all outline-none text-white font-medium resize-none"></textarea>
+              @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                <span class="text-red-400 text-sm">Required</span>
+              }
             </div>
             <button type="submit" class="w-full py-4 bg-brand-primary text-brand-bg font-bold rounded-xl hover:opacity-90 transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2">
               Send Message
