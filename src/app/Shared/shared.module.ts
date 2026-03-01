@@ -5,13 +5,15 @@ import { HeroComponent } from '../Modules/Main/Components/hero/hero.component';
 import { SectionTitleComponent } from '../Modules/Main/Components/section-title/section-title.component';
 import { SkillBadgeComponent } from '../Modules/Main/Components/skill-badge/skill-badge.component';
 import { MatrixBackgroundComponent } from './Components/Fixed/matrix-background/matrix-background.component';
+import { LoaderComponent } from './Components/Fixed/loader/loader.component';
 
 @NgModule({
   declarations: [
     HeroComponent,
     SectionTitleComponent,
     SkillBadgeComponent,
-    MatrixBackgroundComponent
+    MatrixBackgroundComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { MatrixBackgroundComponent } from './Components/Fixed/matrix-background/
     HeroComponent,
     SectionTitleComponent,
     SkillBadgeComponent,
-    MatrixBackgroundComponent
+    MatrixBackgroundComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

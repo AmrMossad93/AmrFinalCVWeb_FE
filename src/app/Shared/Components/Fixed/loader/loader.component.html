@@ -1,0 +1,37 @@
+<div
+  class="loader-overlay"
+  [class.loader-visible]="visible()"
+  [class.loader-hidden]="!visible()"
+  role="status"
+  aria-live="polite"
+  aria-label="Loading"
+>
+  @if (visible()) {
+    @if (showMatrix()) {
+      <div class="loader-matrix-wrap">
+        <app-matrix-background></app-matrix-background>
+      </div>
+    }
+  }
+  <div class="loader-backdrop"></div>
+
+  <div class="loader-content">
+    <div class="loader-card">
+      <div class="loader-card-glow"></div>
+      <div class="loader-card-inner">
+        <div class="loader-spinner" aria-hidden="true">
+          <div class="loader-spinner-track"></div>
+          <div class="loader-spinner-head"></div>
+          <div class="loader-spinner-glow"></div>
+        </div>
+        <div class="loader-text-block">
+          <span class="loader-label"><span class="loader-prompt">></span> loading<span class="loader-cursor">_</span></span>
+          <div class="loader-progress-bar">
+            <div class="loader-progress-fill"></div>
+          </div>
+        </div>
+        <p class="loader-subtitle">// fetching resources</p>
+      </div>
+    </div>
+  </div>
+</div>

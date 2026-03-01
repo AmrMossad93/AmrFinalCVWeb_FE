@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact.component';
 import { SharedModule } from '../../../../Shared/shared.module';
 import { basicInfoResolver } from '../About/Resolvers/BasicInfo/basic-info-resolver';
@@ -13,7 +12,6 @@ import { headerResolver } from '../Home/Resolver/Header/header-resolver';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule,
     SharedModule,
     RouterModule.forChild([
       {
