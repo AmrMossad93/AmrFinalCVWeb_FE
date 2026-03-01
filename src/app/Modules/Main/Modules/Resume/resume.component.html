@@ -135,17 +135,27 @@
                     </div>
                   </div>
                   
-                  <p class="text-sm sm:text-base text-gray-400 leading-relaxed font-medium">
+                  <p *ngIf="!isDistributionArray(exp.distribution)" class="text-sm sm:text-base text-gray-400 leading-relaxed font-medium">
                     {{ exp.distribution }}
                   </p>
+                  <ul *ngIf="isDistributionArray(exp.distribution)" class="list-disc list-inside space-y-2 text-sm sm:text-base text-gray-400 leading-relaxed font-medium">
+                    <li *ngFor="let item of exp.distribution" class="flex flex-col sm:flex-row sm:gap-2">
+                      <span *ngIf="item.date" class="font-mono-code text-[10px] text-brand-primary/90 shrink-0">{{ item.date }}</span>
+                      <span>{{ item.text }}</span>
+                    </li>
+                  </ul>
 
                   <!-- Auto-generated Tech Specs -->
                   <div class="flex flex-wrap gap-2 pt-2">
-                    <span *ngIf="exp.distribution.includes('Angular')" class="tech-pill">ANGULAR</span>
-                    <span *ngIf="exp.distribution.includes('TypeScript')" class="tech-pill">TYPESCRIPT</span>
-                    <span *ngIf="exp.distribution.includes('Tailwind')" class="tech-pill">TAILWIND</span>
-                    <span *ngIf="exp.distribution.includes('Ionic')" class="tech-pill">IONIC</span>
-                    <span *ngIf="exp.distribution.includes('Mobile')" class="tech-pill">MOBILE</span>
+                    <span *ngIf="getDistributionText(exp).includes('Angular')" class="tech-pill">ANGULAR</span>
+                    <span *ngIf="getDistributionText(exp).includes('TypeScript')" class="tech-pill">TYPESCRIPT</span>
+                    <span *ngIf="getDistributionText(exp).includes('Tailwind')" class="tech-pill">TAILWIND</span>
+                    <span *ngIf="getDistributionText(exp).includes('Spring Boot')" class="tech-pill">SPRING BOOT</span>
+                    <span *ngIf="getDistributionText(exp).includes('SQL Server')" class="tech-pill">SQL SERVER</span>
+                    <span *ngIf="getDistributionText(exp).includes('FastAPI')" class="tech-pill">FASTAPI</span>
+                    <span *ngIf="getDistributionText(exp).includes('Docker')" class="tech-pill">DOCKER</span>
+                    <span *ngIf="getDistributionText(exp).includes('Ionic')" class="tech-pill">IONIC</span>
+                    <span *ngIf="getDistributionText(exp).includes('Mobile')" class="tech-pill">MOBILE</span>
                   </div>
                 </div>
               </div>

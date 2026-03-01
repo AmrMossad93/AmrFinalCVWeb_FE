@@ -6,8 +6,11 @@
       "from": "December 2024",
       "to": "Present",
       "company": "Tahakom  (Riyadh - KSA)",
-      "position": "Senior Front-End Web Developer",
-      "distribution": "Customizing The JSON Result To Make The CRUD Operations, Which Come To Me From The Back-End Developer To Design It In The UI By Using Angular 19, TypeScript , HTML5, CSS3 , ES6 , Tailwind , Fontawsome , Google Maps, etc..."
+      "position": "Full Stack Developer",
+      "distribution": [
+        { "date": "December 2024", "text": "Started as Front-End Developer: building the UI with Angular, TypeScript, Tailwind, SSE, GCP, Google Maps, etc., and integrating with backend APIs." },
+        { "date": "September 2025", "text": "Expanded to full stack: adding backend development with Spring Boot, SQL Server, and related technologies for CRUD operations, APIs, and system integration; integrating with FastAPI to contact AI models and surface results in the front end; using Docker for containerization and deployment." }
+      ]
     },
     {
       "from": "September 2023",
