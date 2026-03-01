@@ -1,0 +1,1 @@
+import{a}from"./chunk-5ZHLDSEL.js";import{m as t,q as e}from"./chunk-CI7QKB4X.js";var i={HEADER:"header.json"};var r=class o{dataService=e(a);getHeader(){return this.dataService.getJson(i.HEADER)}static \u0275fac=function(m){return new(m||o)};static \u0275prov=t({token:o,factory:o.\u0275fac,providedIn:"root"})};var E=()=>e(r).getHeader();export{E as a};
