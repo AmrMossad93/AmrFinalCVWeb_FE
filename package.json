@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --base-href \"/AmrFinalCVWeb_FE/\"",
+    "build:hostinger": "ng build --configuration hostinger --base-href \"/\"",
     "deployApp": "npx angular-cli-ghpages --dir=dist/AmrWebsite/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
